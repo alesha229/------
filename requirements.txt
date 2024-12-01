@@ -1,0 +1,14 @@
+aiogram==3.2.0
+SQLAlchemy==2.0.23
+psycopg2-binary==2.9.9
+beautifulsoup4==4.12.2
+beautifulsoup4==4.12.2
+aiohttp==3.9.1
+urllib3==1.26.15
+python-dotenv==1.0.0
+prometheus-client==0.19.0
+requests==2.31.0
+python-dateutil==2.8.2
+asyncio==3.4.3
+lxml>=4.9.3
+aiohttp-proxy==0.1.2

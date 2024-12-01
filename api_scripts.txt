@@ -1,0 +1,76 @@
+
+				$(document).ready(function () {
+					Office.LoadHeader();
+				});
+
+				function toggleGarage(event) {
+					if (!carInitialized) { InitializeCar(); carInitialized = true; } DDL.ToggleDropDown(document.getElementById('garageFloatHead'), event);
+				}
+
+				var carInitialized = false;
+				var timesArray = [];
+				var elem;
+
+				function toggleFloat(container, e) {
+					e.stopPropagation();
+					$(container).hasClass('active') ? $(container).removeClass('active') : $(container).addClass('active');
+
+					if (!carInitialized) {
+						InitializeCar(); // Загрузка меню ТС
+						carInitialized = true;
+					}
+				}
+
+				//Определение, нажат ли ctrl
+				var cntrlIsPressed = false;
+
+				$(document).keydown(function (e) {
+					if (e.which == "17")
+						cntrlIsPressed = true;
+				});
+
+				$(document).keyup(function () {
+					cntrlIsPressed = false;
+				});
+
+				$(".js-close-float").click(function (e) { e.stopPropagation(); });
+				$(document).click(function () {$(".js-close-float").removeClass("active");})
+
+				$(".js-mobile-place-btn").click(function (e) {
+					toggleFloat($(".js-mobile-place-cont"), e);
+				});
+
+				$(".js-mobile-toggle-menu-btn").click(function (e) {
+					toggleFloat($(".js-toggle-cats"), e);
+				});
+
+				$(".js-menu-cont").click(function (e) {
+					toggleFloat($(".js-menu-cont"), e);
+				});
+				
+
+				var options = new AutoCompleteOptions("/Api/Parts/Search", {}, null, "GET", 0);
+				options.ItemsContainerId = "itemsList";
+				options.ItemTemplateId = "headerSearchTemplate";
+				options.EnterToSubmit = false;
+				
+				new AutoComplete("pcode", options);
+			
+---
+
+				<# if (obj.Filters) { #>
+					<li>
+						<a onclick='Utils.LoadSync({Method: "POST", Url: "/Api/Telemetry/SearchHit", Params: {searchString: "<#=Name#>"}})' href="<#=NavigateUrl#>"><#=Name#></a>
+						<dl style="margin-left:5pt" onclick="Utils.StopPropagation(event);">
+							<dt><img src="<#=ImageUrl#>" /></dt>
+							<dd>
+								<# for (var i in obj.Filters) { var filter = obj.Filters[i]; #>
+									<a onclick='Utils.LoadSync({Method: "POST", Url: "/Api/Telemetry/SearchHit", Params: {searchString: "<#=filter.Value#>"}})' href="<#=filter.NavigateUrl#>"><#=filter.Name#> : <#=filter.Value#></a>
+								<# } #>
+							</dd>
+						</dl>
+					</li>
+				<# } else { #>
+					<li><#=HeaderText#> <a  onclick='Utils.LoadSync({Method: "POST", Url: "/Api/Telemetry/SearchHit", Params: {searchString: "<#=Name#>"}})' href="<#=NavigateUrl#>"><#=Name#></a></li>
+				<# } #>
+			

@@ -1,0 +1,2892 @@
+2024-12-01 16:48:54,579 - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 16:48:54,580 - INFO - Определен артикул запчасти: 90915YZZD4
+2024-12-01 16:48:54,580 - INFO - Начинаем поиск детали: 90915YZZD4
+2024-12-01 16:48:54,581 - DEBUG - Отправляем запрос: URL=https://www.autodoc.ru/search/search, Headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', 'Accept': '*/*', 'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'X-Requested-With': 'XMLHttpRequest', 'Origin': 'https://www.autodoc.ru', 'Referer': 'https://www.autodoc.ru/'}, Data={'article': '90915YZZD4', 'isSearchByNumber': 'true'}
+2024-12-01 16:48:55,147 - DEBUG - Получен ответ: Status=200
+2024-12-01 16:48:55,148 - DEBUG - Получен ответ: 
+2024-12-01 16:48:55,148 - ERROR - Ошибка парсинга JSON: 0, message='Attempt to decode JSON with unexpected mimetype: ', url=URL('https://www.autodoc.ru/search/search')
+2024-12-01 16:48:55,149 - DEBUG - Текст ответа: 
+2024-12-01 16:59:57 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:00:16 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:00:16 [INFO] Определен артикул запчасти: 90915YZZD4
+2024-12-01 17:00:16 [INFO] Начинаем поиск детали: 90915YZZD4
+2024-12-01 17:00:16 [DEBUG] Инициализация сессии: status=200
+2024-12-01 17:00:16 [DEBUG] Получены куки: 
+2024-12-01 17:00:16 [DEBUG] Параметры поиска: {'article': '90915YZZD4', 'brand': '', 'searchType': 'article'}
+2024-12-01 17:00:16 [DEBUG] Статус ответа: 200
+2024-12-01 17:00:16 [ERROR] Ошибка при поиске детали: 0, message='Attempt to decode JSON with unexpected mimetype: ', url=URL('https://www.autodoc.ru/api/search/search')
+Traceback (most recent call last):
+  File "C:\Users\alesha229\Desktop\Бот тг\parsers\autodoc_parser.py", line 276, in search_part
+    json_data = await response.json()
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\client_reqrep.py", line 1165, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: ', url=URL('https://www.autodoc.ru/api/search/search')
+2024-12-01 17:02:00 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:02:05 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:02:05 [INFO] Определен артикул запчасти: 90915YZZD4
+2024-12-01 17:02:05 [INFO] Начинаем поиск детали: 90915YZZD4
+2024-12-01 17:02:05 [DEBUG] Инициализация сессии: status=200
+2024-12-01 17:02:05 [DEBUG] Получены куки: 
+2024-12-01 17:02:05 [DEBUG] Параметры поиска: {'article': '90915YZZD4', 'brand': '', 'searchType': 'article'}
+2024-12-01 17:02:05 [DEBUG] Ответ сохранен в файл: logs/responses/90915YZZD4_response_20241201_170205.txt
+2024-12-01 17:02:05 [DEBUG] Статус ответа: 200
+2024-12-01 17:02:05 [ERROR] Ошибка декодирования JSON: Expecting value: line 1 column 1 (char 0), response=
+2024-12-01 17:04:07 [INFO] Начинаем поиск по запросу: JHMEJ93400S131587
+2024-12-01 17:04:07 [INFO] Определен VIN номер, ищем по VIN: JHMEJ93400S131587
+2024-12-01 17:04:07 [INFO] Начинаем поиск по VIN: JHMEJ93400S131587
+2024-12-01 17:04:07 [INFO] Получаем данные автомобиля по VIN: JHMEJ93400S131587
+2024-12-01 17:04:08 [INFO] Получаем категории для brand=HONDA2017, ssd=533
+2024-12-01 17:04:08 [ERROR] Нет данных о категориях
+2024-12-01 17:04:08 [ERROR] Не удалось получить категории
+2024-12-01 17:07:04,292 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:07:11,557 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:07:11,557 [INFO] Поиск по артикулу временно недоступен
+2024-12-01 17:13:44,191 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:16:26,543 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:16:33,728 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:16:33,728 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:16:33,729 [INFO] Начинаем поиск детали: 90915YZZD4
+2024-12-01 17:16:34,314 [DEBUG] Обработан товар: {'source': 'Autodoc.ru', 'part_name': '', 'part_number': '90915YZZD4', 'brand': '', 'price': 0.0, 'url': 'https://autodoc.ru/search?article=90915YZZD4', 'in_stock': False, 'delivery_days': None, 'manufacturer_name': '', 'minimal_price': 0.0}
+2024-12-01 17:16:34,315 [DEBUG] Обработан товар: {'source': 'Autodoc.ru', 'part_name': '', 'part_number': '90915YZZD4', 'brand': '', 'price': 0.0, 'url': 'https://autodoc.ru/search?article=90915YZZD4', 'in_stock': False, 'delivery_days': None, 'manufacturer_name': '', 'minimal_price': 0.0}
+2024-12-01 17:16:34,316 [DEBUG] Обработан товар: {'source': 'Autodoc.ru', 'part_name': '', 'part_number': '90915YZZD4', 'brand': '', 'price': 0.0, 'url': 'https://autodoc.ru/search?article=90915YZZD4', 'in_stock': False, 'delivery_days': None, 'manufacturer_name': '', 'minimal_price': 0.0}
+2024-12-01 17:19:03,847 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:19:08,636 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:19:08,637 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:19:08,637 [INFO] Начинаем поиск детали: 90915YZZD4
+2024-12-01 17:21:05,188 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:21:09,397 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:21:09,397 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:21:09,398 [INFO] Начинаем поиск детали: 90915YZZD4
+2024-12-01 17:22:07,267 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:22:10,375 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:22:10,376 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:22:10,376 [INFO] Начинаем поиск детали: 90915YZZD4
+2024-12-01 17:23:55,803 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:24:00,928 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:24:00,929 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:24:00,929 [INFO] Начинаем поиск детали: 90915YZZD4
+2024-12-01 17:24:01,347 [INFO] Найдено производителей: 3
+2024-12-01 17:24:01,348 [WARNING] Пропущен производитель без ID: {'id': 517, 'manufacturerName': 'DAIHATSU', 'partName': 'Фильтр масляный', 'artNumber': '90915YZZD4'}
+2024-12-01 17:24:01,349 [WARNING] Пропущен производитель без ID: {'id': 558, 'manufacturerName': 'NISSAN', 'partName': '', 'artNumber': '90915YZZD4'}
+2024-12-01 17:24:01,350 [WARNING] Пропущен производитель без ID: {'id': 579, 'manufacturerName': 'TOYOTA', 'partName': 'Фильтр масляный', 'artNumber': '90915YZZD4'}
+2024-12-01 17:24:01,350 [INFO] Всего найдено товаров: 0
+2024-12-01 17:26:04,793 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:26:08,262 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:26:08,263 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:26:08,264 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:26:08,264 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:26:08,265 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/"
+}
+2024-12-01 17:26:08,680 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:26:08,682 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_172608.json
+2024-12-01 17:26:08,682 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:26:08,683 [INFO] [SEARCH] Processing manufacturer 1/3: Unknown (ID: None)
+2024-12-01 17:26:08,683 [WARNING] [SEARCH] Skipped manufacturer without ID: {'id': 517, 'manufacturerName': 'DAIHATSU', 'partName': 'Фильтр масляный', 'artNumber': '90915YZZD4'}
+2024-12-01 17:26:08,684 [INFO] [SEARCH] Processing manufacturer 2/3: Unknown (ID: None)
+2024-12-01 17:26:08,685 [WARNING] [SEARCH] Skipped manufacturer without ID: {'id': 558, 'manufacturerName': 'NISSAN', 'partName': '', 'artNumber': '90915YZZD4'}
+2024-12-01 17:26:08,685 [INFO] [SEARCH] Processing manufacturer 3/3: Unknown (ID: None)
+2024-12-01 17:26:08,686 [WARNING] [SEARCH] Skipped manufacturer without ID: {'id': 579, 'manufacturerName': 'TOYOTA', 'partName': 'Фильтр масляный', 'artNumber': '90915YZZD4'}
+2024-12-01 17:26:08,686 [INFO] [SEARCH] Total parts found: 0
+2024-12-01 17:28:45,336 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:28:49,094 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:28:49,094 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:28:49,095 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:28:49,095 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:28:49,096 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/"
+}
+2024-12-01 17:28:49,680 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:28:49,682 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_172849.json
+2024-12-01 17:28:49,682 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:28:49,683 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:28:49,683 [ERROR] [ERROR] No 'manufacturer' key in data: {'id': 517, 'manufacturerName': 'DAIHATSU', 'partName': 'Фильтр масляный', 'artNumber': '90915YZZD4'}
+2024-12-01 17:28:49,684 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:28:49,685 [ERROR] [ERROR] No 'manufacturer' key in data: {'id': 558, 'manufacturerName': 'NISSAN', 'partName': '', 'artNumber': '90915YZZD4'}
+2024-12-01 17:28:49,686 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:28:49,687 [ERROR] [ERROR] No 'manufacturer' key in data: {'id': 579, 'manufacturerName': 'TOYOTA', 'partName': 'Фильтр масляный', 'artNumber': '90915YZZD4'}
+2024-12-01 17:28:49,688 [INFO] [SEARCH] Total parts found: 0
+2024-12-01 17:31:14,719 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:31:24,911 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:31:24,912 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:31:24,912 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:31:24,912 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:31:25,328 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:31:25,330 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_173125.json
+2024-12-01 17:31:25,330 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:31:25,331 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:31:25,332 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:31:25,333 [INFO] [REQUEST] GET https://www.autodoc.ru/man/517/part/90915YZZD4
+2024-12-01 17:31:25,334 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:31:26,001 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:31:26,003 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241201_173126.html
+2024-12-01 17:31:26,007 [INFO] [PARSED] Successfully parsed details for manufacturer_id=517
+2024-12-01 17:31:26,008 [INFO] [SEARCH] Successfully processed DAIHATSU
+2024-12-01 17:31:26,008 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:31:26,010 [INFO] [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 17:31:26,011 [INFO] [REQUEST] GET https://www.autodoc.ru/man/558/part/90915YZZD4
+2024-12-01 17:31:26,011 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:31:27,545 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:31:27,546 [INFO] [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241201_173127.html
+2024-12-01 17:31:27,550 [INFO] [PARSED] Successfully parsed details for manufacturer_id=558
+2024-12-01 17:31:27,551 [INFO] [SEARCH] Successfully processed NISSAN
+2024-12-01 17:31:27,551 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:31:27,552 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:31:27,553 [INFO] [REQUEST] GET https://www.autodoc.ru/man/579/part/90915YZZD4
+2024-12-01 17:31:27,554 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:31:28,116 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:31:28,118 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241201_173128.html
+2024-12-01 17:31:28,121 [INFO] [PARSED] Successfully parsed details for manufacturer_id=579
+2024-12-01 17:31:28,122 [INFO] [SEARCH] Successfully processed TOYOTA
+2024-12-01 17:31:28,123 [INFO] [SEARCH] Total parts found: 3
+2024-12-01 17:33:22,582 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:33:26,813 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:33:26,814 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:33:26,814 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:33:26,815 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:33:27,243 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:33:27,249 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_173327.json
+2024-12-01 17:33:27,250 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:33:27,251 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:33:27,252 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:33:27,253 [INFO] [REQUEST] GET https://www.autodoc.ru/man/517/part/90915YZZD4
+2024-12-01 17:33:27,253 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:33:28,101 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:33:28,104 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241201_173328.html
+2024-12-01 17:33:28,108 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:33:28,110 [INFO] [SEARCH] Successfully processed DAIHATSU
+2024-12-01 17:33:28,110 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:33:28,112 [INFO] [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 17:33:28,112 [INFO] [REQUEST] GET https://www.autodoc.ru/man/558/part/90915YZZD4
+2024-12-01 17:33:28,113 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:33:28,621 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:33:28,623 [INFO] [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241201_173328.html
+2024-12-01 17:33:28,626 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:33:28,628 [INFO] [SEARCH] Successfully processed NISSAN
+2024-12-01 17:33:28,629 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:33:28,630 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:33:28,631 [INFO] [REQUEST] GET https://www.autodoc.ru/man/579/part/90915YZZD4
+2024-12-01 17:33:28,631 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:33:29,176 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:33:29,177 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241201_173329.html
+2024-12-01 17:33:29,180 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:33:29,182 [INFO] [SEARCH] Successfully processed TOYOTA
+2024-12-01 17:33:29,183 [INFO] [SEARCH] Total parts found: 3
+2024-12-01 17:35:03,940 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:35:07,733 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:35:07,733 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:35:07,733 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:35:07,734 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:35:08,341 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:35:08,343 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_173508.json
+2024-12-01 17:35:08,344 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:35:08,344 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:35:08,346 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:35:08,346 [INFO] [REQUEST] GET https://www.autodoc.ru/man/517/part/90915YZZD4
+2024-12-01 17:35:08,347 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:35:09,269 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:35:09,271 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241201_173509.html
+2024-12-01 17:35:09,275 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:35:09,277 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "DAIHATSU",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/517/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:35:09,280 [WARNING] [WARNING] Price is 0 for DAIHATSU
+2024-12-01 17:35:09,280 [WARNING] [WARNING] Part not in stock for DAIHATSU
+2024-12-01 17:35:09,281 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:35:09,282 [INFO] [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 17:35:09,283 [INFO] [REQUEST] GET https://www.autodoc.ru/man/558/part/90915YZZD4
+2024-12-01 17:35:09,283 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:35:10,448 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:35:10,450 [INFO] [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241201_173510.html
+2024-12-01 17:35:10,453 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:35:10,455 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "90915YZZD4",
+  "brand": "NISSAN",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/558/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "NISSAN",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:35:10,458 [WARNING] [WARNING] Price is 0 for NISSAN
+2024-12-01 17:35:10,458 [WARNING] [WARNING] Part not in stock for NISSAN
+2024-12-01 17:35:10,459 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:35:10,460 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:35:10,460 [INFO] [REQUEST] GET https://www.autodoc.ru/man/579/part/90915YZZD4
+2024-12-01 17:35:10,461 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:35:11,012 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:35:11,014 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241201_173511.html
+2024-12-01 17:35:11,018 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:35:11,021 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "TOYOTA",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/579/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:35:11,023 [WARNING] [WARNING] Price is 0 for TOYOTA
+2024-12-01 17:35:11,024 [WARNING] [WARNING] Part not in stock for TOYOTA
+2024-12-01 17:35:11,024 [INFO] [SEARCH] Total parts found: 3
+2024-12-01 17:35:57,862 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:36:06,912 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:36:06,912 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:36:06,913 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:36:06,913 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:36:08,344 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:36:08,346 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_173608.json
+2024-12-01 17:36:08,346 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:36:08,347 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:36:08,348 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:36:08,348 [INFO] [REQUEST] GET https://www.autodoc.ru/man/517/part/90915YZZD4
+2024-12-01 17:36:08,349 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:36:08,852 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:36:08,853 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241201_173608.html
+2024-12-01 17:36:08,857 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:36:08,859 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "DAIHATSU",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/517/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:36:08,862 [WARNING] [WARNING] Price is 0 for DAIHATSU
+2024-12-01 17:36:08,862 [WARNING] [WARNING] Part not in stock for DAIHATSU
+2024-12-01 17:36:08,863 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:36:08,863 [INFO] [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 17:36:08,864 [INFO] [REQUEST] GET https://www.autodoc.ru/man/558/part/90915YZZD4
+2024-12-01 17:36:08,864 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:36:09,360 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:36:09,361 [INFO] [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241201_173609.html
+2024-12-01 17:36:09,365 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:36:09,367 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "90915YZZD4",
+  "brand": "NISSAN",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/558/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "NISSAN",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:36:09,370 [WARNING] [WARNING] Price is 0 for NISSAN
+2024-12-01 17:36:09,371 [WARNING] [WARNING] Part not in stock for NISSAN
+2024-12-01 17:36:09,371 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:36:09,373 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:36:09,373 [INFO] [REQUEST] GET https://www.autodoc.ru/man/579/part/90915YZZD4
+2024-12-01 17:36:09,374 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:36:09,911 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:36:09,912 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241201_173609.html
+2024-12-01 17:36:09,915 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:36:09,917 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "TOYOTA",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/579/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:36:09,920 [WARNING] [WARNING] Price is 0 for TOYOTA
+2024-12-01 17:36:09,921 [WARNING] [WARNING] Part not in stock for TOYOTA
+2024-12-01 17:36:09,921 [INFO] [SEARCH] Total parts found: 3
+2024-12-01 17:39:03,237 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:39:10,952 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:39:10,952 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:39:10,953 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:39:10,953 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:39:11,470 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:39:11,473 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_173911.json
+2024-12-01 17:39:11,473 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:39:11,474 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:39:11,475 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:39:11,475 [INFO] [REQUEST] GET https://www.autodoc.ru/man/517/part/90915YZZD4
+2024-12-01 17:39:11,476 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:39:12,180 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:39:12,181 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241201_173912.html
+2024-12-01 17:39:12,199 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:39:12,201 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "DAIHATSU",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/517/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:39:12,204 [WARNING] [WARNING] Price is 0 for DAIHATSU
+2024-12-01 17:39:12,205 [WARNING] [WARNING] Part not in stock for DAIHATSU
+2024-12-01 17:39:12,206 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:39:12,207 [INFO] [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 17:39:12,207 [INFO] [REQUEST] GET https://www.autodoc.ru/man/558/part/90915YZZD4
+2024-12-01 17:39:12,208 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:39:12,769 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:39:12,771 [INFO] [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241201_173912.html
+2024-12-01 17:39:12,776 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:39:12,778 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "90915YZZD4",
+  "brand": "NISSAN",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/558/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "NISSAN",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:39:12,781 [WARNING] [WARNING] Price is 0 for NISSAN
+2024-12-01 17:39:12,781 [WARNING] [WARNING] Part not in stock for NISSAN
+2024-12-01 17:39:12,782 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:39:12,783 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:39:12,784 [INFO] [REQUEST] GET https://www.autodoc.ru/man/579/part/90915YZZD4
+2024-12-01 17:39:12,784 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Connection": "keep-alive",
+  "Upgrade-Insecure-Requests": "1"
+}
+2024-12-01 17:39:13,280 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:39:13,281 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241201_173913.html
+2024-12-01 17:39:13,286 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0,
+  "in_stock": false,
+  "delivery_days": null,
+  "description": "",
+  "properties": [],
+  "url": "https://www.autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:39:13,288 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "TOYOTA",
+  "price": 0,
+  "url": "https://www.autodoc.ru/man/579/part/90915YZZD4",
+  "in_stock": false,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:39:13,291 [WARNING] [WARNING] Price is 0 for TOYOTA
+2024-12-01 17:39:13,292 [WARNING] [WARNING] Part not in stock for TOYOTA
+2024-12-01 17:39:13,292 [INFO] [SEARCH] Total parts found: 3
+2024-12-01 17:41:50,454 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:41:54,631 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:41:54,631 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:41:54,632 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:41:54,632 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:41:55,281 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:41:55,284 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_174155.json
+2024-12-01 17:41:55,284 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:41:55,285 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:41:55,286 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:41:55,287 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/spareparts/517/90915YZZD4
+2024-12-01 17:41:55,288 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:41:55,838 [INFO] [RESPONSE] Status: 404
+2024-12-01 17:41:55,838 [ERROR] [RESPONSE] Error content: {
+  "message": "No HTTP resource was found that matches the request URI 'https://webapi.autodoc.ru/api/spareparts/517/90915YZZD4'."
+}
+2024-12-01 17:41:55,840 [WARNING] [SEARCH] No details found for DAIHATSU (ID: 517)
+2024-12-01 17:41:55,840 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:41:55,841 [INFO] [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 17:41:55,842 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/spareparts/558/90915YZZD4
+2024-12-01 17:41:55,843 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:41:56,342 [INFO] [RESPONSE] Status: 404
+2024-12-01 17:41:56,343 [ERROR] [RESPONSE] Error content: {
+  "message": "No HTTP resource was found that matches the request URI 'https://webapi.autodoc.ru/api/spareparts/558/90915YZZD4'."
+}
+2024-12-01 17:41:56,344 [WARNING] [SEARCH] No details found for NISSAN (ID: 558)
+2024-12-01 17:41:56,344 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:41:56,346 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:41:56,346 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/spareparts/579/90915YZZD4
+2024-12-01 17:41:56,347 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:41:56,921 [INFO] [RESPONSE] Status: 404
+2024-12-01 17:41:56,922 [ERROR] [RESPONSE] Error content: {
+  "message": "No HTTP resource was found that matches the request URI 'https://webapi.autodoc.ru/api/spareparts/579/90915YZZD4'."
+}
+2024-12-01 17:41:56,923 [WARNING] [SEARCH] No details found for TOYOTA (ID: 579)
+2024-12-01 17:41:56,924 [INFO] [SEARCH] Total parts found: 0
+2024-12-01 17:45:55,618 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:45:57,703 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:45:57,703 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:45:57,704 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:45:57,704 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:45:58,760 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:45:58,761 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_174558.json
+2024-12-01 17:45:58,762 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:45:58,762 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:45:58,764 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:45:58,765 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/90915YZZD4
+2024-12-01 17:45:58,765 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:45:59,189 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:45:59,191 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241201_174559.json
+2024-12-01 17:45:59,192 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "Фильтр масляный DENSO",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный DAIHATSU 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:45:59,198 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "Фильтр масляный DENSO",
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:45:59,201 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "DAIHATSU",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 0.0,
+  "description": "Фильтр масляный DENSO",
+  "properties": []
+}
+2024-12-01 17:45:59,204 [WARNING] [WARNING] Price is 0 for DAIHATSU
+2024-12-01 17:45:59,204 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:45:59,206 [INFO] [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 17:45:59,207 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/558/sparepart/90915YZZD4
+2024-12-01 17:45:59,207 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:45:59,976 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:45:59,977 [INFO] [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241201_174559.json
+2024-12-01 17:45:59,978 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 558,
+  "manufacturerName": "NISSAN",
+  "partNumber": "90915YZZD4",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "NISSAN 90915YZZD4 - ",
+    "description": " NISSAN 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, NISSAN, 90915YZZD4, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:45:59,985 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:45:59,987 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "90915YZZD4",
+  "brand": "NISSAN",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "NISSAN",
+  "minimal_price": 0.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:45:59,990 [WARNING] [WARNING] Price is 0 for NISSAN
+2024-12-01 17:45:59,990 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:45:59,991 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:45:59,992 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/90915YZZD4
+2024-12-01 17:45:59,992 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:46:00,431 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:46:00,433 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241201_174600.json
+2024-12-01 17:46:00,434 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 684.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:46:00,441 [INFO] [PARSED] Successfully parsed details: {
+  "price": 684.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:46:00,443 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "TOYOTA",
+  "price": 684.0,
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 684.0,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "properties": []
+}
+2024-12-01 17:46:00,446 [INFO] [SEARCH] Total parts found: 3
+2024-12-01 17:47:21,125 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:48:02,364 [INFO] Начинаем поиск по запросу: 2328021010
+2024-12-01 17:48:02,365 [INFO] Определен артикул: 2328021010
+2024-12-01 17:48:02,366 [INFO] [SEARCH] Starting search for part: 2328021010
+2024-12-01 17:48:02,366 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/2328021010?showAll=true
+2024-12-01 17:48:02,944 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:48:02,946 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/2328021010_manufacturers_20241201_174802.json
+2024-12-01 17:48:02,947 [INFO] [SEARCH] Found 6 manufacturers
+2024-12-01 17:48:02,947 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Датчик",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:48:02,948 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:48:02,949 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/2328021010
+2024-12-01 17:48:02,949 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/2328021010"
+}
+2024-12-01 17:48:03,432 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:48:03,434 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_2328021010_20241201_174803.json
+2024-12-01 17:48:03,435 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Датчик",
+  "partNumber": "2328021010",
+  "description": "ДАТЧИК",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 1710.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 2328021010 - Датчик",
+    "description": "Датчик DAIHATSU 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 2328021010, Датчик, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": true,
+  "priceQuantity": 10
+}
+2024-12-01 17:48:03,442 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1710.0,
+  "in_stock": true,
+  "quantity": 10,
+  "delivery_days": null,
+  "description": "ДАТЧИК",
+  "url": "https://autodoc.ru/man/517/part/2328021010"
+}
+2024-12-01 17:48:03,444 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Датчик",
+  "part_number": "2328021010",
+  "brand": "DAIHATSU",
+  "price": 1710.0,
+  "url": "https://autodoc.ru/man/517/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 1710.0,
+  "description": "ДАТЧИК",
+  "properties": []
+}
+2024-12-01 17:48:03,448 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 7761,
+  "manufacturerName": "DAR",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:48:03,449 [INFO] [SEARCH] Processing DAR (ID: 7761)
+2024-12-01 17:48:03,450 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/7761/sparepart/2328021010
+2024-12-01 17:48:03,450 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/7761/part/2328021010"
+}
+2024-12-01 17:48:03,985 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:48:03,986 [INFO] [RESPONSE] Saved to file: logs/responses/details_7761_2328021010_20241201_174803.json
+2024-12-01 17:48:03,987 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 7761,
+  "manufacturerName": "DAR",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 1145.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/7761_2328021010_d75a12c54f5948e2a07809c2e60c3351.23280-21010_1.JPG",
+      "https://images.autodoc.ru/Original/7761_2328021010_2f6ae414a16849afb326d7c6c5a2714f.23280-21010_1.JPG"
+    ]
+  },
+  "seo": {
+    "title": "DAR 2328021010 - Регулятор давления",
+    "description": "Регулятор давления DAR 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAR, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:48:03,995 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1145.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "url": "https://autodoc.ru/man/7761/part/2328021010"
+}
+2024-12-01 17:48:03,997 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "DAR",
+  "price": 1145.0,
+  "url": "https://autodoc.ru/man/7761/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "DAR",
+  "minimal_price": 1145.0,
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "properties": []
+}
+2024-12-01 17:48:04,000 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 66,
+  "manufacturerName": "DENSO",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:48:04,001 [INFO] [SEARCH] Processing DENSO (ID: 66)
+2024-12-01 17:48:04,002 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/66/sparepart/2328021010
+2024-12-01 17:48:04,002 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/66/part/2328021010"
+}
+2024-12-01 17:48:05,049 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:48:05,051 [INFO] [RESPONSE] Saved to file: logs/responses/details_66_2328021010_20241201_174805.json
+2024-12-01 17:48:05,051 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 66,
+  "manufacturerName": "DENSO",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 3080.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DENSO 2328021010 - Регулятор давления",
+    "description": "Регулятор давления DENSO 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DENSO, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:48:05,057 [INFO] [PARSED] Successfully parsed details: {
+  "price": 3080.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "url": "https://autodoc.ru/man/66/part/2328021010"
+}
+2024-12-01 17:48:05,060 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "DENSO",
+  "price": 3080.0,
+  "url": "https://autodoc.ru/man/66/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "DENSO",
+  "minimal_price": 3080.0,
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "properties": []
+}
+2024-12-01 17:48:05,063 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 555,
+  "manufacturerName": "MITSUBISHI",
+  "partName": "",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:48:05,064 [INFO] [SEARCH] Processing MITSUBISHI (ID: 555)
+2024-12-01 17:48:05,065 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/555/sparepart/2328021010
+2024-12-01 17:48:05,065 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/555/part/2328021010"
+}
+2024-12-01 17:48:05,890 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:48:05,891 [INFO] [RESPONSE] Saved to file: logs/responses/details_555_2328021010_20241201_174805.json
+2024-12-01 17:48:05,892 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 555,
+  "manufacturerName": "MITSUBISHI",
+  "partNumber": "2328021010",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "MITSUBISHI 2328021010 - ",
+    "description": " MITSUBISHI 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, MITSUBISHI, 2328021010, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:48:05,898 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/555/part/2328021010"
+}
+2024-12-01 17:48:05,901 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "2328021010",
+  "brand": "MITSUBISHI",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/555/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "MITSUBISHI",
+  "minimal_price": 0.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:48:05,903 [WARNING] [WARNING] Price is 0 for MITSUBISHI
+2024-12-01 17:48:05,904 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 576,
+  "manufacturerName": "SUBARU",
+  "partName": "",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:48:05,905 [INFO] [SEARCH] Processing SUBARU (ID: 576)
+2024-12-01 17:48:05,905 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/576/sparepart/2328021010
+2024-12-01 17:48:05,906 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/576/part/2328021010"
+}
+2024-12-01 17:48:06,329 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:48:06,331 [INFO] [RESPONSE] Saved to file: logs/responses/details_576_2328021010_20241201_174806.json
+2024-12-01 17:48:06,331 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 576,
+  "manufacturerName": "SUBARU",
+  "partNumber": "2328021010",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 14983.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "SUBARU 2328021010 - ",
+    "description": " SUBARU 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, SUBARU, 2328021010, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:48:06,337 [INFO] [PARSED] Successfully parsed details: {
+  "price": 14983.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/576/part/2328021010"
+}
+2024-12-01 17:48:06,339 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "2328021010",
+  "brand": "SUBARU",
+  "price": 14983.0,
+  "url": "https://autodoc.ru/man/576/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "SUBARU",
+  "minimal_price": 14983.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:48:06,342 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:48:06,344 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:48:06,344 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/2328021010
+2024-12-01 17:48:06,345 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/2328021010"
+}
+2024-12-01 17:48:06,801 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:48:06,803 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_2328021010_20241201_174806.json
+2024-12-01 17:48:06,803 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "messagesCount": 9,
+  "properties": [],
+  "minimalPrice": 1211.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_2328021010_fc4908957c3d4ee4815baef969472a83.2328021010_07.JPG",
+      "https://images.autodoc.ru/Original/579_2328021010_20d77cf0ca9a495985bf2af0d4597166.2328021010_09.JPG"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 2328021010 - Регулятор давления",
+    "description": "Регулятор давления TOYOTA 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 3.333333,
+    "cnt": 6,
+    "cntContent": 17,
+    "cnt_mark1": 2,
+    "cnt_mark2": 0,
+    "cnt_mark3": 1,
+    "cnt_mark4": 0,
+    "cnt_mark5": 3
+  },
+  "isCompatibility": 1,
+  "isManInCat": true,
+  "priceQuantity": 2
+}
+2024-12-01 17:48:06,810 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1211.0,
+  "in_stock": true,
+  "quantity": 2,
+  "delivery_days": null,
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "url": "https://autodoc.ru/man/579/part/2328021010"
+}
+2024-12-01 17:48:06,812 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "TOYOTA",
+  "price": 1211.0,
+  "url": "https://autodoc.ru/man/579/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 1211.0,
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "properties": []
+}
+2024-12-01 17:48:06,815 [INFO] [SEARCH] Total parts found: 6
+2024-12-01 17:49:40,590 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:49:43,001 [INFO] Начинаем поиск по запросу: 2328021010
+2024-12-01 17:49:43,002 [INFO] Определен артикул: 2328021010
+2024-12-01 17:49:43,003 [INFO] [SEARCH] Starting search for part: 2328021010
+2024-12-01 17:49:43,003 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/2328021010?showAll=true
+2024-12-01 17:49:43,433 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:49:43,435 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/2328021010_manufacturers_20241201_174943.json
+2024-12-01 17:49:43,436 [INFO] [SEARCH] Found 6 manufacturers
+2024-12-01 17:49:43,436 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Датчик",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:49:43,438 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:49:43,438 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/2328021010
+2024-12-01 17:49:43,439 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/2328021010"
+}
+2024-12-01 17:49:43,865 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:49:43,867 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_2328021010_20241201_174943.json
+2024-12-01 17:49:43,867 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Датчик",
+  "partNumber": "2328021010",
+  "description": "ДАТЧИК",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 1710.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 2328021010 - Датчик",
+    "description": "Датчик DAIHATSU 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 2328021010, Датчик, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": true,
+  "priceQuantity": 10
+}
+2024-12-01 17:49:43,873 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1710.0,
+  "in_stock": true,
+  "quantity": 10,
+  "delivery_days": null,
+  "description": "ДАТЧИК",
+  "url": "https://autodoc.ru/man/517/part/2328021010"
+}
+2024-12-01 17:49:43,875 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Датчик",
+  "part_number": "2328021010",
+  "brand": "DAIHATSU",
+  "price": 1710.0,
+  "url": "https://autodoc.ru/man/517/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 1710.0,
+  "description": "ДАТЧИК",
+  "properties": []
+}
+2024-12-01 17:49:43,879 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 7761,
+  "manufacturerName": "DAR",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:49:43,880 [INFO] [SEARCH] Processing DAR (ID: 7761)
+2024-12-01 17:49:43,880 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/7761/sparepart/2328021010
+2024-12-01 17:49:43,881 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/7761/part/2328021010"
+}
+2024-12-01 17:49:44,332 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:49:44,334 [INFO] [RESPONSE] Saved to file: logs/responses/details_7761_2328021010_20241201_174944.json
+2024-12-01 17:49:44,334 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 7761,
+  "manufacturerName": "DAR",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 1145.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/7761_2328021010_d75a12c54f5948e2a07809c2e60c3351.23280-21010_1.JPG",
+      "https://images.autodoc.ru/Original/7761_2328021010_2f6ae414a16849afb326d7c6c5a2714f.23280-21010_1.JPG"
+    ]
+  },
+  "seo": {
+    "title": "DAR 2328021010 - Регулятор давления",
+    "description": "Регулятор давления DAR 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAR, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:49:44,341 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1145.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "url": "https://autodoc.ru/man/7761/part/2328021010"
+}
+2024-12-01 17:49:44,344 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "DAR",
+  "price": 1145.0,
+  "url": "https://autodoc.ru/man/7761/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "DAR",
+  "minimal_price": 1145.0,
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "properties": []
+}
+2024-12-01 17:49:44,348 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 66,
+  "manufacturerName": "DENSO",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:49:44,350 [INFO] [SEARCH] Processing DENSO (ID: 66)
+2024-12-01 17:49:44,351 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/66/sparepart/2328021010
+2024-12-01 17:49:44,352 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/66/part/2328021010"
+}
+2024-12-01 17:49:44,765 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:49:44,768 [INFO] [RESPONSE] Saved to file: logs/responses/details_66_2328021010_20241201_174944.json
+2024-12-01 17:49:44,768 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 66,
+  "manufacturerName": "DENSO",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 3080.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DENSO 2328021010 - Регулятор давления",
+    "description": "Регулятор давления DENSO 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DENSO, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:49:44,775 [INFO] [PARSED] Successfully parsed details: {
+  "price": 3080.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "url": "https://autodoc.ru/man/66/part/2328021010"
+}
+2024-12-01 17:49:44,777 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "DENSO",
+  "price": 3080.0,
+  "url": "https://autodoc.ru/man/66/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "DENSO",
+  "minimal_price": 3080.0,
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "properties": []
+}
+2024-12-01 17:49:44,780 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 555,
+  "manufacturerName": "MITSUBISHI",
+  "partName": "",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:49:44,781 [INFO] [SEARCH] Processing MITSUBISHI (ID: 555)
+2024-12-01 17:49:44,782 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/555/sparepart/2328021010
+2024-12-01 17:49:44,782 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/555/part/2328021010"
+}
+2024-12-01 17:49:46,226 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:49:46,228 [INFO] [RESPONSE] Saved to file: logs/responses/details_555_2328021010_20241201_174946.json
+2024-12-01 17:49:46,228 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 555,
+  "manufacturerName": "MITSUBISHI",
+  "partNumber": "2328021010",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "MITSUBISHI 2328021010 - ",
+    "description": " MITSUBISHI 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, MITSUBISHI, 2328021010, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:49:46,234 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/555/part/2328021010"
+}
+2024-12-01 17:49:46,237 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "2328021010",
+  "brand": "MITSUBISHI",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/555/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "MITSUBISHI",
+  "minimal_price": 0.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:49:46,240 [WARNING] [WARNING] Price is 0 for MITSUBISHI
+2024-12-01 17:49:46,240 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 576,
+  "manufacturerName": "SUBARU",
+  "partName": "",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:49:46,242 [INFO] [SEARCH] Processing SUBARU (ID: 576)
+2024-12-01 17:49:46,242 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/576/sparepart/2328021010
+2024-12-01 17:49:46,242 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/576/part/2328021010"
+}
+2024-12-01 17:49:46,680 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:49:46,682 [INFO] [RESPONSE] Saved to file: logs/responses/details_576_2328021010_20241201_174946.json
+2024-12-01 17:49:46,683 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 576,
+  "manufacturerName": "SUBARU",
+  "partNumber": "2328021010",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 14983.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "SUBARU 2328021010 - ",
+    "description": " SUBARU 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, SUBARU, 2328021010, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:49:46,688 [INFO] [PARSED] Successfully parsed details: {
+  "price": 14983.0,
+  "in_stock": true,
+  "quantity": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/576/part/2328021010"
+}
+2024-12-01 17:49:46,691 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "2328021010",
+  "brand": "SUBARU",
+  "price": 14983.0,
+  "url": "https://autodoc.ru/man/576/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "SUBARU",
+  "minimal_price": 14983.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:49:46,694 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:49:46,695 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:49:46,696 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/2328021010
+2024-12-01 17:49:46,696 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/2328021010"
+}
+2024-12-01 17:49:47,437 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:49:47,439 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_2328021010_20241201_174947.json
+2024-12-01 17:49:47,440 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "messagesCount": 9,
+  "properties": [],
+  "minimalPrice": 1211.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_2328021010_fc4908957c3d4ee4815baef969472a83.2328021010_07.JPG",
+      "https://images.autodoc.ru/Original/579_2328021010_20d77cf0ca9a495985bf2af0d4597166.2328021010_09.JPG"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 2328021010 - Регулятор давления",
+    "description": "Регулятор давления TOYOTA 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 3.333333,
+    "cnt": 6,
+    "cntContent": 17,
+    "cnt_mark1": 2,
+    "cnt_mark2": 0,
+    "cnt_mark3": 1,
+    "cnt_mark4": 0,
+    "cnt_mark5": 3
+  },
+  "isCompatibility": 1,
+  "isManInCat": true,
+  "priceQuantity": 2
+}
+2024-12-01 17:49:47,446 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1211.0,
+  "in_stock": true,
+  "quantity": 2,
+  "delivery_days": null,
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "url": "https://autodoc.ru/man/579/part/2328021010"
+}
+2024-12-01 17:49:47,448 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "TOYOTA",
+  "price": 1211.0,
+  "url": "https://autodoc.ru/man/579/part/2328021010",
+  "in_stock": true,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 1211.0,
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "properties": []
+}
+2024-12-01 17:49:47,451 [INFO] [SEARCH] Total parts found: 6
+2024-12-01 17:52:15,991 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:52:17,834 [INFO] Начинаем поиск по запросу: 2328021010
+2024-12-01 17:52:17,835 [INFO] Определен артикул: 2328021010
+2024-12-01 17:52:17,835 [INFO] [SEARCH] Starting search for part: 2328021010
+2024-12-01 17:52:17,836 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/2328021010?showAll=true
+2024-12-01 17:52:18,298 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:52:18,300 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/2328021010_manufacturers_20241201_175218.json
+2024-12-01 17:52:18,301 [INFO] [SEARCH] Found 6 manufacturers
+2024-12-01 17:52:18,301 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Датчик",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:52:18,302 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:52:18,303 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/2328021010
+2024-12-01 17:52:18,304 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/2328021010"
+}
+2024-12-01 17:52:18,717 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:18,719 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_2328021010_20241201_175218.json
+2024-12-01 17:52:18,720 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Датчик",
+  "partNumber": "2328021010",
+  "description": "ДАТЧИК",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 1710.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 2328021010 - Датчик",
+    "description": "Датчик DAIHATSU 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 2328021010, Датчик, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": true,
+  "priceQuantity": 10
+}
+2024-12-01 17:52:18,726 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1710.0,
+  "in_stock": 10,
+  "delivery_days": null,
+  "description": "ДАТЧИК",
+  "url": "https://autodoc.ru/man/517/part/2328021010"
+}
+2024-12-01 17:52:18,728 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Датчик",
+  "part_number": "2328021010",
+  "brand": "DAIHATSU",
+  "price": 1710.0,
+  "url": "https://autodoc.ru/man/517/part/2328021010",
+  "in_stock": 10,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 1710.0,
+  "description": "ДАТЧИК",
+  "properties": []
+}
+2024-12-01 17:52:18,731 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 7761,
+  "manufacturerName": "DAR",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:52:18,733 [INFO] [SEARCH] Processing DAR (ID: 7761)
+2024-12-01 17:52:18,733 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/7761/sparepart/2328021010
+2024-12-01 17:52:18,734 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/7761/part/2328021010"
+}
+2024-12-01 17:52:20,463 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:20,465 [INFO] [RESPONSE] Saved to file: logs/responses/details_7761_2328021010_20241201_175220.json
+2024-12-01 17:52:20,466 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 7761,
+  "manufacturerName": "DAR",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 1145.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/7761_2328021010_d75a12c54f5948e2a07809c2e60c3351.23280-21010_1.JPG",
+      "https://images.autodoc.ru/Original/7761_2328021010_2f6ae414a16849afb326d7c6c5a2714f.23280-21010_1.JPG"
+    ]
+  },
+  "seo": {
+    "title": "DAR 2328021010 - Регулятор давления",
+    "description": "Регулятор давления DAR 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAR, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:52:20,473 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1145.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "url": "https://autodoc.ru/man/7761/part/2328021010"
+}
+2024-12-01 17:52:20,475 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "DAR",
+  "price": 1145.0,
+  "url": "https://autodoc.ru/man/7761/part/2328021010",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "DAR",
+  "minimal_price": 1145.0,
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "properties": []
+}
+2024-12-01 17:52:20,478 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 66,
+  "manufacturerName": "DENSO",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:52:20,479 [INFO] [SEARCH] Processing DENSO (ID: 66)
+2024-12-01 17:52:20,480 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/66/sparepart/2328021010
+2024-12-01 17:52:20,480 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/66/part/2328021010"
+}
+2024-12-01 17:52:20,961 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:20,963 [INFO] [RESPONSE] Saved to file: logs/responses/details_66_2328021010_20241201_175220.json
+2024-12-01 17:52:20,964 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 66,
+  "manufacturerName": "DENSO",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 3080.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DENSO 2328021010 - Регулятор давления",
+    "description": "Регулятор давления DENSO 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DENSO, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:52:20,970 [INFO] [PARSED] Successfully parsed details: {
+  "price": 3080.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "url": "https://autodoc.ru/man/66/part/2328021010"
+}
+2024-12-01 17:52:20,972 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "DENSO",
+  "price": 3080.0,
+  "url": "https://autodoc.ru/man/66/part/2328021010",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "DENSO",
+  "minimal_price": 3080.0,
+  "description": "Регулятор давления топлива Toyota Camry / Avensis / Auris",
+  "properties": []
+}
+2024-12-01 17:52:20,976 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 555,
+  "manufacturerName": "MITSUBISHI",
+  "partName": "",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:52:20,977 [INFO] [SEARCH] Processing MITSUBISHI (ID: 555)
+2024-12-01 17:52:20,978 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/555/sparepart/2328021010
+2024-12-01 17:52:20,978 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/555/part/2328021010"
+}
+2024-12-01 17:52:21,385 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:21,386 [INFO] [RESPONSE] Saved to file: logs/responses/details_555_2328021010_20241201_175221.json
+2024-12-01 17:52:21,387 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 555,
+  "manufacturerName": "MITSUBISHI",
+  "partNumber": "2328021010",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "MITSUBISHI 2328021010 - ",
+    "description": " MITSUBISHI 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, MITSUBISHI, 2328021010, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:52:21,393 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/555/part/2328021010"
+}
+2024-12-01 17:52:21,395 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "2328021010",
+  "brand": "MITSUBISHI",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/555/part/2328021010",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "MITSUBISHI",
+  "minimal_price": 0.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:52:21,397 [WARNING] [WARNING] Price is 0 for MITSUBISHI
+2024-12-01 17:52:21,398 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 576,
+  "manufacturerName": "SUBARU",
+  "partName": "",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:52:21,399 [INFO] [SEARCH] Processing SUBARU (ID: 576)
+2024-12-01 17:52:21,400 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/576/sparepart/2328021010
+2024-12-01 17:52:21,400 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/576/part/2328021010"
+}
+2024-12-01 17:52:22,072 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:22,074 [INFO] [RESPONSE] Saved to file: logs/responses/details_576_2328021010_20241201_175222.json
+2024-12-01 17:52:22,075 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 576,
+  "manufacturerName": "SUBARU",
+  "partNumber": "2328021010",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 14983.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "SUBARU 2328021010 - ",
+    "description": " SUBARU 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, SUBARU, 2328021010, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:52:22,081 [INFO] [PARSED] Successfully parsed details: {
+  "price": 14983.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/576/part/2328021010"
+}
+2024-12-01 17:52:22,083 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "2328021010",
+  "brand": "SUBARU",
+  "price": 14983.0,
+  "url": "https://autodoc.ru/man/576/part/2328021010",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "SUBARU",
+  "minimal_price": 14983.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:52:22,087 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Регулятор давления",
+  "artNumber": "2328021010"
+}
+2024-12-01 17:52:22,088 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:52:22,088 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/2328021010
+2024-12-01 17:52:22,088 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/2328021010"
+}
+2024-12-01 17:52:22,510 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:22,512 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_2328021010_20241201_175222.json
+2024-12-01 17:52:22,512 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "messagesCount": 9,
+  "properties": [],
+  "minimalPrice": 1211.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_2328021010_fc4908957c3d4ee4815baef969472a83.2328021010_07.JPG",
+      "https://images.autodoc.ru/Original/579_2328021010_20d77cf0ca9a495985bf2af0d4597166.2328021010_09.JPG"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 2328021010 - Регулятор давления",
+    "description": "Регулятор давления TOYOTA 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 3.333333,
+    "cnt": 6,
+    "cntContent": 17,
+    "cnt_mark1": 2,
+    "cnt_mark2": 0,
+    "cnt_mark3": 1,
+    "cnt_mark4": 0,
+    "cnt_mark5": 3
+  },
+  "isCompatibility": 1,
+  "isManInCat": true,
+  "priceQuantity": 2
+}
+2024-12-01 17:52:22,519 [INFO] [PARSED] Successfully parsed details: {
+  "price": 1211.0,
+  "in_stock": 2,
+  "delivery_days": null,
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "url": "https://autodoc.ru/man/579/part/2328021010"
+}
+2024-12-01 17:52:22,521 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Регулятор давления",
+  "part_number": "2328021010",
+  "brand": "TOYOTA",
+  "price": 1211.0,
+  "url": "https://autodoc.ru/man/579/part/2328021010",
+  "in_stock": 2,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 1211.0,
+  "description": "РЕГУЛЯТОР ДАВЛЕНИЯ",
+  "properties": []
+}
+2024-12-01 17:52:22,524 [INFO] [SEARCH] Total parts found: 6
+2024-12-01 17:52:43,872 [INFO] Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 17:52:43,874 [INFO] Определен артикул: 90915YZZD4
+2024-12-01 17:52:43,874 [INFO] [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 17:52:43,874 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 17:52:44,355 [INFO] [RESPONSE] Manufacturers status: 200
+2024-12-01 17:52:44,356 [INFO] [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_175244.json
+2024-12-01 17:52:44,357 [INFO] [SEARCH] Found 3 manufacturers
+2024-12-01 17:52:44,357 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:52:44,359 [INFO] [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 17:52:44,359 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/90915YZZD4
+2024-12-01 17:52:44,360 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:52:44,777 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:44,779 [INFO] [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241201_175244.json
+2024-12-01 17:52:44,779 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "Фильтр масляный DENSO",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный DAIHATSU 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:52:44,786 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Фильтр масляный DENSO",
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 17:52:44,788 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "DAIHATSU",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 0.0,
+  "description": "Фильтр масляный DENSO",
+  "properties": []
+}
+2024-12-01 17:52:44,791 [WARNING] [WARNING] Price is 0 for DAIHATSU
+2024-12-01 17:52:44,792 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:52:44,793 [INFO] [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 17:52:44,794 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/558/sparepart/90915YZZD4
+2024-12-01 17:52:44,794 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:52:45,308 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:45,309 [INFO] [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241201_175245.json
+2024-12-01 17:52:45,310 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 558,
+  "manufacturerName": "NISSAN",
+  "partNumber": "90915YZZD4",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "NISSAN 90915YZZD4 - ",
+    "description": " NISSAN 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, NISSAN, 90915YZZD4, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:52:45,316 [INFO] [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 17:52:45,318 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "90915YZZD4",
+  "brand": "NISSAN",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "NISSAN",
+  "minimal_price": 0.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 17:52:45,321 [WARNING] [WARNING] Price is 0 for NISSAN
+2024-12-01 17:52:45,321 [INFO] [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 17:52:45,323 [INFO] [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 17:52:45,323 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/90915YZZD4
+2024-12-01 17:52:45,324 [INFO] [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:52:45,739 [INFO] [RESPONSE] Status: 200
+2024-12-01 17:52:45,742 [INFO] [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241201_175245.json
+2024-12-01 17:52:45,742 [INFO] [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 684.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 17:52:45,749 [INFO] [PARSED] Successfully parsed details: {
+  "price": 684.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 17:52:45,751 [INFO] [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "TOYOTA",
+  "price": 684.0,
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 684.0,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "properties": []
+}
+2024-12-01 17:52:45,754 [INFO] [SEARCH] Total parts found: 3
+2024-12-01 17:53:05,649 [INFO] Начинаем поиск по запросу: JHMEJ93400S131587
+2024-12-01 17:53:05,649 [INFO] Определен VIN номер: JHMEJ93400S131587
+2024-12-01 17:53:05,650 [INFO] Начинаем поиск по VIN: JHMEJ93400S131587
+2024-12-01 17:53:05,650 [INFO] Получаем данные автомобиля по VIN: JHMEJ93400S131587
+2024-12-01 17:53:06,622 [INFO] Получаем категории для brand=HONDA, ssd=CIVIC
+2024-12-01 17:53:06,785 [ERROR] Нет данных о категориях
+2024-12-01 17:53:06,786 [ERROR] Не удалось получить категории
+2024-12-01 17:54:41,342 [INFO] Инициализация парсера Autodoc
+2024-12-01 17:54:43,198 [INFO] Начинаем поиск по запросу: JHMEJ93400S131587
+2024-12-01 17:54:43,198 [INFO] Определен VIN номер: JHMEJ93400S131587
+2024-12-01 17:54:43,198 [INFO] [VIN SEARCH] Starting search for VIN: JHMEJ93400S131587
+2024-12-01 17:54:43,199 [INFO] [REQUEST] GET https://webapi.autodoc.ru/api/vehicles/vin/JHMEJ93400S131587
+2024-12-01 17:54:43,808 [INFO] [RESPONSE] Status: 404
+2024-12-01 17:54:43,809 [ERROR] [RESPONSE] Error content: The resource you are looking for has been removed, had its name changed, or is temporarily unavailable.
+2024-12-01 19:02:46,815 - autodoc_parser - INFO - Загружено 3 прокси серверов
+2024-12-01 19:02:46,817 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-01 19:06:47,574 - autodoc_parser - INFO - Загружено 3 прокси серверов
+2024-12-01 19:06:47,575 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-01 19:06:59,019 - autodoc_parser - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 19:06:59,019 - autodoc_parser - INFO - Определен артикул: 90915YZZD4
+2024-12-01 19:06:59,020 - autodoc_parser - INFO - [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 19:06:59,020 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 19:06:59,032 - autodoc_parser - ERROR - [REQUEST ERROR] [Errno 22] Can not connect to proxy proxy3.example.com:1080 [Получен недопустимый аргумент]
+Traceback (most recent call last):
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp_proxy\proto.py", line 141, in connect
+    await self._loop.sock_connect(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\proactor_events.py", line 709, in sock_connect
+    return await self._proactor.connect(sock, address)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\windows_events.py", line 610, in connect
+    ov.ConnectEx(conn.fileno(), address)
+OSError: [WinError 10022] Получен недопустимый аргумент
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alesha229\Desktop\Бот тг\parsers\autodoc_parser.py", line 132, in _make_request
+    async with session.request(method, url, **kwargs) as response:
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\client.py", line 1187, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\client.py", line 574, in _request
+    conn = await self._connector.connect(
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp_proxy\connector.py", line 100, in connect
+    return await super(ProxyConnector, self).connect(
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 911, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 1204, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp_proxy\connector.py", line 85, in _wrap_create_connection
+    await sock.connect((host, port))
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp_proxy\proto.py", line 146, in connect
+    raise SocksConnectionError(
+aiohttp_proxy.errors.SocksConnectionError: [Errno 22] Can not connect to proxy proxy3.example.com:1080 [Получен недопустимый аргумент]
+2024-12-01 19:07:23,753 - autodoc_parser - INFO - Загружено 3 прокси серверов
+2024-12-01 19:07:23,754 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-01 19:07:36,630 - autodoc_parser - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 19:07:36,631 - autodoc_parser - INFO - Определен артикул: 90915YZZD4
+2024-12-01 19:07:36,632 - autodoc_parser - INFO - [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 19:07:36,633 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 19:07:37,087 - autodoc_parser - ERROR - [REQUEST ERROR] Attempt 1/3: Cannot connect to host proxy1.example.com:8080 ssl:default [getaddrinfo failed]
+2024-12-01 19:07:42,558 - autodoc_parser - ERROR - [REQUEST ERROR] Attempt 2/3: Cannot connect to host proxy1.example.com:8080 ssl:default [getaddrinfo failed]
+2024-12-01 19:07:47,995 - autodoc_parser - ERROR - [REQUEST ERROR] Attempt 3/3: Cannot connect to host proxy1.example.com:8080 ssl:default [getaddrinfo failed]
+2024-12-01 19:07:47,996 - autodoc_parser - ERROR - [REQUEST ERROR] Cannot connect to host proxy1.example.com:8080 ssl:default [getaddrinfo failed]
+Traceback (most recent call last):
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 1173, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 884, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alesha229\Desktop\Бот тг\parsers\autodoc_parser.py", line 132, in _make_request
+    async with session.request(method, url, **kwargs) as response:
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\client.py", line 1187, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\client.py", line 574, in _request
+    conn = await self._connector.connect(
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp_proxy\connector.py", line 100, in connect
+    return await super(ProxyConnector, self).connect(
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 909, in _create_connection
+    _, proto = await self._create_proxy_connection(req, traces, timeout)
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 1260, in _create_proxy_connection
+    transport, proto = await self._create_direct_connection(
+  File "C:\Users\alesha229\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\aiohttp\connector.py", line 1187, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host proxy1.example.com:8080 ssl:default [getaddrinfo failed]
+2024-12-01 19:09:18,246 - autodoc_parser - INFO - Загружено 0 прокси серверов
+2024-12-01 19:09:18,247 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-01 19:09:24,347 - autodoc_parser - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-01 19:09:24,348 - autodoc_parser - INFO - Определен артикул: 90915YZZD4
+2024-12-01 19:09:24,348 - autodoc_parser - INFO - [SEARCH] Starting search for part: 90915YZZD4
+2024-12-01 19:09:24,349 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-01 19:09:26,594 - autodoc_parser - INFO - [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241201_190926.json
+2024-12-01 19:09:26,595 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-01 19:09:26,595 - autodoc_parser - INFO - [DEBUG] Raw manufacturer data: {
+  "id": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 19:09:26,597 - autodoc_parser - INFO - [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-01 19:09:26,597 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/90915YZZD4
+2024-12-01 19:09:26,598 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 19:09:31,553 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241201_190931.json
+2024-12-01 19:09:31,554 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "Фильтр масляный DENSO",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный DAIHATSU 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 19:09:31,559 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Фильтр масляный DENSO",
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-01 19:09:31,561 - autodoc_parser - INFO - [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "DAIHATSU",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "DAIHATSU",
+  "minimal_price": 0.0,
+  "description": "Фильтр масляный DENSO",
+  "properties": []
+}
+2024-12-01 19:09:31,576 - autodoc_parser - WARNING - [WARNING] Price is 0 for DAIHATSU
+2024-12-01 19:09:31,576 - autodoc_parser - INFO - [DEBUG] Raw manufacturer data: {
+  "id": 558,
+  "manufacturerName": "NISSAN",
+  "partName": "",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 19:09:31,578 - autodoc_parser - INFO - [SEARCH] Processing NISSAN (ID: 558)
+2024-12-01 19:09:31,578 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/558/sparepart/90915YZZD4
+2024-12-01 19:09:31,579 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 19:09:36,691 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241201_190936.json
+2024-12-01 19:09:36,692 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 558,
+  "manufacturerName": "NISSAN",
+  "partNumber": "90915YZZD4",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "NISSAN 90915YZZD4 - ",
+    "description": " NISSAN 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, NISSAN, 90915YZZD4, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 19:09:36,699 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-01 19:09:36,701 - autodoc_parser - INFO - [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "",
+  "part_number": "90915YZZD4",
+  "brand": "NISSAN",
+  "price": 0.0,
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "NISSAN",
+  "minimal_price": 0.0,
+  "description": "",
+  "properties": []
+}
+2024-12-01 19:09:36,704 - autodoc_parser - WARNING - [WARNING] Price is 0 for NISSAN
+2024-12-01 19:09:36,704 - autodoc_parser - INFO - [DEBUG] Raw manufacturer data: {
+  "id": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "artNumber": "90915YZZD4"
+}
+2024-12-01 19:09:36,706 - autodoc_parser - INFO - [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-01 19:09:36,706 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/90915YZZD4
+2024-12-01 19:09:36,706 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 19:09:41,488 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241201_190941.json
+2024-12-01 19:09:41,489 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 684.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-01 19:09:41,496 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 684.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-01 19:09:41,497 - autodoc_parser - INFO - [RESULT] Part details: {
+  "source": "Autodoc.ru",
+  "part_name": "Фильтр масляный",
+  "part_number": "90915YZZD4",
+  "brand": "TOYOTA",
+  "price": 684.0,
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4",
+  "in_stock": 1000,
+  "delivery_days": null,
+  "manufacturer_name": "TOYOTA",
+  "minimal_price": 684.0,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "properties": []
+}
+2024-12-01 19:09:41,500 - autodoc_parser - INFO - [SEARCH] Total parts found: 3

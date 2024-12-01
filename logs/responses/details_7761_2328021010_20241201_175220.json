@@ -1,0 +1,36 @@
+{
+  "id": 1,
+  "manufacturerId": 7761,
+  "manufacturerName": "DAR",
+  "partName": "Регулятор давления",
+  "partNumber": "2328021010",
+  "description": "Регулятор давления топлива на бензонасос TOYOTA 2AZ / 1,3,4ZZ / 2GR / 1,3AR / 1-3ZR 04-",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 1145.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/7761_2328021010_d75a12c54f5948e2a07809c2e60c3351.23280-21010_1.JPG",
+      "https://images.autodoc.ru/Original/7761_2328021010_2f6ae414a16849afb326d7c6c5a2714f.23280-21010_1.JPG"
+    ]
+  },
+  "seo": {
+    "title": "DAR 2328021010 - Регулятор давления",
+    "description": "Регулятор давления DAR 2328021010: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAR, 2328021010, Регулятор давления, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
