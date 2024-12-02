@@ -1,0 +1,12 @@
+{
+  "test_case": {
+    "brand": "toyota",
+    "model": "camry",
+    "region": "JAPAN",
+    "year": "2018",
+    "description": "Toyota Camry 2018 (Japan)"
+  },
+  "wizard_ssd": null,
+  "catalog_code": "TOYOTA2018",
+  "modifications": []
+}

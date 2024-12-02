@@ -1,0 +1,12 @@
+{
+  "test_case": {
+    "brand": "nissan",
+    "model": "x-trail",
+    "region": "EUROPE",
+    "year": "2016",
+    "description": "Nissan X-Trail 2016 (Europe)"
+  },
+  "wizard_ssd": null,
+  "catalog_code": "NISSAN2016",
+  "modifications": []
+}
