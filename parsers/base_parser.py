@@ -2,7 +2,7 @@ import aiohttp
 import logging
 import os
 import random
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Union
 from aiohttp_proxy import ProxyConnector
 
 logger = logging.getLogger(__name__)
@@ -74,20 +74,27 @@ class BaseParser:
             )
         return self.session
         
-    async def _make_request(self, url: str, method: str = 'GET', **kwargs) -> Optional[Dict]:
-        """Выполнение запроса с защитой от блокировки"""
+    async def _make_request(self, url: str, method: str = 'GET', **kwargs) -> Optional[Union[Dict, List]]:
+        """Выполняет HTTP запрос с обработкой ошибок и прокси"""
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+            'Accept': 'application/json'
+        }
+        
+        if 'headers' in kwargs:
+            headers.update(kwargs['headers'])
+        kwargs['headers'] = headers
+        
         try:
-            session = await self._get_session()
-            session.headers['User-Agent'] = self._get_random_user_agent()
-            
-            async with session.request(method, url, **kwargs) as response:
-                if response.status == 200:
-                    return await response.json()
-                logger.error(f"Request failed with status {response.status}: {url}")
-                return None
-                
+            async with aiohttp.ClientSession() as session:
+                async with session.request(method, url, **kwargs) as response:
+                    if response.status == 200:
+                        return await response.json()
+                    else:
+                        logger.error(f"Request failed with status {response.status}: {url}")
+                        return None
         except Exception as e:
-            logger.error(f"Request error: {e}")
+            logger.error(f"Error making request to {url}: {e}")
             return None
             
     async def close(self):

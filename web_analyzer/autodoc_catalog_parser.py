@@ -53,12 +53,8 @@ class AutodocCatalogParser:
             print(f"Error processing API response: {e}")
             return None
 
-    async def get_regions(self, brand: str, year: str) -> List[Dict]:
+    async def get_regions(self, brand_code: str, year: str) -> List[Dict]:
         """Get available regions for brand and year"""
-        brand_code = await self.get_brand_code(brand)
-        if not brand_code:
-            return []
-            
         url = f"{self.base_url}/brands/{brand_code}/wizzard"
         print(f"Getting regions from URL: {url}")  # Debug print
         
@@ -71,13 +67,9 @@ class AutodocCatalogParser:
             if item["name"] == "Регион":
                 return item["options"]
         return []
-
-    async def get_models(self, brand: str, year: str, region_key: str) -> List[Dict]:
+        
+    async def get_models(self, brand_code: str, year: str, region_key: str) -> List[Dict]:
         """Get models by brand, year and region"""
-        brand_code = await self.get_brand_code(brand)
-        if not brand_code:
-            return []
-            
         url = f"{self.base_url}/brands/{brand_code}/wizzard?ssd={region_key}"
         print(f"Getting models from URL: {url}")  # Debug print
         
@@ -90,13 +82,9 @@ class AutodocCatalogParser:
             if item["name"] == "Модель":
                 return item["options"]
         return []
-
-    async def get_year_options(self, brand: str, model_key: str) -> List[Dict]:
+        
+    async def get_year_options(self, brand_code: str, model_key: str) -> List[Dict]:
         """Get available years after selecting model"""
-        brand_code = await self.get_brand_code(brand)
-        if not brand_code:
-            return []
-            
         url = f"{self.base_url}/brands/{brand_code}/wizzard?ssd={model_key}"
         print(f"Getting years from URL: {url}")  # Debug print
         
@@ -114,14 +102,14 @@ class AutodocCatalogParser:
     async def get_modifications(self, brand: str, model: str, year: str, region: str = None) -> List[Dict]:
         """Get car modifications by brand, model, year and region"""
         try:
-            # 1. Get brand code
+            # 1. Get brand code once
             brand_code = await self.get_brand_code(brand)
             if not brand_code:
                 print(f"Brand code not found for {brand}")
                 return []
 
             # 2. Get regions
-            regions = await self.get_regions(brand, year)
+            regions = await self.get_regions(brand_code, year)
             if not regions:
                 return []
 
@@ -136,7 +124,7 @@ class AutodocCatalogParser:
                 return []
 
             # 4. Get models with region key
-            models = await self.get_models(brand, year, region_key)
+            models = await self.get_models(brand_code, year, region_key)
             if not models:
                 return []
 
@@ -151,7 +139,7 @@ class AutodocCatalogParser:
                 return []
 
             # 6. Get years with model key
-            years = await self.get_year_options(brand, model_key)
+            years = await self.get_year_options(brand_code, model_key)
             if not years:
                 return []
 
@@ -173,8 +161,7 @@ class AutodocCatalogParser:
             if not response:
                 return []
             
-            modifications = response.get("data", [])
-            return modifications
+            return response
 
         except Exception as e:
             print(f"Error getting modifications: {e}")
@@ -192,24 +179,32 @@ async def test_parser():
     )
     
     if modifications:
-        print(f"\nFound {len(modifications)} modifications:")
-        for mod in modifications:
+        print("\nОбщие характеристики:")
+        common_attrs = modifications.get("commonAttributes", [])
+        for attr in common_attrs:
+            print(f"{attr.get('name')}: {attr.get('value')}")
+            
+        print(f"\nНайдено {len(modifications.get('specificAttributes', []))} модификаций:")
+        for mod in modifications.get("specificAttributes", []):
             print("\n" + "="*50)
+            print(f"Модификация ID: {mod.get('carId')}")
             
-            # Получаем и форматируем specific attributes
-            specific_attrs = mod.get("specificAttributes", {})
-            if specific_attrs:
-                print("\nХарактеристики:")
-                for key, value in specific_attrs.items():
-                    # Форматируем ключ для читаемости
-                    formatted_key = key.replace("_", " ").title()
-                    print(f"{formatted_key}: {value}")
-            else:
-                print("\nНет дополнительных характеристик")
+            attributes = mod.get('attributes', [])
+            # Группируем основные характеристики
+            doors = next((attr['value'] for attr in attributes if attr['key'] == 'doors'), 'Н/Д')
+            transmission = next((attr['value'] for attr in attributes if attr['key'] == 'transmission'), 'Н/Д')
+            grade = next((attr['value'] for attr in attributes if attr['key'] == 'grade'), 'Н/Д')
+            region = next((attr['value'] for attr in attributes if attr['key'] == 'country'), 'Н/Д')
+            dest_region = next((attr['value'] for attr in attributes if attr['key'] == 'destinationRegion'), 'Н/Д')
             
+            print(f"Комплектация: {grade}")
+            print(f"Количество дверей: {doors}")
+            print(f"Коробка передач: {transmission}")
+            print(f"Регион: {region}")
+            print(f"Регион поставки: {dest_region}")
             print("="*50)
     else:
-        print("No modifications found")
+        print("Модификации не найдены")
 
 if __name__ == "__main__":
     asyncio.run(test_parser())

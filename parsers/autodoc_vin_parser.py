@@ -1,7 +1,7 @@
 import os
 import json
 import logging
-from typing import Dict, List
+from typing import Dict, List, Optional
 from datetime import datetime
 from .base_parser import BaseParser
 

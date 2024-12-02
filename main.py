@@ -1,8 +1,8 @@
 import asyncio
 import logging
-from aiogram import Bot, Dispatcher, types
-from aiogram.filters.command import Command
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram import Bot, Dispatcher, types, F
+from aiogram.filters import Command
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
@@ -48,11 +48,14 @@ from aiogram.fsm.context import FSMContext
 
 class SearchStates(StatesGroup):
     waiting_for_part_number = State()
+    waiting_for_region = State()
+    viewing_modifications = State()
 
 class CarSearch(StatesGroup):
     manufacturer = State()
     modifications = State()
     model = State()
+    region = State()
 
 @dp.message(Command("start"))
 @log_command
@@ -101,231 +104,373 @@ async def cmd_start(message: types.Message, session: AsyncSession):
 @log_command
 async def search_parts(message: types.Message, state: FSMContext):
     """Обработчик кнопки поиска запчастей"""
-    await state.set_state(SearchStates.waiting_for_part_number)
     await message.answer(
-        "Введите номер детали для поиска.\n"
-        "Например: 90915YZZD4"
+        "Введите поисковый запрос:\n\n"
+        "Примеры:\n"
+        "• Поиск по артикулу: 04465-42160\n"
+        "• Поиск по VIN: JF1BL5KS57G03135T\n"
+        "• Поиск по марке/модели: HONDA CIVIC 1996"
     )
+    await state.set_state(SearchStates.waiting_for_part_number)
 
 @dp.message(SearchStates.waiting_for_part_number)
 @log_command
 async def handle_part_number(message: types.Message, session: AsyncSession, state: FSMContext):
     """Обработчик ввода номера детали"""
-    await state.clear()
-    part_number = message.text.strip()
-    
-    # Проверяем подписку
-    result = await session.execute(
-        select(User)
-        .options(selectinload(User.subscription))
-        .where(User.telegram_id == message.from_user.id)
-    )
-    user = result.scalar_one_or_none()
-    
-    if not user or not user.subscription:
-        keyboard = get_subscription_keyboard()
-        await message.answer(
-            "Для поиска запчастей необходима подписка.\n"
-            "Выберите тариф для оформления подписки:",
-            reply_markup=keyboard
-        )
-        return
-        
-    # Проверяем активность подписки
-    now = datetime.utcnow()
-    subscription = user.subscription
-    if not subscription.is_active or subscription.end_date < now:
-        subscription.is_active = False
-        await session.commit()
-        
-        keyboard = get_subscription_keyboard()
-        await message.answer(
-            "Ваша подписка истекла.\n"
-            "Выберите тариф для продления подписки:",
-            reply_markup=keyboard
-        )
-        return
-    
-    status_message = await message.answer("🔍 Ищем запчасть на всех площадках... Это может занять некоторое время.")
-    
+    query = message.text.strip()
     try:
         # Определяем тип поиска
-        search_type = await AutodocParserFactory.get_search_type(part_number)
-        
-        if search_type == "article":
+        search_type = await AutodocParserFactory.get_search_type(query)
+
+        if search_type == "car":
+            # Создаем парсер для поиска автомобилей
+            parser = AutodocCarParser()
+            
+            # Извлекаем информацию об автомобиле
+            car_info = await AutodocParserFactory.extract_car_info(query)
+
+            if car_info:
+                brand, model, year = car_info
+                # Проверяем существование бренда
+                brand_code = await parser.get_brand_code(brand)
+                
+                if brand_code:
+                    # Создаем кнопки для каждого региона
+                    keyboard_buttons = []
+                    current_row = []
+                    
+                    for region in parser.available_regions:
+                        current_row.append(
+                            types.InlineKeyboardButton(
+                                text=region,
+                                callback_data=f"region_{brand}_{model}_{year}_{region}"
+                            )
+                        )
+                        
+                        # Добавляем по 2 кнопки в ряд
+                        if len(current_row) == 2:
+                            keyboard_buttons.append(current_row)
+                            current_row = []
+                    
+                    # Добавляем оставшиеся кнопки, если есть
+                    if current_row:
+                        keyboard_buttons.append(current_row)
+                    
+                    # Создаем клавиатуру с явным указанием inline_keyboard
+                    keyboard = types.InlineKeyboardMarkup(inline_keyboard=keyboard_buttons)
+                    
+                    await message.answer(
+                        "Выберите регион для поиска:",
+                        reply_markup=keyboard
+                    )
+                    await state.update_data(brand=brand, model=model, year=year)
+                    await state.set_state(SearchStates.waiting_for_region)
+                else:
+                    await message.answer(
+                        "❌ Производитель не найден. Пожалуйста, проверьте название и попробуйте снова."
+                    )
+            else:
+                await message.answer(
+                    "❌ Не удалось распознать информацию об автомобиле.\n"
+                    "Пожалуйста, используйте формат: МАРКА МОДЕЛЬ ГОД\n"
+                    "Например: HONDA CIVIC 1996"
+                )
+                
+        elif search_type == "vin":
+            # Поиск по VIN
+            parser = AutodocVinParser()
+            result = await parser.search(query)
+            if result:
+                await message.answer(result)
+            else:
+                await message.answer("❌ Не удалось найти информацию по указанному VIN")
+                
+        else:
             # Поиск по артикулу
             parser = AutodocArticleParser()
-            results = await parser.search_by_article(part_number)
-            
+            results = await parser.search(query)
             if results:
-                response = "🔍 Найденные запчасти (отсортированы по цене):\n\n"
+                # Форматируем результаты поиска
+                response = "🔍 Найденные запчасти:\n\n"
                 for i, part in enumerate(results, 1):
-                    # Название детали (если есть)
-                    if part.get('name'):
-                        response += f"{i}. {part['name']}\n"
-                    else:
-                        response += f"{i}. \n"
-                        
-                    response += f"📝 Артикул: {part['number']}\n"
-                    response += f"🏭 Производитель: {part['manufacturer']}\n"
+                    response += f"{i}. {part.get('name', 'Название не указано')}\n"
+                    response += f"📝 Артикул: {part.get('number', 'Не указан')}\n"
+                    response += f"🏭 Производитель: {part.get('manufacturer', 'Не указан')}\n"
                     
-                    # Цена с проверкой
-                    price = part.get('price', 0)
-                    if price > 0:
+                    # Цена
+                    price = part.get('price')
+                    if price:
                         response += f"💰 Цена: {price} ₽\n"
                     else:
-                        response += f"💰 Цена: Не указана ₽\n"
-                        
-                    response += f"🏪 Магазин: {part['source']}\n"
+                        response += "💰 Цена: Не указана\n"
+                    
+                    # Магазин
+                    source = part.get('source', 'Не указан')
+                    response += f"🏪 Магазин: {source}\n"
                     
                     # Наличие
-                    in_stock = part.get('in_stock', 0)
-                    if in_stock > 0:
-                        response += f"✅ В наличии: {in_stock} шт.\n"
+                    if part.get('availability'):
+                        response += "✅ В наличии\n"
                     else:
                         response += "❌ Нет в наличии\n"
                     
                     # URL если есть
                     if part.get('url'):
-                        response += f"\n🔗 {part['url']}\n"
-                        
-                    response += "\n"
-            else:
-                response = "К сожалению, запчасти с таким артикулом не найдены"
+                        response += f"🔗 {part['url']}\n"
+                    
+                    response += "\n" + "="*30 + "\n"
                 
-            await status_message.edit_text(response)
-            
-        elif search_type == "car":
-            # Поиск по марке/модели
-            parser = AutodocCarParser()
-            
-            # Проверяем, содержит ли запрос только название бренда
-            if len(part_number.split()) == 1:
-                wizard_data = await parser.get_wizard_data(part_number)
-                if wizard_data:
-                    models = parser.extract_models(wizard_data)
-                    if models:
-                        keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-                        for model in models:
-                            keyboard.add(types.KeyboardButton(model['name']))
-                        await status_message.edit_text("Выберите модель:", reply_markup=keyboard)
-                        await state.update_data(brand=part_number)
-                        await CarSearch.model.set()
-                    else:
-                        await status_message.edit_text("Не удалось найти модели для данного производителя")
-                else:
-                    await status_message.edit_text("Не удалось получить информацию о моделях")
+                # Разбиваем на части если сообщение слишком длинное
+                max_length = 4096
+                for i in range(0, len(response), max_length):
+                    chunk = response[i:i + max_length]
+                    await message.answer(chunk)
             else:
-                await status_message.edit_text(
-                    "Для поиска по марке автомобиля, пожалуйста, введите только название марки.\n"
-                    "Например: HONDA"
-                )
-        
+                await message.answer("❌ Не удалось найти информацию по указанному артикулу")
+                
     except Exception as e:
-        logger.error(f"Error during part search: {e}")
-        await status_message.edit_text("Произошла ошибка при поиске. Пожалуйста, попробуйте позже.")
-    
-    await state.clear()
-
-@dp.message(lambda message: message.text.startswith("/search"))
-@log_command
-async def search_handler(message: types.Message, state: FSMContext):
-    """Обработчик поискового запроса"""
-    query = message.text.replace("/search", "").strip()
-    
-    # Определяем тип поиска
-    search_type = await AutodocParserFactory.get_search_type(query)
-    
-    if search_type == "article":
-        # Поиск по артикулу
-        parser = AutodocArticleParser()
-        results = await parser.search_by_article(query)
-        if results:
-            response = "🔍 Найденные запчасти (отсортированы по цене):\n\n"
-            for i, part in enumerate(results, 1):
-                # Название детали (если есть)
-                if part.get('name'):
-                    response += f"{i}. {part['name']}\n"
-                else:
-                    response += f"{i}. \n"
-                    
-                response += f"📝 Артикул: {part['number']}\n"
-                response += f"🏭 Производитель: {part['manufacturer']}\n"
-                
-                # Цена с проверкой
-                price = part.get('price', 0)
-                if price > 0:
-                    response += f"💰 Цена: {price} ₽\n"
-                else:
-                    response += f"💰 Цена: Не указана ₽\n"
-                    
-                response += f"🏪 Магазин: {part['source']}\n"
-                
-                # Наличие
-                in_stock = part.get('in_stock', 0)
-                if in_stock > 0:
-                    response += f"✅ В наличии: {in_stock} шт.\n"
-                else:
-                    response += "❌ Нет в наличии\n"
-                
-                # URL если есть
-                if part.get('url'):
-                    response += f"\n🔗 {part['url']}\n"
-                    
-                response += "\n"
-        else:
-            response = "К сожалению, запчасти с таким артикулом не найдены"
-            
-        await message.answer(response)
+        logger.error(f"Error in search handler: {e}")
+        await message.answer(
+            "❌ Произошла ошибка при поиске. Пожалуйста, попробуйте позже или измените запрос."
+        )
+    finally:
         await state.clear()
+
+def create_modifications_keyboard(modifications, page=1):
+    """Создать клавиатуру с модификациями и пагинацией"""
+    # Проверяем, что у нас есть список модификаций
+    if not modifications.get('modifications'):
+        return types.InlineKeyboardMarkup(inline_keyboard=[])
+
+    # Получаем список модификаций
+    mod_list = modifications.get('modifications', [])
+    logger.info(modifications)
+    
+    # Разбиваем на страницы по 5 кнопок (уменьшаем количество для лучшей читаемости)
+    items_per_page = 5
+    total_pages = (len(mod_list) + items_per_page - 1) // items_per_page
+    
+    # Убедимся, что страница в допустимых пределах
+    page = max(1, min(page, total_pages))
+    
+    # Вычисляем индексы для текущей страницы
+    start_idx = (page - 1) * items_per_page
+    end_idx = min(start_idx + items_per_page, len(mod_list))
+    
+    # Создаем кнопки для текущей страницы
+    keyboard = []
+    for mod in mod_list[start_idx:end_idx]:
+        # Создаем текст кнопки с информацией о модификации
+        button_text = (
+            f"{mod.get('grade', 'Н/Д')} • "
+            f"{mod.get('transmission', 'Н/Д')} • "
+            f"{mod.get('doors', 'Н/Д')}д • "
+            f"({mod.get('dest_region', 'Н/Д')})"
+        )
         
-    else:
-        # Поиск по марке/модели
+        # Создаем callback_data с ID модификации
+        callback_data = f"mod_{mod.get('id', '')}"
+        
+        keyboard.append([
+            types.InlineKeyboardButton(
+                text=button_text,
+                callback_data=callback_data
+            )
+        ])
+    
+    # Добавляем кнопки пагинации
+    nav_buttons = []
+    
+    # Кнопка "В начало", если не на первой странице
+    if page > 1:
+        nav_buttons.append(types.InlineKeyboardButton(
+            text="⏮",
+            callback_data="page_1"
+        ))
+    
+    # Кнопка "Назад"
+    if page > 1:
+        nav_buttons.append(types.InlineKeyboardButton(
+            text="⬅️",
+            callback_data=f"page_{page-1}"
+        ))
+    
+    # Кнопка "Вперед"
+    if page < total_pages:
+        nav_buttons.append(types.InlineKeyboardButton(
+            text="➡️",
+            callback_data=f"page_{page+1}"
+        ))
+    
+    # Кнопка "В конец", если не на последней странице
+    if page < total_pages:
+        nav_buttons.append(types.InlineKeyboardButton(
+            text="⏭",
+            callback_data=f"page_{total_pages}"
+        ))
+    
+    if nav_buttons:
+        keyboard.append(nav_buttons)
+    
+    # Добавляем информацию о странице
+    keyboard.append([
+        types.InlineKeyboardButton(
+            text=f"📄 {page} из {total_pages}",
+            callback_data="page_info"
+        )
+    ])
+    
+    return types.InlineKeyboardMarkup(inline_keyboard=keyboard)
+
+@dp.callback_query(lambda c: c.data.startswith('region_'))
+async def handle_region_selection(callback_query: types.CallbackQuery, state: FSMContext):
+    """Обработчик выбора региона"""
+    try:
+        # Разбираем callback data
+        _, brand, model, year, region = callback_query.data.split('_')
+        
+        logger.info(f"Selected: brand={brand}, model={model}, year={year}, region={region}")
+        
+        # Создаем парсер и получаем модификации
         parser = AutodocCarParser()
+        try:
+            modifications_data = await parser.search_modifications(brand, model, year, region)
+            logger.info(f"Modifications data: {modifications_data}")
+            if not modifications_data or not modifications_data.get('modifications'):
+                await callback_query.answer("Модификации не найдены")
+                return
+            
+            # Сохраняем данные в состояние
+            await state.update_data(
+                modifications=modifications_data['modifications'],
+                region=region,
+                brand=brand,
+                model=model,
+                year=year
+            )
+            
+            # Создаем клавиатуру с модификациями
+            keyboard = create_modifications_keyboard(modifications_data)
+            
+            # Форматируем общую информацию
+            common_info = []
+            for attr in modifications_data.get('commonAttributes', []):
+                if attr['key'] in ['Brand', 'Model', 'manufactured']:
+                    common_info.append(f"{attr['name']}: {attr['value']}")
+            
+            message_text = (
+                f"🚗 {' | '.join(common_info)}\n\n"
+                "Выберите модификацию:"
+            )
+            
+            try:
+                await callback_query.message.edit_text(
+                    text=message_text,
+                    reply_markup=keyboard
+                )
+            except aiogram.exceptions.TelegramBadRequest as e:
+                if "message is not modified" not in str(e):
+                    raise
+                
+        except Exception as e:
+            logger.error(f"Error getting modifications: {e}")
+            await callback_query.answer("Ошибка при получении модификаций. Попробуйте позже.")
+            
+    except Exception as e:
+        logger.error(f"Error in region selection handler: {e}")
+        try:
+            await callback_query.answer("Произошла ошибка. Попробуйте позже.")
+        except:
+            pass
+
+@dp.callback_query(lambda c: c.data.startswith('page_'))
+async def handle_page_selection(callback_query: types.CallbackQuery, state: FSMContext):
+    """Обработчик выбора страницы"""
+    try:
+        page = int(callback_query.data.split('_')[1])
+        data = await state.get_data()
+        modifications = data.get('modifications', [])
+        keyboard = create_modifications_keyboard({'modifications': modifications}, page)
+        await callback_query.message.edit_text(
+            f"{data.get('brand')} {data.get('model')} {data.get('year')}\n\nВыберите модификацию:",
+            reply_markup=keyboard
+        )
+        await state.update_data(current_page=page)
+        await callback_query.answer()
+    except Exception as e:
+        logger.error(f"Error in page selection handler: {e}")
+        await callback_query.answer("Ошибка при переключении страницы", show_alert=True)
+
+@dp.callback_query(lambda c: c.data.startswith('mod_'))
+async def handle_modification_selection(callback_query: types.CallbackQuery, state: FSMContext):
+    """Обработчик выбора модификации"""
+    try:
+        _, mod_id = callback_query.data.split('_')
         
-        # Если запрос содержит только название бренда
-        if len(query.split()) == 1:
-            # Получаем данные мастера для бренда
-            wizard_data = await parser.get_wizard_data(query)
-            if wizard_data:
-                models = parser.extract_models(wizard_data)
-                if models:
-                    keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-                    for model in models:
-                        keyboard.add(types.KeyboardButton(model['name']))
-                    await message.answer("Выберите модель:", reply_markup=keyboard)
-                    await state.update_data(brand=query)
-                    await CarSearch.model.set()
-                else:
-                    await message.answer("Не удалось найти модели для данного производителя")
-                    await state.clear()
-            else:
-                await message.answer("Не удалось получить информацию о моделях")
-                await state.clear()
+        # Получаем данные о выбранной модификации
+        data = await state.get_data()
+        modifications = data.get('modifications', [])
+        
+        # Ищем выбранную модификацию
+        selected_mod = None
+        for mod in modifications:
+            if str(mod.get("id")) == mod_id:
+                selected_mod = mod
+                break
+        
+        if selected_mod:
+            # Извлекаем атрибуты из списка attributes
+            attributes_dict = {}
+            for attr in selected_mod.get('attributes', []):
+                attributes_dict[attr['key']] = attr['value']
+            
+            message_text = [
+                "🚗 Выбранная модификация:"
+            ]
+            
+            # Добавляем основные характеристики, если они есть
+            if attributes_dict.get('grade'):
+                message_text.append(f"• Комплектация: {attributes_dict['grade']}")
+            if attributes_dict.get('transmission'):
+                message_text.append(f"• КПП: {attributes_dict['transmission']}")
+            if attributes_dict.get('engine'):
+                message_text.append(f"• Двигатель: {attributes_dict['engine']}")
+            if attributes_dict.get('engineCode'):
+                message_text.append(f"• Код двигателя: {attributes_dict['engineCode']}")
+            if attributes_dict.get('power'):
+                message_text.append(f"• Мощность: {attributes_dict['power']}")
+            if attributes_dict.get('bodyType'):
+                message_text.append(f"• Тип кузова: {attributes_dict['bodyType']}")
+            if data.get('region'):
+                message_text.append(f"• Регион: {data['region']}")
+            
+            # Добавляем остальные атрибуты, которые могут быть полезны
+            for key, value in attributes_dict.items():
+                if key not in ['grade', 'transmission', 'engine', 'engineCode', 'power', 'bodyType'] and value:
+                    message_text.append(f"• {key}: {value}")
+            
+            await callback_query.message.answer("\n".join(message_text))
+            
+            # Добавляем кнопку для перехода к поиску запчастей
+            keyboard = types.InlineKeyboardMarkup(inline_keyboard=[
+                [types.InlineKeyboardButton(
+                    text="🔍 Искать запчасти",
+                    callback_data=f"search_parts_{mod_id}"
+                )]
+            ])
+            
+            await callback_query.message.answer(
+                "Нажмите кнопку ниже, чтобы начать поиск запчастей для выбранной модификации:",
+                reply_markup=keyboard
+            )
+            
+            await callback_query.answer()
         else:
-            # Если запрос содержит больше информации
-            car_info = await AutodocParserFactory.extract_car_info(query)
-            if car_info:
-                manufacturer, model, year = car_info
-                await state.update_data(brand=manufacturer, model=model, year=year)
-                wizard_data = await parser.get_wizard_data(manufacturer)
-                if wizard_data:
-                    modifications = parser.extract_models(wizard_data)
-                    if modifications:
-                        keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-                        for mod in modifications:
-                            keyboard.add(types.KeyboardButton(mod['name']))
-                        await message.answer("Выберите модификацию:", reply_markup=keyboard)
-                        await CarSearch.modifications.set()
-                    else:
-                        await message.answer("Не удалось найти модификации для данного автомобиля")
-                        await state.clear()
-                else:
-                    await message.answer("Не удалось получить информацию о модификациях")
-                    await state.clear()
-            else:
-                await message.answer("Пожалуйста, укажите производителя, модель и год автомобиля в формате:\n/search HONDA CIVIC 2020")
-                await state.clear()
+            await callback_query.answer("Модификация не найдена", show_alert=True)
+            
+    except Exception as e:
+        logger.error(f"Error in modification selection handler: {e}")
+        await callback_query.answer("Ошибка при выборе модификации", show_alert=True)
 
 async def main():
     # Инициализация базы данных

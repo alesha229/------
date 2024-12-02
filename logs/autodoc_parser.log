@@ -5007,3 +5007,919 @@ aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON w
   "url": "https://autodoc.ru/man/1261/part/452-1001042"
 }
 2024-12-02 12:25:33,674 - autodoc_parser - INFO - [SEARCH] Total parts found: 2
+2024-12-02 15:53:52,218 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 15:55:17,532 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 15:55:17,532 - autodoc_parser - INFO - [ARTICLE SEARCH] Starting search for article: 90915YZZD4
+2024-12-02 15:55:17,533 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-02 15:55:19,971 - autodoc_parser - INFO - [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241202_155519.json
+2024-12-02 15:55:19,972 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-02 15:55:19,972 - autodoc_parser - INFO - [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-02 15:55:19,973 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/90915YZZD4
+2024-12-02 15:55:19,973 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 15:55:26,662 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241202_155526.json
+2024-12-02 15:55:26,664 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "Фильтр масляный DENSO",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный DAIHATSU 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 15:55:26,670 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Фильтр масляный DENSO",
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 15:55:26,671 - autodoc_parser - INFO - [SEARCH] Processing NISSAN (ID: 558)
+2024-12-02 15:55:26,672 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/558/sparepart/90915YZZD4
+2024-12-02 15:55:26,672 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 15:55:30,133 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241202_155530.json
+2024-12-02 15:55:30,134 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 558,
+  "manufacturerName": "NISSAN",
+  "partNumber": "90915YZZD4",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "NISSAN 90915YZZD4 - ",
+    "description": " NISSAN 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, NISSAN, 90915YZZD4, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 15:55:30,138 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 15:55:30,140 - autodoc_parser - INFO - [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-02 15:55:30,140 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/90915YZZD4
+2024-12-02 15:55:30,141 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 15:55:36,634 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241202_155536.json
+2024-12-02 15:55:36,634 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 668.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 15:55:36,642 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 668.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 15:55:36,644 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-02 16:04:52,571 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:05:06,915 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:05:06,915 - autodoc_parser - INFO - [ARTICLE SEARCH] Starting search for article: 90915YZZD4
+2024-12-02 16:05:06,916 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-02 16:05:09,128 - autodoc_parser - INFO - [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241202_160509.json
+2024-12-02 16:05:09,129 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-02 16:05:09,129 - autodoc_parser - INFO - [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-02 16:05:09,130 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/90915YZZD4
+2024-12-02 16:05:09,131 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 16:05:13,533 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241202_160513.json
+2024-12-02 16:05:13,533 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "Фильтр масляный DENSO",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный DAIHATSU 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 16:05:13,540 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Фильтр масляный DENSO",
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 16:05:13,541 - autodoc_parser - INFO - [SEARCH] Processing NISSAN (ID: 558)
+2024-12-02 16:05:13,542 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/558/sparepart/90915YZZD4
+2024-12-02 16:05:13,542 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 16:05:20,331 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241202_160520.json
+2024-12-02 16:05:20,332 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 558,
+  "manufacturerName": "NISSAN",
+  "partNumber": "90915YZZD4",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "NISSAN 90915YZZD4 - ",
+    "description": " NISSAN 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, NISSAN, 90915YZZD4, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 16:05:20,339 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 16:05:20,341 - autodoc_parser - INFO - [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-02 16:05:20,341 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/90915YZZD4
+2024-12-02 16:05:20,342 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 16:05:27,077 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241202_160527.json
+2024-12-02 16:05:27,078 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 668.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 16:05:27,085 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 668.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 16:05:27,087 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-02 16:14:22,072 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:24:54,195 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:29:52,693 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:31:42,614 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:31:52,623 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:32:48,447 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:32:48,448 - autodoc_parser - INFO - [ARTICLE SEARCH] Starting search for article: 90915YZZD4
+2024-12-02 16:32:48,448 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-02 16:32:50,653 - autodoc_parser - INFO - [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241202_163250.json
+2024-12-02 16:32:50,654 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-02 16:32:50,655 - autodoc_parser - INFO - [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-02 16:32:50,655 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/90915YZZD4
+2024-12-02 16:32:50,656 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 16:32:55,692 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241202_163255.json
+2024-12-02 16:32:55,694 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "Фильтр масляный DENSO",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный DAIHATSU 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 16:32:55,701 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Фильтр масляный DENSO",
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 16:32:55,702 - autodoc_parser - INFO - [SEARCH] Processing NISSAN (ID: 558)
+2024-12-02 16:32:55,703 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/558/sparepart/90915YZZD4
+2024-12-02 16:32:55,703 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 16:33:00,795 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241202_163300.json
+2024-12-02 16:33:00,796 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 558,
+  "manufacturerName": "NISSAN",
+  "partNumber": "90915YZZD4",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "NISSAN 90915YZZD4 - ",
+    "description": " NISSAN 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, NISSAN, 90915YZZD4, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 16:33:00,801 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 16:33:00,803 - autodoc_parser - INFO - [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-02 16:33:00,803 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/90915YZZD4
+2024-12-02 16:33:00,805 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 16:33:04,568 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241202_163304.json
+2024-12-02 16:33:04,569 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 668.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 16:33:04,574 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 668.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 16:33:04,576 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-02 16:35:57,418 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:39:18,818 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:44:27,810 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:47:33,155 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:51:06,705 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 16:55:20,845 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:03:12,747 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:07:16,732 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:33:44,049 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:34:19,747 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:34:19,747 - autodoc_parser - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-02 17:34:19,748 - autodoc_parser - INFO - [ARTICLE SEARCH] Starting search for article: 90915YZZD4
+2024-12-02 17:34:19,748 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-02 17:34:22,003 - autodoc_parser - INFO - [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241202_173422.json
+2024-12-02 17:34:22,004 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-02 17:34:22,005 - autodoc_parser - INFO - [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-02 17:34:22,005 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/90915YZZD4
+2024-12-02 17:34:22,006 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 17:34:27,342 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241202_173427.json
+2024-12-02 17:34:27,343 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "Фильтр масляный DENSO",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный DAIHATSU 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 17:34:27,349 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Фильтр масляный DENSO",
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 17:34:27,351 - autodoc_parser - INFO - [SEARCH] Processing NISSAN (ID: 558)
+2024-12-02 17:34:27,351 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/558/sparepart/90915YZZD4
+2024-12-02 17:34:27,352 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 17:34:31,988 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241202_173431.json
+2024-12-02 17:34:31,989 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 558,
+  "manufacturerName": "NISSAN",
+  "partNumber": "90915YZZD4",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "NISSAN 90915YZZD4 - ",
+    "description": " NISSAN 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, NISSAN, 90915YZZD4, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 17:34:31,995 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 17:34:31,996 - autodoc_parser - INFO - [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-02 17:34:31,997 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/90915YZZD4
+2024-12-02 17:34:31,997 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 17:34:36,328 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241202_173436.json
+2024-12-02 17:34:36,328 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 668.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 17:34:36,335 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 668.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 17:34:36,337 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-02 17:37:00,774 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:37:06,071 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:37:06,072 - autodoc_parser - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-02 17:37:06,072 - autodoc_parser - INFO - [ARTICLE SEARCH] Starting search for article: 90915YZZD4
+2024-12-02 17:37:06,073 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/90915YZZD4?showAll=true
+2024-12-02 17:37:08,285 - autodoc_parser - INFO - [RESPONSE] Manufacturers saved to: logs/responses/90915YZZD4_manufacturers_20241202_173708.json
+2024-12-02 17:37:08,285 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-02 17:37:08,286 - autodoc_parser - INFO - [SEARCH] Processing DAIHATSU (ID: 517)
+2024-12-02 17:37:08,287 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/517/sparepart/90915YZZD4
+2024-12-02 17:37:08,287 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 17:37:13,087 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_517_90915YZZD4_20241202_173713.json
+2024-12-02 17:37:13,087 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 517,
+  "manufacturerName": "DAIHATSU",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "Фильтр масляный DENSO",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "DAIHATSU 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный DAIHATSU 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, DAIHATSU, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 0,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 17:37:13,093 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "Фильтр масляный DENSO",
+  "url": "https://autodoc.ru/man/517/part/90915YZZD4"
+}
+2024-12-02 17:37:13,095 - autodoc_parser - INFO - [SEARCH] Processing NISSAN (ID: 558)
+2024-12-02 17:37:13,095 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/558/sparepart/90915YZZD4
+2024-12-02 17:37:13,096 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 17:37:18,807 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_558_90915YZZD4_20241202_173718.json
+2024-12-02 17:37:18,807 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 558,
+  "manufacturerName": "NISSAN",
+  "partNumber": "90915YZZD4",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "NISSAN 90915YZZD4 - ",
+    "description": " NISSAN 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, NISSAN, 90915YZZD4, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 17:37:18,814 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/558/part/90915YZZD4"
+}
+2024-12-02 17:37:18,815 - autodoc_parser - INFO - [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-02 17:37:18,816 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/90915YZZD4
+2024-12-02 17:37:18,816 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 17:37:22,733 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_579_90915YZZD4_20241202_173722.json
+2024-12-02 17:37:22,734 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 668.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 17:37:22,740 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 668.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "url": "https://autodoc.ru/man/579/part/90915YZZD4"
+}
+2024-12-02 17:37:22,741 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-02 17:39:55,562 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:43:03,235 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:46:04,460 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:47:38,186 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:49:39,589 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:51:48,548 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:52:57,681 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:53:54,315 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:54:42,634 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 17:57:56,332 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:01:56,454 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:05:14,710 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:07:08,223 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:08:17,179 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:19:08,544 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:27:59,983 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:30:07,394 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:33:45,378 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:37:41,334 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:39:58,453 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:49:50,248 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:51:10,489 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:53:46,523 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:56:13,774 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 18:57:40,545 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:00:05,031 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:02:53,539 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:05:56,565 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:08:13,610 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:09:58,755 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:13:36,286 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:14:22,872 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:14:22,872 - autodoc_parser - INFO - Начинаем поиск по запросу: 04465-42160
+2024-12-02 19:14:22,873 - autodoc_parser - INFO - [ARTICLE SEARCH] Starting search for article: 04465-42160
+2024-12-02 19:14:22,873 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturers/04465-42160?showAll=true
+2024-12-02 19:14:24,528 - autodoc_parser - INFO - [RESPONSE] Manufacturers saved to: logs/responses/04465-42160_manufacturers_20241202_191424.json
+2024-12-02 19:14:24,529 - autodoc_parser - INFO - [SEARCH] Found 1 manufacturers
+2024-12-02 19:14:24,529 - autodoc_parser - INFO - [SEARCH] Processing TOYOTA (ID: 579)
+2024-12-02 19:14:24,530 - autodoc_parser - INFO - [REQUEST] GET https://webapi.autodoc.ru/api/manufacturer/579/sparepart/04465-42160
+2024-12-02 19:14:24,530 - autodoc_parser - INFO - [REQUEST] Headers: {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "Accept": "application/json",
+  "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Origin": "https://autodoc.ru",
+  "Referer": "https://autodoc.ru/man/579/part/04465-42160"
+}
+2024-12-02 19:14:28,261 - autodoc_parser - INFO - [RESPONSE] Saved to file: logs/responses/details_579_04465-42160_20241202_191428.json
+2024-12-02 19:14:28,262 - autodoc_parser - INFO - [DEBUG] API Response: {
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partNumber": "04465-42160",
+  "messagesCount": 0,
+  "properties": [],
+  "minimalPrice": 0.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": []
+  },
+  "seo": {
+    "title": "TOYOTA 04465-42160 - ",
+    "description": " TOYOTA 04465-42160: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 04465-42160, , автодок"
+  },
+  "mark": {
+    "avg": 0.0,
+    "cnt": 0,
+    "cntContent": 0,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 0
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}
+2024-12-02 19:14:28,268 - autodoc_parser - INFO - [PARSED] Successfully parsed details: {
+  "price": 0.0,
+  "in_stock": 1000,
+  "delivery_days": null,
+  "description": "",
+  "url": "https://autodoc.ru/man/579/part/04465-42160"
+}
+2024-12-02 19:14:28,270 - autodoc_parser - INFO - [SEARCH] Total parts found: 1
+2024-12-02 19:18:20,178 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:21:07,215 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:25:07,409 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:26:55,891 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:29:46,629 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:32:13,909 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:34:16,390 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:35:45,369 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:37:29,048 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:40:58,841 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:42:18,693 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:44:31,561 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:46:41,925 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:49:14,022 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-02 19:51:09,406 - autodoc_parser - INFO - Инициализация парсера Autodoc

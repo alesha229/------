@@ -386,3 +386,90 @@ Call log:
 2024-12-02 13:52:07,719 - web_analyzer - ERROR - Error saving request data: Request.response: Target page, context or browser has been closed
 2024-12-02 13:52:07,719 - web_analyzer - ERROR - Error saving request data: Request.response: Target page, context or browser has been closed
 2024-12-02 13:52:07,720 - web_analyzer - ERROR - Error saving request data: Request.response: Target page, context or browser has been closed
+2024-12-02 15:15:09,782 - web_analyzer - INFO - Response from https://catalogoriginal.autodoc.ru/api/catalogs/original/brands: {
+  "items": [
+    {
+      "brand": "ABARTH",
+      "code": "CFIAT84",
+      "name": "ABARTH",
+      "features": [
+        "vinsearch",
+        "wizardsearch2",
+        "quickgroups",
+      ...
+2024-12-02 15:15:14,729 - web_analyzer - INFO - Response from https://catalogoriginal.autodoc.ru/api/catalogs/original/brands: {
+  "items": [
+    {
+      "brand": "ABARTH",
+      "code": "CFIAT84",
+      "name": "ABARTH",
+      "features": [
+        "vinsearch",
+        "wizardsearch2",
+        "quickgroups",
+      ...
+2024-12-02 15:15:18,916 - web_analyzer - INFO - Response from https://catalogoriginal.autodoc.ru/api/catalogs/original/brands/HONDA2017/wizzard: {
+  "items": [
+    {
+      "name": "Регион",
+      "options": [
+        {
+          "key": "JCpLd0hNbHVtRUFBQUFBR08yRXN3PSQ=",
+          "value": "America"
+        },
+        {
+          "ke...
+2024-12-02 15:15:23,560 - web_analyzer - INFO - Response from https://catalogoriginal.autodoc.ru/api/catalogs/original/brands: {
+  "items": [
+    {
+      "brand": "ABARTH",
+      "code": "CFIAT84",
+      "name": "ABARTH",
+      "features": [
+        "vinsearch",
+        "wizardsearch2",
+        "quickgroups",
+      ...
+2024-12-02 15:15:29,447 - web_analyzer - INFO - Response from https://catalogoriginal.autodoc.ru/api/catalogs/original/brands/HONDA2017/wizzard?ssd=JCpLd0ZlQkhzVUFBQUFBQzVaQlk0PSQ=: {
+  "items": [
+    {
+      "name": "Регион",
+      "value": "General",
+      "options": [],
+      "automatic": false,
+      "determined": true
+    },
+    {
+      "name": "Модель",
+      "op...
+2024-12-02 15:15:34,166 - web_analyzer - INFO - Response from https://catalogoriginal.autodoc.ru/api/catalogs/original/brands: {
+  "items": [
+    {
+      "brand": "ABARTH",
+      "code": "CFIAT84",
+      "name": "ABARTH",
+      "features": [
+        "vinsearch",
+        "wizardsearch2",
+        "quickgroups",
+      ...
+2024-12-02 15:15:40,376 - web_analyzer - INFO - Response from https://catalogoriginal.autodoc.ru/api/catalogs/original/brands/HONDA2017/wizzard?ssd=JCpLd0VNVmlsR1FBMTREUW9BQUFBQTBFLWVPUT09JA==: {
+  "items": [
+    {
+      "name": "Регион",
+      "value": "General",
+      "ssd": "JCpLd0ZpTzBjdlpBQUFBQUFyZUtiViQ=",
+      "options": [],
+      "automatic": false,
+      "determined": true...
+2024-12-02 15:15:46,411 - web_analyzer - INFO - Response from https://catalogoriginal.autodoc.ru/api/catalogs/original/brands/HONDA2017/wizzard/0/modifications?ssd=JCpLd0VhUUQ5UVZodHVHeHhYR214RFRWUUFBQUFBeHgxb1FnPT0k: {
+  "commonAttributes": [
+    {
+      "key": "Brand",
+      "name": "Бренд",
+      "value": "HONDA"
+    },
+    {
+      "key": "ManufacturerId",
+      "name": "Производитель",
+      "value": ...

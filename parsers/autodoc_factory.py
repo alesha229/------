@@ -43,7 +43,7 @@ class AutodocParserFactory:
     async def get_brand_names(cls) -> List[str]:
         """Возвращает список названий брендов"""
         brands = await cls._fetch_brands()
-        return [brand['name'] for brand in brands]
+        return [brand.get('brand', '') for brand in brands if isinstance(brand, dict)]
     
     @staticmethod
     def is_vin(query: str) -> bool:
@@ -68,7 +68,11 @@ class AutodocParserFactory:
         :param query: поисковый запрос
         :return: True если это поиск по авто, False если нет
         """
-        # Если запрос содержит цифры и дефисы, это скорее всего артикул
+        # Если запрос содержит год (19XX или 20XX), это вероятно поиск авто
+        if re.search(r'\b(19|20)\d{2}\b', query):
+            return True
+            
+        # Если запрос содержит цифры и дефисы, и это похоже на артикул
         if cls.is_article_number(query):
             return False
             
@@ -90,29 +94,40 @@ class AutodocParserFactory:
         Извлекает информацию об автомобиле из запроса
         Возвращает (производитель, модель, год) или None
         """
-        brands = await cls.get_brand_names()
+        logger.info(f"Processing query: {query}")
         
         # Ищем год в запросе
         year_match = re.search(r'\b(19|20)\d{2}\b', query)
         year = int(year_match.group()) if year_match else None
+        logger.info(f"Extracted year: {year}")
         
-        # Нормализуем запрос и бренды
-        query_lower = query.lower()
-        normalized_brands = [(brand.lower(), brand) for brand in brands]
+        # Разбиваем запрос на слова
+        words = query.strip().split()
+        if len(words) < 2:  # Нужно минимум бренд и модель
+            return None
+            
+        # Первое слово считаем брендом
+        brand = words[0]
+        logger.info(f"Checking brand: {brand}")
         
-        # Ищем бренд в запросе
-        found_brand = None
-        for norm_brand, original_brand in normalized_brands:
-            if norm_brand in query_lower:
-                found_brand = original_brand
-                # Убираем бренд из запроса для извлечения модели
-                model_text = query_lower.replace(norm_brand, '').strip()
-                if year_match:
-                    # Убираем год из текста модели
-                    model_text = model_text.replace(year_match.group(), '').strip()
-                if model_text:
-                    return found_brand, model_text, year
-                    
+        # Проверяем существование бренда через API
+        car_parser = AutodocCarParser()
+        brand_code = await car_parser.get_brand_code(brand)
+        
+        if brand_code:
+            logger.info(f"Found valid brand: {brand}")
+            # Все слова между брендом и годом (если есть) считаем моделью
+            model_words = []
+            for word in words[1:]:
+                if not re.match(r'(19|20)\d{2}', word):
+                    model_words.append(word)
+            
+            if model_words:
+                model = ' '.join(model_words)
+                logger.info(f"Extracted model: {model}")
+                return brand, model, year
+        
+        logger.warning(f"No valid brand-model combination found in query: {query}")
         return None
 
     @classmethod

@@ -167,68 +167,7 @@ class AutodocParser:
         if self.session and not self.session.closed:
             await self.session.close()
 
-    async def get_car_data(self, vin: str) -> Optional[Dict]:
-        """Получает данные об автомобиле по VIN номеру"""
-        try:
-            logger.info(f"Получаем данные автомобиля по VIN: {vin}")
-            url = f'https://catalogoriginal.autodoc.ru/api/catalogs/original/cars/{vin}/modifications'
-            
-            response = await self._make_request(url)
-            if not response:
-                return None
-            
-            json_data = response
-            common_attrs = json_data.get('commonAttributes', [])
-            
-            if not common_attrs or len(common_attrs) < 9:
-                logger.error("Неверный формат данных автомобиля")
-                return None
-
-            try:
-                return {
-                    'brand': common_attrs[0]['value'],
-                    'model': common_attrs[1]['value'],
-                    'modification': common_attrs[2]['value'],
-                    'year': common_attrs[3]['value'],
-                    'catalog': common_attrs[4]['value'],
-                    'date': common_attrs[8]['value']
-                }
-            except (IndexError, KeyError) as e:
-                logger.error(f"Ошибка при извлечении данных автомобиля: {e}", exc_info=True)
-                return None
-                
-        except Exception as e:
-            logger.error(f"Ошибка при получении данных автомобиля: {e}", exc_info=True)
-            return None
-
-    async def get_categories(self, session: aiohttp.ClientSession, brand: str, ssd: str) -> Optional[Dict]:
-        """Получает категории запчастей"""
-        try:
-            logger.info(f"Получаем категории для brand={brand}, ssd={ssd}")
-            url = f'https://catalogoriginal.autodoc.ru/api/catalogs/original/brands/{brand}/cars/0/quickgroups'
-            params = {'ssd': ssd}
-            
-            response = await self._make_request(url, params=params)
-            if not response:
-                return None
-            
-            json_data = response
-            if not json_data:
-                logger.error("Нет данных о категориях")
-                return None
-            
-            categories = {}
-            for category in json_data:
-                categories[category['quickGroupId']] = {
-                    'name': category['name'],
-                    'id': category['quickGroupId']
-                }
-            return categories
-                
-        except Exception as e:
-            logger.error(f"Ошибка при получении категорий: {e}", exc_info=True)
-            return None
-
+    
     async def get_part_details(self, session: aiohttp.ClientSession, category_id: str, 
                              brand: str, ssd: str) -> Optional[Dict]:
         """Получает детальную информацию о запчасти"""
@@ -440,122 +379,14 @@ class AutodocParser:
             logger.error(f"[ERROR] Search failed: {str(e)}", exc_info=True)
             return []
 
-    async def search_by_vin(self, vin: str) -> List[Dict]:
-        """Поиск запчастей по VIN номеру"""
-        try:
-            # URL для API поиска по VIN
-            api_url = f'https://webapi.autodoc.ru/api/vehicles/vin/{vin}'
-            
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-                'Accept': 'application/json',
-                'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'Origin': 'https://autodoc.ru',
-                'Referer': 'https://autodoc.ru/'
-            }
-
-            logger.info(f"[VIN SEARCH] Starting search for VIN: {vin}")
-            logger.info(f"[REQUEST] GET {api_url}")
-            
-            response = await self._make_request(api_url, headers=headers)
-            if not response:
-                return []
-            
-            data = response
-            
-            # Сохраняем ответ для отладки
-            os.makedirs('logs/responses', exist_ok=True)
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            response_file = f'logs/responses/vin_search_{vin}_{timestamp}.json'
-            with open(response_file, 'w', encoding='utf-8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            
-            logger.info(f"[RESPONSE] Saved to file: {response_file}")
-            
-            # Получаем информацию о модификации автомобиля
-            modification = data.get('modification', {})
-            if not modification:
-                logger.warning(f"[WARNING] No modification found for VIN: {vin}")
-                return []
-            
-            # Получаем список групп запчастей
-            groups_url = f'https://webapi.autodoc.ru/api/vehicles/{modification["id"]}/groups'
-            
-            response = await self._make_request(groups_url, headers=headers)
-            if not response:
-                return []
-            
-            groups_data = response
-            
-            # Сохраняем ответ для отладки
-            groups_file = f'logs/responses/vin_groups_{vin}_{timestamp}.json'
-            with open(groups_file, 'w', encoding='utf-8') as f:
-                json.dump(groups_data, f, ensure_ascii=False, indent=2)
-            
-            results = []
-            for group in groups_data:
-                # Получаем список запчастей для каждой группы
-                parts_url = f'https://webapi.autodoc.ru/api/vehicles/{modification["id"]}/groups/{group["id"]}/parts'
-                
-                response = await self._make_request(parts_url, headers=headers)
-                if not response:
-                    continue
-                
-                parts_data = response
-                
-                for part in parts_data:
-                    result = {
-                        'part_number': part.get('number'),
-                        'part_name': part.get('name'),
-                        'brand': part.get('brand', {}).get('name'),
-                        'group_name': group.get('name'),
-                        'source': 'Autodoc',
-                        'url': f'https://autodoc.ru/catalogs/vehicle/{modification["id"]}/group/{group["id"]}'
-                    }
-                    
-                    # Получаем детали о цене и наличии
-                    if result['part_number'] and result['brand']:
-                        details = await self.get_part_details(result['part_number'])
-                        result.update(details)
-                    
-                    results.append(result)
-            
-            return results
-            
-        except Exception as e:
-            logger.error(f"[ERROR] Failed to search by VIN: {str(e)}", exc_info=True)
-            return []
-
-    async def search(self, query: str) -> List[Dict]:
-        """
-        Основной метод поиска. Определяет тип запроса (VIN или артикул) и вызывает соответствующий метод
-        """
-        # Очищаем запрос от лишних пробелов
-        query = query.strip()
-        
-        # Проверяем, является ли запрос VIN номером (17 символов, буквы и цифры)
-        is_vin = len(query) == 17 and all(c.isalnum() for c in query)
-        
-        if is_vin:
-            logger.info(f"[SEARCH] Detected VIN number: {query}")
-            return await self.search_by_vin(query)
-        else:
-            logger.info(f"[SEARCH] Searching by part number: {query}")
-            return await self.search_part(query)
 
     async def search(self, query: str) -> List[Dict]:
         """Универсальный метод поиска"""
         try:
             logger.info(f"Начинаем поиск по запросу: {query}")
             
-            # Проверяем, является ли запрос VIN номером
-            if len(query) == 17 and query.isalnum():
-                logger.info(f"Определен VIN номер: {query}")
-                return await self.search_by_vin(query)
-            else:
-                logger.info(f"Определен артикул: {query}")
-                return await self.search_part(query)
+           
+            return await self.search_part(query)
 
         except Exception as e:
             logger.error(f"Ошибка при поиске: {e}", exc_info=True)
