@@ -16,6 +16,10 @@ class AutodocCarParser(BaseParser):
         self.base_url = "https://catalogoriginal.autodoc.ru/api/catalogs/original"
         self.available_regions = ["General", "America", "Europe", "Japan"]
 
+    def get_regions(self) -> List[str]:
+        """Возвращает список доступных регионов"""
+        return self.available_regions.copy()
+
     async def get_brand_code(self, brand: str) -> Optional[str]:
         """Get manufacturer code by brand name"""
         url = f"{self.base_url}/brands"
@@ -112,46 +116,73 @@ class AutodocCarParser(BaseParser):
             # 2. Get regions
             regions = await self.get_regions(brand_code, year)
             if not regions:
+                logger.info(f"No regions found for {brand} {year}")
                 return []
 
-            # 3. Find region key
+            # 3. Find region key or use default
             region_key = None
+            region_lower = region.lower() if region else ""
+            
             for r in regions:
-                if r["value"].lower() == region.lower():
-                    region_key = r["key"]
+                r_value = r.get("value", "").lower()
+                if region_lower in r_value or r_value in region_lower:
+                    region_key = r.get("key")
                     break
+            
+            if not region_key and regions:
+                # Если регион не найден, используем первый доступный
+                region_key = regions[0].get("key")
+                logger.info(f"Using default region key: {region_key}")
 
             if not region_key:
+                logger.info(f"No valid region key found for {region}")
                 return []
 
             # 4. Get models with region key
             models = await self.get_models(brand_code, year, region_key)
             if not models:
+                logger.info(f"No models found for {brand} with region {region_key}")
                 return []
 
             # 5. Filter and find matching model
             model_key = None
+            model_lower = model.lower()
+            
             for m in models:
-                if model.lower() in m["value"].lower():
-                    model_key = m["key"]
+                m_value = m.get("value", "").lower()
+                if model_lower in m_value or m_value in model_lower:
+                    model_key = m.get("key")
                     break
 
             if not model_key:
+                logger.info(f"Model key not found for {model}")
                 return []
 
             # 6. Get years with model key
             years = await self.get_year_options(brand_code, model_key)
             if not years:
+                logger.info(f"No years found for {brand} {model}")
                 return []
 
-            # 7. Find matching year key
+            # 7. Find matching year key with fuzzy matching
             year_key = None
             for y in years:
-                if y["value"] == year:
-                    year_key = y["key"]
+                if str(y.get("value")) == str(year):
+                    year_key = y.get("key")
                     break
+                    
+            if not year_key and years:
+                # Если год не найден точно, ищем ближайший
+                try:
+                    target_year = int(year)
+                    closest_year = min(years, key=lambda x: abs(int(x.get("value", 0)) - target_year))
+                    year_key = closest_year.get("key")
+                    logger.info(f"Using closest year: {closest_year.get('value')} for {year}")
+                except (ValueError, TypeError):
+                    pass
 
             if not year_key:
+                logger.info(f"Year key not found for {year}")
                 return []
 
             # 8. Get modifications using year key
@@ -161,6 +192,12 @@ class AutodocCarParser(BaseParser):
             try:
                 response = await self._make_request(url)
                 if not response:
+                    logger.info("No response from modifications API")
+                    return []
+                    
+                # Проверяем наличие модификаций в ответе
+                if not response.get("specificAttributes"):
+                    logger.info(f"No modifications in response for {brand} {model} {year}")
                     return []
                 
                 return response
@@ -219,32 +256,6 @@ class AutodocCarParser(BaseParser):
         except Exception as e:
             logger.error(f"Error searching modifications: {e}")
             return None
-
-async def test_parser():
-    parser = AutodocCarParser()
-    
-    # Test getting modifications
-    modifications = await parser.get_modifications(
-        brand="honda",
-        model="civic",
-        year="1996",
-        region="General"
-    )
-    
-    if modifications:
-        print(modifications)
-    else:
-        print("Модификации не найдены")
-
-    # Test search by name
-    print("\nTesting search by name...")
-    results = await parser.search_modifications("honda", "civic", "1996", "General")
-    
-    if results:
-        print("\nSearch Results:")
-        print(results)
-    else:
-        print("No parts found")
 
 if __name__ == "__main__":
     asyncio.run(test_parser())

@@ -1,26 +1,29 @@
-from aiogram import Router, types
+from aiogram import types, Router
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
 from datetime import datetime, timedelta
-
-from models import User, Subscription, Payment
-from config import ADMIN_IDS
+from utils.metrics import metrics
+from utils.logger import logger
+from config import config
+from services.subscription_service import SubscriptionService
 
 router = Router()
 
 class AdminStates(StatesGroup):
     waiting_for_user_id = State()
     waiting_for_subscription_days = State()
+    waiting_broadcast_message = State()
 
-def admin_filter(message: types.Message):
-    return message.from_user.id in ADMIN_IDS
-
-@router.message(Command("admin"), admin_filter)
+@router.message(Command("admin"))
 async def show_admin_menu(message: types.Message):
     """Показать админ-меню"""
+    if message.from_user.id not in config.ADMIN_IDS:
+        await message.reply("У вас нет доступа к админ-панели.")
+        return
+        
     text = (
         "🔑 Админ-панель\n\n"
         "Доступные команды:\n"
@@ -31,38 +34,56 @@ async def show_admin_menu(message: types.Message):
     )
     await message.answer(text)
 
-@router.message(Command("admin_stats"), admin_filter)
-async def show_stats(message: types.Message, session: AsyncSession):
-    """Показать статистику пользователей"""
-    total_users = await session.execute(select(func.count()).select_from(User))
-    total_users = total_users.scalar()
+@router.message(Command("admin_stats"))
+async def admin_command(message: types.Message):
+    """Обработка команды /admin"""
+    if message.from_user.id not in config.ADMIN_IDS:
+        await message.reply("У вас нет доступа к админ-панели.")
+        return
+        
+    metrics.user_commands.labels(command="admin").inc()
     
-    active_subscriptions = await session.execute(
-        select(func.count())
-        .select_from(Subscription)
-        .where(Subscription.is_active == True)
-        .where(Subscription.end_date > datetime.utcnow())
+    stats = await get_admin_stats()
+    await message.reply(
+        f"📊 Статистика:\n"
+        f"Активных пользователей: {stats['active_users']}\n"
+        f"Активных подписок: {stats['active_subscriptions']}\n"
+        f"Выручка за сегодня: {stats['today_revenue']}₽\n"
+        f"Всего запросов: {stats['total_requests']}"
     )
-    active_subscriptions = active_subscriptions.scalar()
-    
-    today_payments = await session.execute(
-        select(func.sum(Payment.amount))
-        .where(Payment.created_at >= datetime.utcnow().date())
-        .where(Payment.status == 'completed')
-    )
-    today_payments = today_payments.scalar() or 0
-    
-    text = (
-        "📊 Статистика:\n\n"
-        f"👥 Всего пользователей: {total_users}\n"
-        f"✅ Активных подписок: {active_subscriptions}\n"
-        f"💰 Оплат за сегодня: {today_payments}₽"
-    )
-    await message.answer(text)
 
-@router.message(Command("admin_add_subscription"), admin_filter)
+async def get_admin_stats():
+    """Получение статистики для админ-панели"""
+    try:
+        # Получаем метрики из Prometheus
+        active_users = metrics.active_users._value.get()
+        active_subs = metrics.active_subscriptions._value.get()
+        total_revenue = metrics.subscription_revenue._value.get()
+        total_requests = sum(
+            m.value for m in metrics.user_commands.collect()[0].samples
+        )
+        
+        return {
+            "active_users": int(active_users),
+            "active_subscriptions": int(active_subs),
+            "today_revenue": round(float(total_revenue), 2),
+            "total_requests": int(total_requests)
+        }
+    except Exception as e:
+        logger.error("admin_stats_error", error=str(e))
+        return {
+            "active_users": 0,
+            "active_subscriptions": 0,
+            "today_revenue": 0,
+            "total_requests": 0
+        }
+
+@router.message(Command("admin_add_subscription"))
 async def add_subscription_start(message: types.Message, state: FSMContext):
     """Начало процесса добавления подписки"""
+    if message.from_user.id not in config.ADMIN_IDS:
+        return
+        
     await message.answer("Введите ID пользователя:")
     await state.set_state(AdminStates.waiting_for_user_id)
 
@@ -117,9 +138,12 @@ async def process_subscription_days(message: types.Message, state: FSMContext, s
     finally:
         await state.clear()
 
-@router.message(Command("admin_search_user"), admin_filter)
+@router.message(Command("admin_search_user"))
 async def search_user(message: types.Message, session: AsyncSession):
     """Поиск пользователя по ID или юзернейму"""
+    if message.from_user.id not in config.ADMIN_IDS:
+        return
+        
     search_query = message.text.replace("/admin_search_user", "").strip()
     if not search_query:
         await message.answer("Укажите ID или username пользователя")
@@ -153,3 +177,31 @@ async def search_user(message: types.Message, session: AsyncSession):
         f"Дата регистрации: {user.created_at.strftime('%d.%m.%Y')}"
     )
     await message.answer(text)
+
+@router.message(Command("admin_broadcast"))
+async def broadcast_command(message: types.Message, state: FSMContext):
+    """Отправка сообщения всем пользователям"""
+    if message.from_user.id not in config.ADMIN_IDS:
+        return
+        
+    await message.reply(
+        "Отправьте сообщение для рассылки или /cancel для отмены"
+    )
+    await state.set_state(AdminStates.waiting_broadcast_message)
+
+@router.message(AdminStates.waiting_broadcast_message)
+async def process_broadcast_message(message: types.Message, state: FSMContext):
+    """Обработка сообщения для рассылки"""
+    if message.text == "/cancel":
+        await state.finish()
+        await message.reply("Рассылка отменена")
+        return
+        
+    try:
+        # Здесь будет логика рассылки
+        metrics.user_commands.labels(command="broadcast").inc()
+        await message.reply("Рассылка начата")
+    except Exception as e:
+        logger.error("broadcast_error", error=str(e))
+        metrics.error_count.labels(type="broadcast").inc()
+        await message.reply("Произошла ошибка при рассылке")

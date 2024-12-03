@@ -1,0 +1,35 @@
+{
+  "id": 1,
+  "manufacturerId": 579,
+  "manufacturerName": "TOYOTA",
+  "partName": "Фильтр масляный",
+  "partNumber": "90915YZZD4",
+  "description": "ФИЛЬТР МАСЛЯНЫЙ ДВС TOYOTA",
+  "messagesCount": 4,
+  "properties": [],
+  "minimalPrice": 668.0,
+  "galleryModel": {
+    "photoType": 0,
+    "imgUrls": [
+      "https://images.autodoc.ru/Original/579_90915YZZD4_11584776e7de44b0bbe1753d086b8591.0000000077_001_001.jpg"
+    ]
+  },
+  "seo": {
+    "title": "TOYOTA 90915YZZD4 - Фильтр масляный",
+    "description": "Фильтр масляный TOYOTA 90915YZZD4: фото, цена, описание, применимость. Купить в интернет-магазине Автодок",
+    "keywords": "Купить, TOYOTA, 90915YZZD4, Фильтр масляный, автодок"
+  },
+  "mark": {
+    "avg": 5.0,
+    "cnt": 5,
+    "cntContent": 4,
+    "cnt_mark1": 0,
+    "cnt_mark2": 0,
+    "cnt_mark3": 0,
+    "cnt_mark4": 0,
+    "cnt_mark5": 5
+  },
+  "isCompatibility": 1,
+  "isManInCat": false,
+  "priceQuantity": 1000
+}

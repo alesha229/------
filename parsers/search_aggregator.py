@@ -1,17 +1,15 @@
 import asyncio
 import logging
+from utils.logger import logger
 from typing import List, Dict
 from .exist_parser import ExistParser
-from .autodoc_article_parser import AutodocArticleParser
-from .autodoc_car_parser import AutodocCarParser
 from .autodoc_factory import AutodocParserFactory
 from .avtoto_parser import AvtotoParser
 
 class SearchAggregator:
     def __init__(self):
         self.exist_parser = ExistParser()
-        self.autodoc_article_parser = AutodocArticleParser()
-        self.autodoc_car_parser = AutodocCarParser()
+        self.autodoc_factory = AutodocParserFactory()
         self.avtoto_parser = AvtotoParser()
         
     async def search_all(self, query: str) -> Dict[str, List[Dict]]:
@@ -23,20 +21,12 @@ class SearchAggregator:
             Dict с ключами 'exist', 'autodoc', 'avtoto' и соответствующими результатами
         """
         try:
-            # Определяем тип поиска для Autodoc
-            search_type = await AutodocParserFactory.get_search_type(query)
-            
-            # Выбираем соответствующий парсер и метод
-            if search_type == "article":
-                autodoc_task = asyncio.create_task(self.autodoc_article_parser.search_by_article(query))
-            elif search_type == "car":
-                autodoc_task = asyncio.create_task(self.autodoc_car_parser.get_wizard_data(query))
-            else:
-                autodoc_task = asyncio.create_task(self.autodoc_article_parser.search_by_article(query))
+            # Создаем парсер через фабрику
+            autodoc_parser = await self.autodoc_factory.create_parser(query)
             
             tasks = [
                 # asyncio.create_task(self.exist_parser.search_part(query)),
-                autodoc_task,
+                asyncio.create_task(autodoc_parser.search(query)),
                 asyncio.create_task(self.avtoto_parser.search_part(query))
             ]
             
@@ -52,31 +42,18 @@ class SearchAggregator:
             
             for i, result in enumerate(results):
                 if isinstance(result, Exception):
-                    logging.error(f"Error in parser {i}: {result}")
+                    logger.error(f"Error in parser {i}: {result}")
                     continue
                     
                 if i == 0:
-                    if search_type == "car" and result:
-                        # Для поиска по марке возвращаем список моделей
-                        models = self.autodoc_car_parser.extract_models(result)
-                        aggregated_results['autodoc'] = [
-                            {
-                                'type': 'car_model',
-                                'name': model['name'],
-                                'code': model.get('code', ''),
-                                'source': 'autodoc'
-                            }
-                            for model in models
-                        ]
-                    else:
-                        aggregated_results['autodoc'] = result
+                    aggregated_results['autodoc'] = result if result else []
                 elif i == 1:
-                    aggregated_results['avtoto'] = result
+                    aggregated_results['avtoto'] = result if result else []
             
             return aggregated_results
             
         except Exception as e:
-            logging.error(f"Error in search aggregator: {e}", exc_info=True)
+            logger.error(f"Error in search aggregator: {e}", exc_info=True)
             return {
                 'exist': [],
                 'autodoc': [],

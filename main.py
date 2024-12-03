@@ -2,49 +2,59 @@ import asyncio
 import logging
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
-from aiohttp import web
-from datetime import datetime
-from aiogram.fsm.storage.memory import MemoryStorage
+from datetime import datetime, timedelta
 
-import config
+from config import config
 from models import Base, User, Subscription
 from handlers import admin, subscription, referral
-from utils.monitoring import start_monitoring, log_command
+from utils.logger import logger
+from utils.metrics import metrics
+from prometheus_client import start_http_server
+from database import engine, async_session_maker, DatabaseMiddleware
+from keyboards.main import get_main_keyboard, get_search_keyboard
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
+from parsers.autodoc_factory import AutodocParserFactory
 from parsers.search_aggregator import SearchAggregator
 from parsers.autodoc_car_parser import AutodocCarParser
-from parsers.autodoc_article_parser import AutodocArticleParser
-from parsers.autodoc_factory import AutodocParserFactory
-from webhook_server import app as webhook_app
-from database import engine, async_session_maker, DatabaseMiddleware
-from keyboards.subscription import get_subscription_keyboard
-from keyboards.main import get_main_keyboard
 
-# Configure logging
-logging.basicConfig(level=getattr(logging, config.LOG_LEVEL))
-logger = logging.getLogger(__name__)
+def create_regions_keyboard() -> InlineKeyboardMarkup:
+    """Создать клавиатуру с регионами"""
+    regions = ["General", "America", "Europe", "Japan"]
+    
+    keyboard = []
+    current_row = []
+    
+    for region in regions:
+        if len(current_row) == 2:
+            keyboard.append(current_row)
+            current_row = []
+        
+        current_row.append(
+            InlineKeyboardButton(
+                text=region,
+                callback_data=f"region_{region}"
+            )
+        )
+    
+    if current_row:
+        keyboard.append(current_row)
+    
+    return InlineKeyboardMarkup(inline_keyboard=keyboard)
 
-# Initialize bot and dispatcher
+# Инициализация бота и диспетчера
 bot = Bot(token=config.BOT_TOKEN)
-dp = Dispatcher(storage=MemoryStorage())  # Добавляем хранилище для FSM
+storage = MemoryStorage()
+dp = Dispatcher(storage=storage)
 
-# Add middleware
-dp.update.middleware(DatabaseMiddleware())
-
-# Register routers
-dp.include_router(admin.router)
-dp.include_router(subscription.router)
-dp.include_router(referral.router)
-
-# Initialize parsers
+# Инициализация парсеров
+parser_factory = AutodocParserFactory()
 search_aggregator = SearchAggregator()
-
-# Создаем состояния для FSM
-from aiogram.fsm.state import State, StatesGroup
-from aiogram.fsm.context import FSMContext
 
 class SearchStates(StatesGroup):
     waiting_for_part_number = State()
@@ -57,287 +67,317 @@ class CarSearch(StatesGroup):
     model = State()
     region = State()
 
+async def register_handlers(dp: Dispatcher):
+    """Регистрация всех обработчиков"""
+    dp.include_router(admin.router)
+    dp.include_router(subscription.router)
+    dp.include_router(referral.router)
+
 @dp.message(Command("start"))
-@log_command
 async def cmd_start(message: types.Message, session: AsyncSession):
     """Обработчик команды /start"""
-    # Создаем или получаем пользователя
-    result = await session.execute(
-        select(User)
-        .options(selectinload(User.subscription))
-        .where(User.telegram_id == message.from_user.id)
-    )
-    user = result.scalar_one_or_none()
+    metrics.user_commands.labels(command="start").inc()
     
-    if not user:
-        # Создаем нового пользователя
-        user = User(
-            telegram_id=message.from_user.id,
-            username=message.from_user.username,
-            first_name=message.from_user.first_name,
-            last_name=message.from_user.last_name
+    try:
+        # Создаем или получаем пользователя
+        result = await session.execute(
+            select(User)
+            .options(selectinload(User.subscription))
+            .where(User.telegram_id == message.from_user.id)
         )
-        session.add(user)
-        await session.commit()
+        user = result.scalar_one_or_none()
         
-        # Создаем тестовую подписку на 1 день
-        from datetime import datetime, timedelta
-        trial_subscription = Subscription(
-            user_id=user.id,
-            is_active=True,
-            start_date=datetime.utcnow(),
-            period='trial',
-            end_date=datetime.utcnow() + timedelta(days=1),
-            is_trial=True
+        if not user:
+            # Создаем нового пользователя
+            user = User(
+                telegram_id=message.from_user.id,
+                username=message.from_user.username,
+                first_name=message.from_user.first_name,
+                last_name=message.from_user.last_name,
+                registered_at=datetime.utcnow()
+            )
+            session.add(user)
+            await session.commit()
+            
+            logger.info(
+                "new_user_registered",
+                telegram_id=user.telegram_id,
+                username=user.username
+            )
+            metrics.new_users.inc()
+        
+        # Формируем приветственное сообщение
+        welcome_text = (
+            f"👋 Привет, {message.from_user.first_name}!\n\n"
+            "🔍 Я помогу тебе найти автозапчасти по всей России.\n"
+            "Просто отправь мне номер детали, и я найду лучшие предложения!"
         )
-        session.add(trial_subscription)
-        await session.commit()
-    
-    await message.answer(
-        f"Привет, {message.from_user.first_name}! 👋\n\n"
-        f"Я помогу тебе найти автозапчасти по лучшим ценам.\n"
-        f"Используй кнопки меню для навигации:",
-        reply_markup=get_main_keyboard()
-    )
+        
+        # Отправляем сообщение с основной клавиатурой
+        await message.answer(
+            welcome_text,
+            reply_markup=get_main_keyboard()
+        )
+        
+        logger.info(
+            "start_command_processed",
+            telegram_id=user.telegram_id,
+            has_subscription=bool(user.subscription)
+        )
+        
+    except Exception as e:
+        logger.error(
+            "start_command_error",
+            error=str(e),
+            telegram_id=message.from_user.id
+        )
+        metrics.error_count.labels(type="start_command").inc()
+        await message.answer(
+            "Произошла ошибка при обработке команды. Попробуйте позже.",
+            reply_markup=get_main_keyboard()
+        )
 
 @dp.message(lambda message: message.text == "🔍 Поиск запчастей")
-@log_command
 async def search_parts(message: types.Message, state: FSMContext):
     """Обработчик кнопки поиска запчастей"""
-    await message.answer(
-        "Введите поисковый запрос:\n\n"
-        "Примеры:\n"
-        "• Поиск по артикулу: 04465-42160\n"
-        "• Поиск по VIN: JF1BL5KS57G03135T\n"
-        "• Поиск по марке/модели: HONDA CIVIC 1996"
-    )
-    await state.set_state(SearchStates.waiting_for_part_number)
+    try:
+        await state.set_state(SearchStates.waiting_for_part_number)
+        await message.answer(
+            "🔍 Выберите способ поиска:\n\n"
+            "1️⃣ Поиск по номеру детали:\n"
+            "   • Пример: 04465-42160\n\n"
+            "2️⃣ Поиск по VIN-номеру:\n"
+            "   • Пример: JF1BL5KS57G03135T\n\n"
+            "3️⃣ Поиск по автомобилю:\n"
+            "   • Формат: МАРКА МОДЕЛЬ ГОД\n"
+            "   • Пример: HONDA CIVIC 1996\n\n"
+            "✍️ Введите ваш запрос в любом из этих форматов:",
+            reply_markup=types.ReplyKeyboardRemove()
+        )
+        logger.info(
+            "search_initiated",
+            telegram_id=message.from_user.id
+        )
+        metrics.user_actions.labels(action="search_initiated").inc()
+    except Exception as e:
+        logger.error(
+            "search_initiation_error",
+            error=str(e),
+            telegram_id=message.from_user.id
+        )
+        metrics.error_count.labels(type="search_initiation").inc()
+        await message.answer(
+            "Произошла ошибка. Попробуйте позже.",
+            reply_markup=get_main_keyboard()
+        )
 
 @dp.message(SearchStates.waiting_for_part_number)
-@log_command
 async def handle_part_number(message: types.Message, session: AsyncSession, state: FSMContext):
     """Обработчик ввода номера детали"""
-    query = message.text.strip()
     try:
+        query = message.text.strip()
+        
+        # Проверяем подписку пользователя
+        result = await session.execute(
+            select(User)
+            .options(selectinload(User.subscription))
+            .where(User.telegram_id == message.from_user.id)
+        )
+        user = result.scalar_one()
+        
+        if not user.subscription or not user.subscription.is_active:
+            await message.answer(
+                "⚠️ Для поиска запчастей необходима активная подписка.\n"
+                "Оформите подписку, чтобы получить доступ к поиску.",
+                reply_markup=get_main_keyboard()
+            )
+            await state.clear()
+            return
+        
         # Определяем тип поиска
-        search_type = await AutodocParserFactory.get_search_type(query)
-
+        search_type = await parser_factory.get_search_type(query)
+        
         if search_type == "car":
-            # Создаем парсер для поиска автомобилей
-            parser = AutodocCarParser()
-            
-            # Извлекаем информацию об автомобиле
-            car_info = await AutodocParserFactory.extract_car_info(query)
-
+            # Поиск по марке/модели
+            car_info = await parser_factory.extract_car_info(query)
             if car_info:
                 brand, model, year = car_info
-                # Проверяем существование бренда
-                brand_code = await parser.get_brand_code(brand)
-                
-                if brand_code:
-                    # Создаем кнопки для каждого региона
-                    keyboard_buttons = []
-                    current_row = []
-                    
-                    for region in parser.available_regions:
-                        current_row.append(
-                            types.InlineKeyboardButton(
-                                text=region,
-                                callback_data=f"region_{brand}_{model}_{year}_{region}"
-                            )
-                        )
-                        
-                        # Добавляем по 2 кнопки в ряд
-                        if len(current_row) == 2:
-                            keyboard_buttons.append(current_row)
-                            current_row = []
-                    
-                    # Добавляем оставшиеся кнопки, если есть
-                    if current_row:
-                        keyboard_buttons.append(current_row)
-                    
-                    # Создаем клавиатуру с явным указанием inline_keyboard
-                    keyboard = types.InlineKeyboardMarkup(inline_keyboard=keyboard_buttons)
-                    
-                    await message.answer(
-                        "Выберите регион для поиска:",
-                        reply_markup=keyboard
-                    )
-                    await state.update_data(brand=brand, model=model, year=year)
-                    await state.set_state(SearchStates.waiting_for_region)
-                else:
-                    await message.answer(
-                        "❌ Производитель не найден. Пожалуйста, проверьте название и попробуйте снова."
-                    )
+                await state.update_data(car_info={"brand": brand, "model": model, "year": year})
+                await state.set_state(SearchStates.waiting_for_region)
+                await message.answer(
+                    f"🚗 Найден автомобиль:\n"
+                    f"Марка: {brand}\n"
+                    f"Модель: {model}\n"
+                    f"Год: {year}\n\n"
+                    f"Выберите регион поиска:",
+                    reply_markup=create_regions_keyboard()
+                )
+                logger.info(
+                    "car_search_success",
+                    telegram_id=user.telegram_id,
+                    brand=brand,
+                    model=model,
+                    year=year
+                )
             else:
                 await message.answer(
                     "❌ Не удалось распознать информацию об автомобиле.\n"
-                    "Пожалуйста, используйте формат: МАРКА МОДЕЛЬ ГОД\n"
-                    "Например: HONDA CIVIC 1996"
+                    "Используйте формат: МАРКА МОДЕЛЬ ГОД\n"
+                    "Например: HONDA CIVIC 1996",
+                    reply_markup=get_main_keyboard()
                 )
+                await state.clear()
                 
         elif search_type == "vin":
             # Поиск по VIN
-            parser = AutodocVinParser()
-            result = await parser.search(query)
-            if result:
-                await message.answer(result)
+            car_info = await parser_factory.extract_car_info(query)
+            if car_info:
+                await state.update_data(car_info=car_info)
+                await state.set_state(SearchStates.waiting_for_region)
+                await message.answer(
+                    f"🚗 Информация по VIN:\n"
+                    f"Марка: {car_info['brand']}\n"
+                    f"Модель: {car_info['model']}\n"
+                    f"Год: {car_info['year']}\n\n"
+                    f"Выберите регион поиска:",
+                    reply_markup=create_regions_keyboard()
+                )
+                logger.info(
+                    "vin_search_success",
+                    telegram_id=user.telegram_id,
+                    vin=query
+                )
             else:
-                await message.answer("❌ Не удалось найти информацию по указанному VIN")
+                await message.answer(
+                    "❌ Не удалось получить информацию по VIN.\n"
+                    "Проверьте правильность ввода и попробуйте снова.",
+                    reply_markup=get_main_keyboard()
+                )
+                await state.clear()
                 
         else:
             # Поиск по артикулу
-            parser = AutodocArticleParser()
-            results = await parser.search(query)
-            if results:
-                # Форматируем результаты поиска
+            await message.answer("🔍 Ищу запчасти по артикулу...")
+            
+            results = await search_aggregator.search_all(query)
+            if results and any(results.values()):
+                # Форматируем результаты
                 response = "🔍 Найденные запчасти:\n\n"
-                for i, part in enumerate(results, 1):
-                    response += f"{i}. {part.get('name', 'Название не указано')}\n"
-                    response += f"📝 Артикул: {part.get('number', 'Не указан')}\n"
-                    response += f"🏭 Производитель: {part.get('manufacturer', 'Не указан')}\n"
-                    
-                    # Цена
-                    price = part.get('price')
-                    if price:
-                        response += f"💰 Цена: {price} ₽\n"
-                    else:
-                        response += "💰 Цена: Не указана\n"
-                    
-                    # Магазин
-                    source = part.get('source', 'Не указан')
-                    response += f"🏪 Магазин: {source}\n"
-                    
-                    # Наличие
-                    if part.get('availability'):
-                        response += "✅ В наличии\n"
-                    else:
-                        response += "❌ Нет в наличии\n"
-                    
-                    # URL если есть
-                    if part.get('url'):
-                        response += f"🔗 {part['url']}\n"
-                    
-                    response += "\n" + "="*30 + "\n"
+                idx = 1
+                
+                for source, items in results.items():
+                    if items:
+                        for item in items:
+                            if isinstance(item, dict) and item.get('type') != 'car_model':
+                                response += f"{idx}. {item.get('name', 'Название не указано')}\n"
+                                response += f"📝 Артикул: {item.get('article', query)}\n"
+                                response += f"🏭 Производитель: {item.get('brand', 'Не указан')}\n"
+                                
+                                # Цена
+                                price = item.get('price')
+                                if price:
+                                    response += f"💰 Цена: {price} ₽\n"
+                                else:
+                                    response += "💰 Цена: По запросу\n"
+                                
+                                # Магазин
+                                response += f"🏪 Магазин: {source.upper()}\n"
+                                
+                                # Наличие
+                                quantity = item.get('quantity')
+                                if quantity and quantity > 0:
+                                    response += f"✅ В наличии: {quantity} шт.\n"
+                                else:
+                                    response += "❌ Нет в наличии\n"
+                                
+                                # Срок доставки
+                                delivery = item.get('delivery_days')
+                                if delivery:
+                                    response += f"🚚 Срок доставки: {delivery} дн.\n"
+                                
+                                # URL если есть
+                                if item.get('url'):
+                                    response += f"🔗 {item['url']}\n"
+                                
+                                response += "\n" + "="*30 + "\n"
+                                idx += 1
                 
                 # Разбиваем на части если сообщение слишком длинное
                 max_length = 4096
                 for i in range(0, len(response), max_length):
                     chunk = response[i:i + max_length]
                     await message.answer(chunk)
+                
+                logger.info(
+                    "article_search_success",
+                    telegram_id=user.telegram_id,
+                    query=query,
+                    results_count=sum(len(items) for items in results.values())
+                )
+                metrics.search_results.labels(type="success").inc()
             else:
-                await message.answer("❌ Не удалось найти информацию по указанному артикулу")
+                await message.answer(
+                    "❌ По вашему запросу ничего не найдено.\n"
+                    "Проверьте правильность ввода номера детали.",
+                    reply_markup=get_main_keyboard()
+                )
+                await state.clear()
+                
+                logger.info(
+                    "search_no_results",
+                    telegram_id=user.telegram_id,
+                    query=query
+                )
+                metrics.search_results.labels(type="no_results").inc()
                 
     except Exception as e:
-        logger.error(f"Error in search handler: {e}")
+        logger.error(
+            "search_error",
+            error=str(e),
+            telegram_id=message.from_user.id,
+            query=message.text
+        )
+        metrics.error_count.labels(type="search").inc()
         await message.answer(
-            "❌ Произошла ошибка при поиске. Пожалуйста, попробуйте позже или измените запрос."
+            "Произошла ошибка при поиске.\n"
+            "Попробуйте позже или обратитесь в поддержку.",
+            reply_markup=get_main_keyboard()
         )
-    finally:
         await state.clear()
-
-def create_modifications_keyboard(modifications, page=1):
-    """Создать клавиатуру с модификациями и пагинацией"""
-    # Проверяем, что у нас есть список модификаций
-    if not modifications.get('modifications'):
-        return types.InlineKeyboardMarkup(inline_keyboard=[])
-
-    # Получаем список модификаций
-    mod_list = modifications.get('modifications', [])
-    logger.info(modifications)
-    
-    # Разбиваем на страницы по 5 кнопок (уменьшаем количество для лучшей читаемости)
-    items_per_page = 5
-    total_pages = (len(mod_list) + items_per_page - 1) // items_per_page
-    
-    # Убедимся, что страница в допустимых пределах
-    page = max(1, min(page, total_pages))
-    
-    # Вычисляем индексы для текущей страницы
-    start_idx = (page - 1) * items_per_page
-    end_idx = min(start_idx + items_per_page, len(mod_list))
-    
-    # Создаем кнопки для текущей страницы
-    keyboard = []
-    for mod in mod_list[start_idx:end_idx]:
-        # Создаем текст кнопки с информацией о модификации
-        button_text = (
-            f"{mod.get('grade', 'Н/Д')} • "
-            f"{mod.get('transmission', 'Н/Д')} • "
-            f"{mod.get('doors', 'Н/Д')}д • "
-            f"({mod.get('dest_region', 'Н/Д')})"
-        )
-        
-        # Создаем callback_data с ID модификации
-        callback_data = f"mod_{mod.get('id', '')}"
-        
-        keyboard.append([
-            types.InlineKeyboardButton(
-                text=button_text,
-                callback_data=callback_data
-            )
-        ])
-    
-    # Добавляем кнопки пагинации
-    nav_buttons = []
-    
-    # Кнопка "В начало", если не на первой странице
-    if page > 1:
-        nav_buttons.append(types.InlineKeyboardButton(
-            text="⏮",
-            callback_data="page_1"
-        ))
-    
-    # Кнопка "Назад"
-    if page > 1:
-        nav_buttons.append(types.InlineKeyboardButton(
-            text="⬅️",
-            callback_data=f"page_{page-1}"
-        ))
-    
-    # Кнопка "Вперед"
-    if page < total_pages:
-        nav_buttons.append(types.InlineKeyboardButton(
-            text="➡️",
-            callback_data=f"page_{page+1}"
-        ))
-    
-    # Кнопка "В конец", если не на последней странице
-    if page < total_pages:
-        nav_buttons.append(types.InlineKeyboardButton(
-            text="⏭",
-            callback_data=f"page_{total_pages}"
-        ))
-    
-    if nav_buttons:
-        keyboard.append(nav_buttons)
-    
-    # Добавляем информацию о странице
-    keyboard.append([
-        types.InlineKeyboardButton(
-            text=f"📄 {page} из {total_pages}",
-            callback_data="page_info"
-        )
-    ])
-    
-    return types.InlineKeyboardMarkup(inline_keyboard=keyboard)
 
 @dp.callback_query(lambda c: c.data.startswith('region_'))
 async def handle_region_selection(callback_query: types.CallbackQuery, state: FSMContext):
     """Обработчик выбора региона"""
     try:
-        # Разбираем callback data
-        _, brand, model, year, region = callback_query.data.split('_')
+        # Получаем выбранный регион
+        region = callback_query.data.split('_')[1]
+        
+        # Получаем сохраненные данные об автомобиле
+        data = await state.get_data()
+        car_info = data.get('car_info', {})
+        
+        brand = car_info.get('brand')
+        model = car_info.get('model')
+        year = car_info.get('year')
         
         logger.info(f"Selected: brand={brand}, model={model}, year={year}, region={region}")
+        
+        if not all([brand, model, year]):
+            await callback_query.answer("Ошибка: неполные данные об автомобиле")
+            return
         
         # Создаем парсер и получаем модификации
         parser = AutodocCarParser()
         try:
             modifications_data = await parser.search_modifications(brand, model, year, region)
             logger.info(f"Modifications data: {modifications_data}")
+            
             if not modifications_data or not modifications_data.get('modifications'):
-                await callback_query.answer("Модификации не найдены")
+                await callback_query.message.edit_text(
+                    "❌ Модификации не найдены для выбранного региона.\n"
+                    "Попробуйте выбрать другой регион или изменить параметры поиска.",
+                    reply_markup=create_regions_keyboard()
+                )
                 return
             
             # Сохраняем данные в состояние
@@ -350,38 +390,42 @@ async def handle_region_selection(callback_query: types.CallbackQuery, state: FS
             )
             
             # Создаем клавиатуру с модификациями
-            keyboard = create_modifications_keyboard(modifications_data)
+            keyboard = create_modifications_keyboard(modifications_data.get('modifications', []))
             
-            # Форматируем общую информацию
-            common_info = []
-            for attr in modifications_data.get('commonAttributes', []):
-                if attr['key'] in ['Brand', 'Model', 'manufactured']:
-                    common_info.append(f"{attr['name']}: {attr['value']}")
-            
+            # Форматируем сообщение
             message_text = (
-                f"🚗 {' | '.join(common_info)}\n\n"
-                "Выберите модификацию:"
+                f"🚗 {brand} {model} {year}\n"
+                f"🌍 Регион: {region}\n\n"
+                f"Выберите модификацию:"
             )
             
-            try:
-                await callback_query.message.edit_text(
-                    text=message_text,
-                    reply_markup=keyboard
-                )
-            except aiogram.exceptions.TelegramBadRequest as e:
-                if "message is not modified" not in str(e):
-                    raise
-                
-        except Exception as e:
-            logger.error(f"Error getting modifications: {e}")
-            await callback_query.answer("Ошибка при получении модификаций. Попробуйте позже.")
+            await callback_query.message.edit_text(
+                message_text,
+                reply_markup=keyboard
+            )
             
+            # Устанавливаем состояние просмотра модификаций
+            await state.set_state(SearchStates.viewing_modifications)
+            
+        except Exception as e:
+            logger.error(f"Error getting modifications: {str(e)}")
+            await callback_query.message.edit_text(
+                "❌ Произошла ошибка при получении модификаций.\n"
+                "Попробуйте позже или выберите другой регион.",
+                reply_markup=create_regions_keyboard()
+            )
+    
     except Exception as e:
-        logger.error(f"Error in region selection handler: {e}")
-        try:
-            await callback_query.answer("Произошла ошибка. Попробуйте позже.")
-        except:
-            pass
+        logger.error(
+            "Error in region selection handler",
+            error=str(e),
+            telegram_id=callback_query.from_user.id
+        )
+        await callback_query.message.edit_text(
+            "Произошла ошибка. Попробуйте начать поиск заново.",
+            reply_markup=get_main_keyboard()
+        )
+        await state.clear()
 
 @dp.callback_query(lambda c: c.data.startswith('page_'))
 async def handle_page_selection(callback_query: types.CallbackQuery, state: FSMContext):
@@ -390,7 +434,7 @@ async def handle_page_selection(callback_query: types.CallbackQuery, state: FSMC
         page = int(callback_query.data.split('_')[1])
         data = await state.get_data()
         modifications = data.get('modifications', [])
-        keyboard = create_modifications_keyboard({'modifications': modifications}, page)
+        keyboard = create_modifications_keyboard(modifications, page)
         await callback_query.message.edit_text(
             f"{data.get('brand')} {data.get('model')} {data.get('year')}\n\nВыберите модификацию:",
             reply_markup=keyboard
@@ -473,22 +517,122 @@ async def handle_modification_selection(callback_query: types.CallbackQuery, sta
         await callback_query.answer("Ошибка при выборе модификации", show_alert=True)
 
 async def main():
-    # Инициализация базы данных
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+    """Основная функция запуска бота"""
+    try:
+        # Инициализация базы данных
+        async with engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
+        
+        # Настройка middleware
+        dp.update.middleware.register(DatabaseMiddleware())
+        
+        # Регистрация обработчиков
+        await register_handlers(dp)
+        
+        # Запуск Prometheus сервера
+        start_http_server(config.PROMETHEUS_PORT)
+        logger.info(
+            "prometheus_server_started",
+            port=config.PROMETHEUS_PORT
+        )
+        
+        # Запуск бота
+        logger.info("bot_starting")
+        await dp.start_polling(bot)
+        
+    except Exception as e:
+        logger.error("bot_startup_error", error=str(e))
+        metrics.error_count.labels(type="startup").inc()
+        raise
 
-    # Запуск мониторинга
-    await start_monitoring()
+if __name__ == "__main__":
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("bot_shutdown_keyboard_interrupt")
+    except Exception as e:
+        logger.error("bot_shutdown_error", error=str(e))
+    finally:
+        logger.info("bot_shutdown_complete")
 
-    # Запуск вебхук сервера
-    runner = web.AppRunner(webhook_app)
-    await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', 8080)
-    await site.start()
-    logger.info("Webhook server started on port 8080")
+def create_modifications_keyboard(modifications, page=1):
+    """Создать клавиатуру с модификациями и пагинацией"""
+    # Проверяем, что у нас есть список модификаций
+    if not modifications:
+        return types.InlineKeyboardMarkup(inline_keyboard=[])
 
-    # Запуск бота
-    await dp.start_polling(bot)
-
-if __name__ == '__main__':
-    asyncio.run(main())
+    # Разбиваем на страницы по 5 кнопок (уменьшаем количество для лучшей читаемости)
+    items_per_page = 5
+    total_pages = (len(modifications) + items_per_page - 1) // items_per_page
+    
+    # Убедимся, что страница в допустимых пределах
+    page = max(1, min(page, total_pages))
+    
+    # Вычисляем индексы для текущей страницы
+    start_idx = (page - 1) * items_per_page
+    end_idx = min(start_idx + items_per_page, len(modifications))
+    
+    # Создаем кнопки для текущей страницы
+    keyboard = []
+    for mod in modifications[start_idx:end_idx]:
+        # Создаем текст кнопки с информацией о модификации
+        button_text = (
+            f"{mod.get('grade', 'Н/Д')} • "
+            f"{mod.get('transmission', 'Н/Д')} • "
+            f"{mod.get('doors', 'Н/Д')}д • "
+            f"({mod.get('dest_region', 'Н/Д')})"
+        )
+        
+        # Создаем callback_data с ID модификации
+        callback_data = f"mod_{mod.get('id', '')}"
+        
+        keyboard.append([
+            types.InlineKeyboardButton(
+                text=button_text,
+                callback_data=callback_data
+            )
+        ])
+    
+    # Добавляем кнопки пагинации
+    nav_buttons = []
+    
+    # Кнопка "В начало", если не на первой странице
+    if page > 1:
+        nav_buttons.append(types.InlineKeyboardButton(
+            text="⏮",
+            callback_data="page_1"
+        ))
+    
+    # Кнопка "Назад"
+    if page > 1:
+        nav_buttons.append(types.InlineKeyboardButton(
+            text="⬅️",
+            callback_data=f"page_{page-1}"
+        ))
+    
+    # Кнопка "Вперед"
+    if page < total_pages:
+        nav_buttons.append(types.InlineKeyboardButton(
+            text="➡️",
+            callback_data=f"page_{page+1}"
+        ))
+    
+    # Кнопка "В конец", если не на последней странице
+    if page < total_pages:
+        nav_buttons.append(types.InlineKeyboardButton(
+            text="⏭",
+            callback_data=f"page_{total_pages}"
+        ))
+    
+    if nav_buttons:
+        keyboard.append(nav_buttons)
+    
+    # Добавляем информацию о странице
+    keyboard.append([
+        types.InlineKeyboardButton(
+            text=f"📄 {page} из {total_pages}",
+            callback_data="page_info"
+        )
+    ])
+    
+    return types.InlineKeyboardMarkup(inline_keyboard=keyboard)

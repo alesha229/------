@@ -1,19 +1,53 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 def get_main_keyboard() -> ReplyKeyboardMarkup:
-    """Основная клавиатура бота"""
-    keyboard = [
-        [
-            KeyboardButton(text="🔍 Поиск запчастей"),
-            KeyboardButton(text="💎 Подписка")
+    """Создание основной клавиатуры"""
+    keyboard = ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="🔍 Поиск запчастей")
+            ],
+            [
+                KeyboardButton(text="💳 Подписка"),
+                KeyboardButton(text="📱 Мой профиль")
+            ],
+            [
+                KeyboardButton(text="❓ Помощь"),
+                KeyboardButton(text="👥 Реферальная программа")
+            ]
         ],
-        [
-            KeyboardButton(text="❓ Помощь"),
-            KeyboardButton(text="👥 Реферальная программа")
-        ]
-    ]
-    return ReplyKeyboardMarkup(
-        keyboard=keyboard,
-        resize_keyboard=True,
-        input_field_placeholder="Выберите действие"
+        resize_keyboard=True
     )
+    return keyboard
+
+def get_search_keyboard() -> ReplyKeyboardMarkup:
+    """Создание клавиатуры для поиска"""
+    keyboard = ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="🔄 Новый поиск"),
+                KeyboardButton(text="📋 История поиска")
+            ],
+            [
+                KeyboardButton(text="🏠 Главное меню")
+            ]
+        ],
+        resize_keyboard=True
+    )
+    return keyboard
+
+def get_profile_keyboard() -> ReplyKeyboardMarkup:
+    """Создание клавиатуры профиля"""
+    keyboard = ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="📊 Статистика поиска"),
+                KeyboardButton(text="⚙️ Настройки")
+            ],
+            [
+                KeyboardButton(text="🏠 Главное меню")
+            ]
+        ],
+        resize_keyboard=True
+    )
+    return keyboard
