@@ -345,6 +345,60 @@ async def handle_part_number(message: types.Message, session: AsyncSession, stat
         )
         await state.clear()
 
+def create_modifications_keyboard(modifications, page=1):
+    """Создать клавиатуру с модификациями и пагинацией"""
+    # Проверяем, что у нас есть список модификаций
+    if not modifications:
+        return types.InlineKeyboardMarkup(inline_keyboard=[])
+
+    # Разбиваем на страницы по 5 кнопок
+    items_per_page = 5
+    total_pages = (len(modifications) + items_per_page - 1) // items_per_page
+    
+    # Убедимся, что страница в допустимом диапазоне
+    page = max(1, min(page, total_pages))
+    
+    # Получаем модификации для текущей страницы
+    start_idx = (page - 1) * items_per_page
+    end_idx = min(start_idx + items_per_page, len(modifications))
+    current_modifications = modifications[start_idx:end_idx]
+    
+    # Создаем кнопки для каждой модификации
+    keyboard = []
+    for mod in current_modifications:
+        # Формируем текст кнопки с информацией о модификации
+        mod_text = f"{mod['grade']} • {mod['transmission']} • {mod['doors']}д • {mod['dest_region']}"
+        callback_data = f"mod_{mod['id']}"
+        keyboard.append([types.InlineKeyboardButton(text=mod_text, callback_data=callback_data)])
+    
+    # Добавляем кнопки пагинации если есть больше одной страницы
+    if total_pages > 1:
+        nav_buttons = []
+        
+        # Кнопка "Назад" если не на первой странице
+        if page > 1:
+            nav_buttons.append(types.InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"page_{page-1}"
+            ))
+            
+        # Показываем текущую страницу
+        nav_buttons.append(types.InlineKeyboardButton(
+            text=f"{page}/{total_pages}",
+            callback_data="current_page"
+        ))
+        
+        # Кнопка "Вперед" если не на последней странице
+        if page < total_pages:
+            nav_buttons.append(types.InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"page_{page+1}"
+            ))
+            
+        keyboard.append(nav_buttons)
+    
+    return types.InlineKeyboardMarkup(inline_keyboard=keyboard)
+
 @dp.callback_query(lambda c: c.data.startswith('region_'))
 async def handle_region_selection(callback_query: types.CallbackQuery, state: FSMContext):
     """Обработчик выбора региона"""
@@ -554,85 +608,3 @@ if __name__ == "__main__":
         logger.error("bot_shutdown_error", error=str(e))
     finally:
         logger.info("bot_shutdown_complete")
-
-def create_modifications_keyboard(modifications, page=1):
-    """Создать клавиатуру с модификациями и пагинацией"""
-    # Проверяем, что у нас есть список модификаций
-    if not modifications:
-        return types.InlineKeyboardMarkup(inline_keyboard=[])
-
-    # Разбиваем на страницы по 5 кнопок (уменьшаем количество для лучшей читаемости)
-    items_per_page = 5
-    total_pages = (len(modifications) + items_per_page - 1) // items_per_page
-    
-    # Убедимся, что страница в допустимых пределах
-    page = max(1, min(page, total_pages))
-    
-    # Вычисляем индексы для текущей страницы
-    start_idx = (page - 1) * items_per_page
-    end_idx = min(start_idx + items_per_page, len(modifications))
-    
-    # Создаем кнопки для текущей страницы
-    keyboard = []
-    for mod in modifications[start_idx:end_idx]:
-        # Создаем текст кнопки с информацией о модификации
-        button_text = (
-            f"{mod.get('grade', 'Н/Д')} • "
-            f"{mod.get('transmission', 'Н/Д')} • "
-            f"{mod.get('doors', 'Н/Д')}д • "
-            f"({mod.get('dest_region', 'Н/Д')})"
-        )
-        
-        # Создаем callback_data с ID модификации
-        callback_data = f"mod_{mod.get('id', '')}"
-        
-        keyboard.append([
-            types.InlineKeyboardButton(
-                text=button_text,
-                callback_data=callback_data
-            )
-        ])
-    
-    # Добавляем кнопки пагинации
-    nav_buttons = []
-    
-    # Кнопка "В начало", если не на первой странице
-    if page > 1:
-        nav_buttons.append(types.InlineKeyboardButton(
-            text="⏮",
-            callback_data="page_1"
-        ))
-    
-    # Кнопка "Назад"
-    if page > 1:
-        nav_buttons.append(types.InlineKeyboardButton(
-            text="⬅️",
-            callback_data=f"page_{page-1}"
-        ))
-    
-    # Кнопка "Вперед"
-    if page < total_pages:
-        nav_buttons.append(types.InlineKeyboardButton(
-            text="➡️",
-            callback_data=f"page_{page+1}"
-        ))
-    
-    # Кнопка "В конец", если не на последней странице
-    if page < total_pages:
-        nav_buttons.append(types.InlineKeyboardButton(
-            text="⏭",
-            callback_data=f"page_{total_pages}"
-        ))
-    
-    if nav_buttons:
-        keyboard.append(nav_buttons)
-    
-    # Добавляем информацию о странице
-    keyboard.append([
-        types.InlineKeyboardButton(
-            text=f"📄 {page} из {total_pages}",
-            callback_data="page_info"
-        )
-    ])
-    
-    return types.InlineKeyboardMarkup(inline_keyboard=keyboard)
