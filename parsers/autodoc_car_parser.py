@@ -174,19 +174,61 @@ class AutodocCarParser(BaseParser):
 
     async def display_modifications(self, brand_code: str, ssd: str) -> Optional[Tuple[str, str]]:
         """Display available modifications and return selected car_id and ssd"""
+        logger.info(f"Displaying modifications for brand_code={brand_code}, ssd={ssd}")
         try:
             modifications = await self._get_modifications(brand_code, ssd)
+            logger.info(f"Got modifications: {modifications}")
+            
             if not modifications:
+                logger.error("No modifications found")
                 return None
                 
-            # Вместо вывода в консоль возвращаем список модификаций
             return modifications
             
         except Exception as e:
             logger.error(f"Error displaying modifications: {e}")
             return None
 
-    def format_modification(self, mod: Dict) -> Dict:
+    async def _get_modifications(self, brand_code: str, ssd: str) -> Optional[Tuple[str, str]]:
+        """Get modifications for a specific brand and SSD"""
+        url = f"{self.base_url}/brands/{brand_code}/wizzard/0/modifications?ssd={ssd}"
+        logger.info(f"Getting modifications from URL: {url}")
+        logger.info(f"Parameters: brand_code={brand_code}, ssd={ssd}")
+        
+        try:
+            response = await self._make_request(url)
+            logger.info(f"Raw API Response: {json.dumps(response, indent=2, ensure_ascii=False)}")
+            
+            if not response:
+                logger.error("Empty response from API")
+                return None
+                
+            # В консольной версии мы используем другой URL для получения car_id
+            url = f"{self.base_url}/brands/{brand_code}/modifications?ssd={ssd}"
+            logger.info(f"Getting car_id from URL: {url}")
+            
+            modifications_response = await self._make_request(url)
+            logger.info(f"Modifications Response: {json.dumps(modifications_response, indent=2, ensure_ascii=False)}")
+            
+            if not modifications_response:
+                logger.error("Empty modifications response")
+                return None
+                
+            # Ищем первую модификацию с car_id
+            for mod in modifications_response.get('items', []):
+                car_id = mod.get('id')
+                if car_id:
+                    logger.info(f"Found car_id: {car_id}")
+                    return car_id, ssd
+                    
+            logger.error("No car_id found in modifications")
+            return None
+            
+        except Exception as e:
+            logger.error(f"Error getting modifications: {e}")
+            return None
+
+    async def format_modification(self, mod: Dict) -> Dict:
         """Форматирование модификации для отображения"""
         attributes = mod.get('attributes', [])
         return {

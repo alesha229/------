@@ -62,7 +62,7 @@ class TelegramBot:
         self.dp.include_router(subscription.router)
         self.dp.include_router(referral.router)
         
-        # Регистрация основных хендлеров
+        # Регистрация основных хенд��еров
         self.dp.message.register(self.cmd_start, Command("start"))
         
         # Регистрация хендлеров кнопок основного меню
@@ -79,7 +79,7 @@ class TelegramBot:
         
         # Регистрация хендлеров кнопок профиля
         self.dp.message.register(self.handle_search_stats, F.text == "📊 Статистика поиска")
-        self.dp.message.register(self.handle_settings, F.text == "⚙️ Настройки")
+        self.dp.message.register(self.handle_settings, F.text == "⚙ Настройки")
         
         # Регистрация остальных хендлеров
         self.dp.message.register(self.handle_part_number, SearchStates.waiting_for_part_number)
@@ -95,6 +95,18 @@ class TelegramBot:
         self.dp.message.register(self.handle_year_input, CarSearchStates.waiting_for_year)
         self.dp.callback_query.register(self.handle_field_selection, CarSearchStates.selecting_field)
         self.dp.callback_query.register(self.handle_field_value_selection, CarSearchStates.selecting_field_value)
+        self.dp.callback_query.register(self.handle_back_to_fields, lambda c: c.data == "back_to_fields")
+        
+        # Добавляем обработчики для модификаций
+        self.dp.callback_query.register(
+            self.handle_modification_selection,
+            lambda c: c.data.startswith("select_mod_")
+        )
+        
+        self.dp.callback_query.register(
+            self.handle_back_to_modifications,
+            lambda c: c.data == "back_to_modifications"
+        )
 
     @staticmethod
     async def cmd_start(message: types.Message, session: AsyncSession):
@@ -169,7 +181,7 @@ class TelegramBot:
         parts = message.text.strip().split()
         
         if len(parts) >= 3 and parts[-1].isdigit():
-            # Это поиск по марке/модели/году
+            # Это поиск по марке/модели/��оду
             brand = parts[0]
             model = ' '.join(parts[1:-1])
             year = parts[-1]
@@ -266,24 +278,75 @@ class TelegramBot:
 
     @staticmethod
     async def handle_modification_selection(callback_query: types.CallbackQuery, state: FSMContext):
-        """Обработчик выбора модификации"""
-        mod_id = int(callback_query.data.replace("mod_", ""))
-        data = await state.get_data()
-        
-        modifications = data.get("modifications", [])
-        selected_mod = next((m for m in modifications if m["id"] == mod_id), None)
-        
-        if not selected_mod:
-            await callback_query.answer("Модификация не найдена")
-            return
-        
-        # Здесь должна быть логика обработки выбранной модификации
-        await callback_query.message.answer(
-            f"Вы выбрали: {selected_mod['name']}\n"
-            f"Цена: {selected_mod['price']} руб."
-        )
-        await callback_query.answer()
-        await state.clear()
+        """Обр��бтка выбора конкретной модификации"""
+        try:
+            mod_id = callback_query.data.split('_')[2]
+            data = await state.get_data()
+            modifications = data.get('modifications', [])
+            
+            # Находим выбранную модификацию
+            selected_mod = next((mod for mod in modifications if str(mod['id']) == mod_id), None)
+            
+            if not selected_mod:
+                await callback_query.answer("Модификация не найдена")
+                return
+            
+            # Получаем список запчастей для выбранной модификации
+            parser = AutodocCarParser()
+            brand_code = data['search_result'].get('brand_code')
+            parts_data = await parser.get_parts_list(
+                brand_code, 
+                selected_mod['id'],
+                selected_mod['car_ssd']
+            )
+            
+            if not parts_data:
+                await callback_query.answer("Список запчастей недоступен")
+                return
+            
+            # Форматируем и отправляем дерево запчастей
+            parts_tree = parser.display_parts_tree(parts_data)
+            parts_text = "🚗 Выбранная модификация:\n"
+            parts_text += f"• Комлектация: {selected_mod['grade']}\n"
+            parts_text += f"• Трансмиссия: {selected_mod['transmission']}\n"
+            parts_text += f"• Двери: {selected_mod['doors']}\n"
+            parts_text += f"• Регион: {selected_mod['country']}\n\n"
+            parts_text += "📦 Доступные запчасти:\n"
+            
+            # Разбиваем текст на части, если он слишком длинный
+            max_length = 4096
+            messages = []
+            current_message = parts_text
+            
+            for part in parts_tree:
+                if len(current_message) + len(str(part)) + 2 > max_length:
+                    messages.append(current_message)
+                    current_message = str(part) + "\n"
+                else:
+                    current_message += str(part) + "\n"
+            
+            if current_message:
+                messages.append(current_message)
+            
+            # Отправляем сообщения
+            for i, msg_text in enumerate(messages):
+                if i == 0:
+                    # Первое сообщение с кнопкой "Назад"
+                    await callback_query.message.edit_text(
+                        msg_text,
+                        reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
+                            InlineKeyboardButton(text="◀️ Назад к модификациям", callback_data="back_to_modifications")
+                        ]])
+                    )
+                else:
+                    # Остальные сообщения без кнопок
+                    await callback_query.message.answer(msg_text)
+            
+            await callback_query.answer()
+            
+        except Exception as e:
+            logger.error(f"Error handling modification selection: {e}")
+            await callback_query.answer("Произошла ошибка при получении данных")
 
     async def handle_car_search(self, message: types.Message, state: FSMContext):
         """Начало поиска по марке/модели/году"""
@@ -320,7 +383,7 @@ class TelegramBot:
             return
             
         if not message.text.isdigit():
-            await message.answer("Пожалуйста, введите корректный год")
+            await message.answer("Пожалуйста, введите корректный г��д")
             return
             
         data = await state.get_data()
@@ -378,6 +441,7 @@ class TelegramBot:
                             search_result=search_result,
                             current_ssd=current_ssd
                         )
+                        logger.info(f"Auto filled: {search_result}, current_ssd: {current_ssd}")
                         await self.show_available_fields(message, state)
                         return
                 if auto_filled:
@@ -404,30 +468,55 @@ class TelegramBot:
 
     async def handle_field_selection(self, callback: types.CallbackQuery, state: FSMContext):
         """Обработка выбора поля"""
-        if callback.data == "show_modifications":
-            await self.show_modifications(callback.message, state)
-            return
+        try:
+            # Проверяем специальные callback_data
+            if callback.data == "show_modifications":
+                await self.show_modifications(callback.message, state)
+                await callback.answer()
+                return
+            elif callback.data == "back_to_fields":
+                await self.handle_back_to_fields(callback, state)
+                await callback.answer()
+                return
             
-        field_idx = int(callback.data.split('_')[1]) - 1
-        data = await state.get_data()
-        fields = list(data['search_result'].get('available_fields', {}).items())
-        
-        if 0 <= field_idx < len(fields):
-            field_name, field_data = fields[field_idx]
-            keyboard = []
+            # Обработка выбора конкретного поля
+            parts = callback.data.split('_')
+            if len(parts) < 2 or not parts[1].isdigit():
+                logger.error(f"Invalid callback data format: {callback.data}")
+                await callback.answer("Неверный формат данных")
+                return
             
-            for idx, option in enumerate(field_data['options'], 1):
-                keyboard.append([InlineKeyboardButton(
-                    text=option['value'],
-                    callback_data=f"value_{idx}_{field_idx}"
-                )])
+            field_idx = int(parts[1]) - 1
+            data = await state.get_data()
+            fields = list(data['search_result'].get('available_fields', {}).items())
+            
+            if 0 <= field_idx < len(fields):
+                field_name, field_data = fields[field_idx]
+                keyboard = []
                 
-            await callback.message.edit_text(
-                f"Выберите значение для {field_name}:",
-                reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
-            )
-            await state.set_state(CarSearchStates.selecting_field_value)
-            await callback.answer()
+                for idx, option in enumerate(field_data['options'], 1):
+                    keyboard.append([InlineKeyboardButton(
+                        text=option['value'],
+                        callback_data=f"value_{idx}_{field_idx}"
+                    )])
+                    
+                keyboard.append([InlineKeyboardButton(
+                    text="◀️ Назад",
+                    callback_data="back_to_fields"
+                )])
+                    
+                await callback.message.edit_text(
+                    f"Выберите значение для {field_name}:",
+                    reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
+                )
+                await state.set_state(CarSearchStates.selecting_field_value)
+                await callback.answer()
+            else:
+                await callback.answer("Неверный индекс поля")
+                
+        except Exception as e:
+            logger.error(f"Error in field selection: {e}", exc_info=True)
+            await callback.answer("Произошла ошибка при выборе поля")
 
     async def handle_field_value_selection(self, callback: types.CallbackQuery, state: FSMContext):
         """Обработка выбора значения поля"""
@@ -511,32 +600,152 @@ class TelegramBot:
         await state.set_state(CarSearchStates.selecting_field)
         await callback.answer()
 
-    async def show_modifications(self, message: types.Message, state: FSMContext):
-        """Показать модификации"""
-        data = await state.get_data()
+    async def search_modifications(self, brand_code: str, current_ssd: str) -> str:
+        """Поиск модификаций и получение списка запчастей"""
+        logger.info(f"Searching modifications with brand_code={brand_code}, current_ssd={current_ssd}")
         parser = AutodocCarParser()
         
-        mod_result = await parser.display_modifications(
-            data['search_result'].get('brand_code'),
-            data['current_ssd']
-        )
-        
-        if mod_result:
-            car_id, ssd = mod_result
-            parts_data = await parser.get_parts_list(
-                data['search_result'].get('brand_code'),
-                car_id,
-                ssd
+        if current_ssd:
+            logger.info("Getting modifications...")
+            mod_result = await parser.display_modifications(brand_code, current_ssd)
+            logger.info(f"Got modifications result: {mod_result}")
+            
+            if mod_result:
+                car_id, ssd = mod_result
+                logger.info(f"Getting parts list for car_id={car_id}, ssd={ssd}")
+                parts_data = await parser.get_parts_list(brand_code, car_id, ssd)
+                logger.info(f"Got parts data: {parts_data}")
+                return parser.display_parts_tree(parts_data)
+        return None
+
+    async def show_modifications(self, message: types.Message, state: FSMContext):
+        """Показать модификации"""
+        try:
+            data = await state.get_data()
+            logger.info(f"Show modifications - State data: {data}")
+            
+            if not data.get('current_ssd'):
+                logger.error("No current_ssd in state data")
+                await message.edit_text(
+                    "Сначала нужно выбрать все необходимые параметры автомобиля.",
+                    reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
+                        InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_fields")
+                    ]])
+                )
+                return
+            
+            parser = AutodocCarParser()
+            brand_code = data['search_result'].get('brand_code')
+            current_ssd = data.get('current_ssd')
+            
+            logger.info(f"Getting modifications for brand_code={brand_code}, ssd={current_ssd}")
+            modifications = await parser.get_wizard_modifications(brand_code, current_ssd)
+            logger.info(f"Got modifications response: {modifications}")
+            
+            if not modifications or not modifications.get('specificAttributes'):
+                logger.warning("No modifications found in response")
+                await message.edit_text(
+                    "Модифик��ции не найдены",
+                    reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
+                        InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_fields")
+                    ]])
+                )
+                return
+            
+            # Форматируем модификации для отображения
+            formatted_mods = []
+            keyboard = []
+            
+            for mod in modifications.get('specificAttributes', []):
+                try:
+                    # Получаем нужные атрибуты напрямую из mod
+                    attributes = {attr['key']: attr['value'] for attr in mod.get('attributes', [])}
+                    car_id = mod.get('carId')
+                    car_ssd = mod.get('ssd')
+                    
+                    # Создаем словарь с данными модификации
+                    formatted_mod = {
+                        'id': car_id,
+                        'car_ssd': car_ssd,
+                        'grade': attributes.get('grade', 'Н/Д'),
+                        'transmission': attributes.get('transmission', 'Н/Д'),
+                        'doors': data['search_result'].get('state', {}).get('items', [])[5].get('value', 'Н/Д'),
+                        'country': attributes.get('destinationRegion', 'Н/Д')
+                    }
+                    
+                    formatted_mods.append(formatted_mod)
+                    
+                    # Создаем текст для кнопки
+                    button_text = f"{formatted_mod['grade']} - {formatted_mod['transmission']}"
+                    if formatted_mod['doors'] != 'Н/Д':
+                        button_text += f" ({formatted_mod['doors']})"
+                    
+                    # Добавляем кнопку для каждой модификации
+                    keyboard.append([InlineKeyboardButton(
+                        text=button_text,
+                        callback_data=f"select_mod_{formatted_mod['id']}"
+                    )])
+                    
+                except Exception as e:
+                    logger.error(f"Error formatting modification: {e}", exc_info=True)
+                    continue
+            
+            # Добавляем кнопку "Назад"
+            keyboard.append([InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_fields")])
+            
+            # Формируем текст с общей информацией
+            common_info = parser.format_common_info(modifications.get('commonAttributes', []))
+            info_text = "📋 Общая информация:\n"
+            for key, value in common_info.items():
+                info_text += f"• {key}: {value}\n"
+            
+            info_text += "\n🚗 Доступные модификации:"
+            
+            logger.info(f"Sending message with {len(formatted_mods)} modifications")
+            
+            # Отправляем сообщение с кнопками
+            await message.edit_text(
+                info_text,
+                reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
             )
             
-            parts_text = self.format_parts_tree(parts_data)
-            await message.edit_text(parts_text)
-                
-        await state.clear()
-        await message.answer(
-            "Поиск завершен! Выберите действие:",
-            reply_markup=get_main_keyboard()
+            # Сохраняем модификации в состоянии
+            await state.update_data(modifications=formatted_mods)
+            await state.set_state(CarSearchStates.viewing_modifications)
+            
+        except Exception as e:
+            logger.error(f"Error showing modifications: {e}", exc_info=True)
+            await message.edit_text(
+                "Произошла ошибка при получении модификаций",
+                reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
+                    InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_fields")
+                ]])
+            )
+
+    async def handle_back_to_fields(self, callback: types.CallbackQuery, state: FSMContext):
+        """Обработка возврата к выбору полей"""
+        data = await state.get_data()
+        search_result = data.get('search_result', {})
+        fields = list(search_result.get('available_fields', {}).items())
+        
+        keyboard = []
+        for idx, (field_name, _) in enumerate(fields, 1):
+            keyboard.append([InlineKeyboardButton(
+                text=field_name,
+                callback_data=f"field_{idx}"
+            )])
+        
+        keyboard.append([InlineKeyboardButton(
+            text="Показать текущие модификации",
+            callback_data="show_modifications"
+        )])
+        
+        await callback.message.edit_text(
+            "Выберите поле для уточнения:",
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
         )
+        await state.set_state(CarSearchStates.selecting_field)
+        await callback.answer()
 
     def format_parts_tree(self, parts_data, level=0):
         """Форматирование дерева запчастей в текст"""
@@ -618,8 +827,17 @@ class TelegramBot:
 
     async def handle_search_stats(self, message: types.Message):
         """Обработчик кнопки статистики поиска"""
-        await message.answer("Статистика ваших поисков")
+        await message.answer("Статистика ваших писков")
 
     async def handle_settings(self, message: types.Message):
         """Обработчик кнопки настроек"""
         await message.answer("Настройки профиля")
+
+    async def handle_back_to_modifications(self, callback: types.CallbackQuery, state: FSMContext):
+        """Обработчик возврата к списку модификаций"""
+        try:
+            await self.show_modifications(callback.message, state)
+            await callback.answer()
+        except Exception as e:
+            logger.error(f"Error handling back to modifications: {e}")
+            await callback.answer("Произошла ошибка при возврате к списку модификаций")
