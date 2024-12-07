@@ -40,30 +40,6 @@ class CarSearch(StatesGroup):
     model = State()
     region = State()
 
-# def create_regions_keyboard() -> InlineKeyboardMarkup:
-#     """Создать клавиатуру с регионами"""
-#     regions = ["General", "America", "Europe", "Japan"]
-    
-#     keyboard = []
-#     current_row = []
-    
-#     for region in regions:
-#         if len(current_row) == 2:
-#             keyboard.append(current_row)
-#             current_row = []
-        
-#         current_row.append(
-#             InlineKeyboardButton(
-#                 text=region,
-#                 callback_data=f"region_{region}"
-#             )
-#         )
-    
-#     if current_row:
-#         keyboard.append(current_row)
-    
-#     return InlineKeyboardMarkup(inline_keyboard=keyboard)
-
 class TelegramBot:
     def __init__(self):
         self.bot = Bot(token=config.BOT_TOKEN)
@@ -171,116 +147,67 @@ class TelegramBot:
             logger.error(f"Error in start command: {e}")
             await message.answer("Произошла ошибка. Пожалуйста, попробуйте позже.")
 
-    @staticmethod
-    async def search_parts(message: types.Message, state: FSMContext):
-        """Обработчик кнопки поиска запчастей"""
+    async def search_parts(self, message: types.Message, state: FSMContext):
+        """Начало поиска запчастей"""
         await message.answer(
-            "Введите артикул запчасти:",
-            reply_markup=get_search_keyboard()
+            "Введите артикул, VIN-номер или информацию об автомобиле в формате: МАРКА МОДЕЛЬ ГОД\n"
+            "Например: honda civic 1996",
+            reply_markup=types.ReplyKeyboardMarkup(
+                keyboard=[[types.KeyboardButton(text="🏠 Главное меню")]], 
+                resize_keyboard=True
+            )
         )
         await state.set_state(SearchStates.waiting_for_part_number)
 
-    async def handle_part_number(self, message: types.Message, session: AsyncSession, state: FSMContext):
-        """Обработчик ввода номера детали"""
-        try:
-            part_number = message.text.strip()
-            
-            if len(part_number) < 3:
-                await message.answer("Артикул должен содержать минимум 3 символа. Попробуйте еще раз.")
-                return
+    async def handle_part_number(self, message: types.Message, state: FSMContext):
+        """Обработка ввода артикула/VIN или информации об авто"""
+        if message.text == "🏠 Главное меню":
+            await self.handle_main_menu(message, state)
+            return
 
-            # Отправляем сообщение о начале поиска
-            await message.answer("🔍 Ищу запчасти по артикулу...")
+        # Проверяем формат ввода
+        parts = message.text.strip().split()
+        
+        if len(parts) >= 3 and parts[-1].isdigit():
+            # Это поиск по марке/модели/году
+            brand = parts[0]
+            model = ' '.join(parts[1:-1])
+            year = parts[-1]
             
-            # Используем search_aggregator для поиска
-            results = await self.search_aggregator.search_all(part_number)
+            parser = AutodocCarParser()
+            initial_query = f"{brand} {model} {year}"
             
-            if results and any(results.values()):
-                # Форматируем результаты
-                response = "🔍 Найденные запчасти:\n\n"
-                idx = 1
+            search_result = await parser.step_by_step_search(initial_query)
+            if not search_result:
+                await message.answer("Не удалось найти информацию по указанному автомобилю. Проверьте правильность ввода.")
+                return
                 
-                for source, items in results.items():
-                    if items:
-                        for item in items:
-                            if isinstance(item, dict) and item.get('type') != 'car_model':
-                                response += f"{idx}. {item.get('name', 'Название не указано')}\n"
-                                response += f"📝 Артикул: {item.get('article', part_number)}\n"
-                                response += f"🏭 Производитель: {item.get('brand', 'Не указан')}\n"
-                                
-                                # Цена
-                                price = item.get('price')
-                                if price:
-                                    response += f"💰 Цена: {price} ₽\n"
-                                else:
-                                    response += "💰 Цена: По запросу\n"
-                                
-                                # Магазин
-                                response += f"🏪 Магазин: {source.upper()}\n"
-                                
-                                # Наличие
-                                quantity = item.get('quantity')
-                                if quantity and quantity > 0:
-                                    response += f"✅ В наличии: {quantity} шт.\n"
-                                else:
-                                    response += "❌ Нет в наличии\n"
-                                
-                                # Срок доставки
-                                delivery = item.get('delivery_days')
-                                if delivery:
-                                    response += f"🚚 Срок доставки: {delivery} дн.\n"
-                                
-                                # URL если есть
-                                if item.get('url'):
-                                    response += f"🔗 {item['url']}\n"
-                                
-                                response += "\n" + "="*30 + "\n"
-                                idx += 1
-                
-                # Разбиваем на части если сообщение слишком длинное
-                max_length = 4096
-                for i in range(0, len(response), max_length):
-                    chunk = response[i:i + max_length]
-                    await message.answer(chunk)
-                
-                logger.info(
-                    "article_search_success",
-                    telegram_id=message.from_user.id,
-                    query=part_number,
-                    results_count=sum(len(items) for items in results.values())
-                )
-                metrics.search_results.labels(type="success").inc()
-            else:
-                await message.answer(
-                    "❌ По вашему запросу ничего не найдено.\n"
-                    "Проверьте правильность ввода номера детали.",
-                    reply_markup=get_main_keyboard()
-                )
-                
-                logger.info(
-                    "search_no_results",
-                    telegram_id=message.from_user.id,
-                    query=part_number
-                )
-                metrics.search_results.labels(type="no_results").inc()
+            keyboard = []
+            fields = list(search_result.get('available_fields', {}).items())
             
-            # Очищаем состояние после завершения поиска
-            await state.clear()
-                
-        except Exception as e:
-            logger.error(
-                "search_error",
-                error=str(e),
-                telegram_id=message.from_user.id,
-                query=message.text
+            for idx, (field_name, _) in enumerate(fields, 1):
+                keyboard.append([InlineKeyboardButton(
+                    text=field_name,
+                    callback_data=f"field_{idx}"
+                )])
+            
+            keyboard.append([InlineKeyboardButton(
+                text="Показать текущие модификации",
+                callback_data="show_modifications"
+            )])
+            
+            search_message = await message.answer(
+                "Выберите поле для уточнения:",
+                reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
             )
-            metrics.error_count.labels(type="search").inc()
-            await message.answer(
-                "Произошла ошибка при поиске.\n"
-                "Попробуйте позже или обратитесь в поддержку.",
-                reply_markup=get_main_keyboard()
+                
+            await state.update_data(
+                search_result=search_result,
+                current_ssd=None,
+                known_values={'Модель': model, 'Год': year},
+                message_id=search_message.message_id
             )
-            await state.clear()
+            await state.set_state(CarSearchStates.selecting_field)
 
     @staticmethod
     async def handle_region_selection(callback_query: types.CallbackQuery, state: FSMContext):
@@ -405,13 +332,16 @@ class TelegramBot:
         initial_query = f"{brand} {model} {year}"
         
         search_result = await parser.step_by_step_search(initial_query)
+        # Отправляем первое сообщение и сохраняем его ID
+        search_message = await message.answer("Выполняется поиск...")
         await state.update_data(
             search_result=search_result,
             current_ssd=None,
-            known_values={'Модель': model, 'Год': year}
+            known_values={'Модель': model, 'Год': year},
+            message_id=search_message.message_id
         )
         
-        await self.show_available_fields(message, state)
+        await self.show_available_fields(search_message, state)
 
     async def show_available_fields(self, message: types.Message, state: FSMContext):
         """Показать доступные поля для выбора"""
@@ -423,10 +353,37 @@ class TelegramBot:
             if data.get('current_ssd'):
                 await self.show_modifications(message, state)
             else:
-                await message.answer("Поиск завершен!")
+                await message.edit_text("Поиск завершен!")
                 await state.clear()
             return
+
+        # Проверяем можно ли автозаполнить какие-то поля
+        known_values = data.get('known_values', {})
+        current_ssd = data.get('current_ssd')
+        auto_filled = False
+        parser = AutodocCarParser()
+        
+        for field_name, field_data in fields:
+            if field_name in known_values:
+                target_value = known_values[field_name]
+                for option in field_data['options']:
+                    if target_value.upper() in option['value'].upper():
+                        current_ssd = option['key']
+                        search_result = await parser.step_by_step_search({
+                            'brand_code': search_result.get('brand_code'),
+                            'ssd': current_ssd
+                        })
+                        auto_filled = True
+                        await state.update_data(
+                            search_result=search_result,
+                            current_ssd=current_ssd
+                        )
+                        await self.show_available_fields(message, state)
+                        return
+                if auto_filled:
+                    return
             
+        # Если ничего не автозаполнилось, показываем доступные поля
         keyboard = []
         for idx, (field_name, _) in enumerate(fields, 1):
             keyboard.append([InlineKeyboardButton(
@@ -439,7 +396,7 @@ class TelegramBot:
             callback_data="show_modifications"
         )])
         
-        await message.answer(
+        await message.edit_text(
             "Выберите поле для уточнения:",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
         )
@@ -470,6 +427,7 @@ class TelegramBot:
                 reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
             )
             await state.set_state(CarSearchStates.selecting_field_value)
+            await callback.answer()
 
     async def handle_field_value_selection(self, callback: types.CallbackQuery, state: FSMContext):
         """Обработка выбора значения поля"""
@@ -492,7 +450,66 @@ class TelegramBot:
             current_ssd=current_ssd
         )
         
-        await self.show_available_fields(callback.message, state)
+        # Проверяем можно ли автозаполнить какие-то поля
+        known_values = data.get('known_values', {})
+        available_fields = search_result.get('available_fields', {})
+        
+        # Цикл автозаполнения - проверяем все поля
+        while True:
+            auto_filled = False
+            current_fields = list(search_result.get('available_fields', {}).items())
+            
+            for field_name, field_data in current_fields:
+                if field_name in known_values:
+                    target_value = known_values[field_name]
+                    for option in field_data['options']:
+                        if target_value.upper() in option['value'].upper():
+                            current_ssd = option['key']
+                            search_result = await parser.step_by_step_search({
+                                'brand_code': search_result.get('brand_code'),
+                                'ssd': current_ssd
+                            })
+                            auto_filled = True
+                            await state.update_data(
+                                search_result=search_result,
+                                current_ssd=current_ssd
+                            )
+                            break
+                    if auto_filled:
+                        break
+            
+            # Если ничего не автозаполнилось, выходим из цикла
+            if not auto_filled:
+                break
+        
+        # Показываем обновленные поля
+        fields = list(search_result.get('available_fields', {}).items())
+        if not fields:
+            if current_ssd:
+                await self.show_modifications(callback.message, state)
+            else:
+                await callback.message.edit_text("Поиск завершен!")
+                await state.clear()
+            return
+            
+        keyboard = []
+        for idx, (field_name, _) in enumerate(fields, 1):
+            keyboard.append([InlineKeyboardButton(
+                text=field_name,
+                callback_data=f"field_{idx}"
+            )])
+        
+        keyboard.append([InlineKeyboardButton(
+            text="Показать текущие модификации",
+            callback_data="show_modifications"
+        )])
+        
+        await callback.message.edit_text(
+            "Выберите поле для уточнения:",
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard)
+        )
+        await state.set_state(CarSearchStates.selecting_field)
+        await callback.answer()
 
     async def show_modifications(self, message: types.Message, state: FSMContext):
         """Показать модификации"""
@@ -512,12 +529,8 @@ class TelegramBot:
                 ssd
             )
             
-            # Преобразуем дерево запчастей в текстовый формат для отправки
             parts_text = self.format_parts_tree(parts_data)
-            
-            # Разбиваем длинное сообщение на части, если необходимо
-            for part in self.split_long_message(parts_text):
-                await message.answer(part)
+            await message.edit_text(parts_text)
                 
         await state.clear()
         await message.answer(
