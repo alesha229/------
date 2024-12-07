@@ -25,7 +25,10 @@ def get_search_keyboard() -> ReplyKeyboardMarkup:
     keyboard = ReplyKeyboardMarkup(
         keyboard=[
             [
-                KeyboardButton(text="🔄 Новый поиск"),
+                KeyboardButton(text="🔍 Поиск по артикулу/VIN"),
+                KeyboardButton(text="🚗 Поиск по авто")
+            ],
+            [
                 KeyboardButton(text="📋 История поиска")
             ],
             [

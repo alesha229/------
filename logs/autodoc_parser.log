@@ -6833,3 +6833,39 @@ AttributeError: 'AutodocArticleParser' object has no attribute 'get_manufacturer
 2024-12-03 10:00:01,386 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 558)
 2024-12-03 10:00:01,509 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 579)
 2024-12-03 10:00:01,558 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-07 10:03:40,148 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-07 10:03:40,149 - autodoc_parser - INFO - Начинаем поиск по запросу: 04465-42160
+2024-12-07 10:03:51,869 - autodoc_parser - INFO - [SEARCH] Found 1 manufacturers
+2024-12-07 10:03:51,870 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 579)
+2024-12-07 10:03:52,035 - autodoc_parser - INFO - [SEARCH] Total parts found: 1
+2024-12-07 10:04:18,597 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-07 10:04:18,598 - autodoc_parser - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-07 10:04:20,221 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-07 10:04:20,223 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 517)
+2024-12-07 10:04:20,451 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 558)
+2024-12-07 10:04:20,632 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 579)
+2024-12-07 10:04:21,099 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-07 10:26:14,347 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-07 10:26:14,347 - autodoc_parser - INFO - Начинаем поиск по запросу: 04465-42160
+2024-12-07 10:26:15,317 - autodoc_parser - INFO - [SEARCH] Found 1 manufacturers
+2024-12-07 10:26:15,318 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 579)
+2024-12-07 10:26:15,522 - autodoc_parser - INFO - [SEARCH] Total parts found: 1
+2024-12-07 10:26:30,160 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-07 10:26:30,161 - autodoc_parser - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-07 10:26:30,764 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-07 10:26:30,764 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 517)
+2024-12-07 10:26:31,025 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 558)
+2024-12-07 10:26:31,254 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 579)
+2024-12-07 10:26:31,442 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-07 10:27:02,648 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-07 10:27:02,648 - autodoc_parser - INFO - Начинаем поиск по запросу: 90915YZZD4
+2024-12-07 10:27:03,234 - autodoc_parser - INFO - [SEARCH] Found 3 manufacturers
+2024-12-07 10:27:03,235 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 517)
+2024-12-07 10:27:03,386 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 558)
+2024-12-07 10:27:03,543 - autodoc_parser - INFO - [SEARCH] Processing None (ID: 579)
+2024-12-07 10:27:04,150 - autodoc_parser - INFO - [SEARCH] Total parts found: 3
+2024-12-07 17:07:59,372 - autodoc_parser - INFO - Инициализация парсера Autodoc
+2024-12-07 17:07:59,378 - autodoc_parser - INFO - Начинаем поиск по запросу: 🔍 Поиск по артикулу/VIN
+2024-12-07 17:08:11,061 - autodoc_parser - ERROR - [ERROR] Failed to get manufacturers: 404
+2024-12-07 17:08:11,061 - autodoc_parser - INFO - [SEARCH] Found 0 manufacturers
+2024-12-07 17:08:11,062 - autodoc_parser - INFO - [SEARCH] Total parts found: 0
