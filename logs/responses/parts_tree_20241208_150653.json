@@ -1,0 +1,3337 @@
+{
+  "data": [
+    {
+      "name": "Детали для ТО",
+      "synonyms": "",
+      "quickGroupId": "1",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Фильтр масляный",
+          "synonyms": "",
+          "quickGroupId": "2",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Фильтр воздушный",
+          "synonyms": "воздухан",
+          "quickGroupId": "3",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Фильтр топливный",
+          "synonyms": "",
+          "quickGroupId": "4",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Свечи зажигания",
+          "synonyms": "Свеча зажигания, Свечки",
+          "quickGroupId": "9",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Ремень приводной",
+          "synonyms": "Ремень поликлиновый, ремень поликлиновой, ремень клиновой, ремень агрегатов",
+          "quickGroupId": "11",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Ремень ГРМ",
+          "synonyms": "",
+          "quickGroupId": "12",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Насос системы охлаждения",
+          "synonyms": "Водяной насос,Помпа",
+          "quickGroupId": "13",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Термостат",
+          "synonyms": "",
+          "quickGroupId": "14",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Колодки тормозные",
+          "synonyms": "",
+          "quickGroupId": "15",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Пробка сливного отверстия",
+          "synonyms": "Пробка поддона",
+          "quickGroupId": "16",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Щетки стеклоочистителя",
+          "synonyms": "Дворники, Мослы, Дворник, Щетка стеклоочистителя",
+          "quickGroupId": "17",
+          "canBeSearched": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Двигатель",
+      "synonyms": "",
+      "quickGroupId": "18",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Головка блока цилиндров",
+          "synonyms": "",
+          "quickGroupId": "35",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Головка блока цилиндров",
+              "synonyms": "",
+              "quickGroupId": "42",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка головки цилиндра",
+              "synonyms": "Прокладка ГБЦ",
+              "quickGroupId": "36",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крышка клапанная",
+              "synonyms": "",
+              "quickGroupId": "37",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка клапанной крышки",
+              "synonyms": "",
+              "quickGroupId": "22",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крышка маслозаливной горловины",
+              "synonyms": "деталь 710",
+              "quickGroupId": "41",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Механизм газораспределения",
+          "synonyms": "",
+          "quickGroupId": "68",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Клапаны, регулировка",
+              "synonyms": "",
+              "quickGroupId": "92",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Клапан впускной",
+                  "synonyms": "впускные клапана",
+                  "quickGroupId": "13458",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Клапан выпускной",
+                  "synonyms": "выпускные клапана",
+                  "quickGroupId": "13459",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Маслосъемные колпачки",
+                  "synonyms": "Колпачок маслоотражающий, Колпачок  маслосьемный, Колпачок  маслосъемный",
+                  "quickGroupId": "23",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Толкатели клапана",
+                  "synonyms": "",
+                  "quickGroupId": "13461",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Пружины клапана",
+                  "synonyms": "",
+                  "quickGroupId": "13463",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Стопор пружины клапана",
+                  "synonyms": "Сухари клапана, Сухарь клапана",
+                  "quickGroupId": "13464",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Направляющая клапана",
+                  "synonyms": "",
+                  "quickGroupId": "39",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Ремень ГРМ, натяжители ремня",
+              "synonyms": "",
+              "quickGroupId": "69",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Комплект ремня ГРМ",
+                  "synonyms": "",
+                  "quickGroupId": "71",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Ремень ГРМ",
+                  "synonyms": "",
+                  "quickGroupId": "70",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Ролик обводной, направляющий",
+                  "synonyms": "",
+                  "quickGroupId": "73",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Крышка ремня ГРМ",
+                  "synonyms": "",
+                  "quickGroupId": "78",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Распредвал",
+              "synonyms": "Распределительный вал",
+              "quickGroupId": "87",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Шестерни",
+              "synonyms": "",
+              "quickGroupId": "85",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Блок-картер",
+          "synonyms": "",
+          "quickGroupId": "95",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Блок-картер",
+              "synonyms": "блок цилиндров",
+              "quickGroupId": "96",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Вентиляция",
+              "synonyms": "",
+              "quickGroupId": "99",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Кривошипношатунный механизм",
+          "synonyms": "",
+          "quickGroupId": "102",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Коленчатый вал, вкладыши",
+              "synonyms": "Коленвал",
+              "quickGroupId": "103",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Коленчатый вал",
+                  "synonyms": "Коленвал, колено",
+                  "quickGroupId": "104",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Вкладыш подшипника коленвала",
+                  "synonyms": "",
+                  "quickGroupId": "105",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Диск коленвала",
+                  "synonyms": "",
+                  "quickGroupId": "107",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Шестерня коленвала",
+                  "synonyms": "",
+                  "quickGroupId": "86",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Шатун",
+              "synonyms": "",
+              "quickGroupId": "111",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Шатун",
+                  "synonyms": "",
+                  "quickGroupId": "112",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Вкладыш нижней головки шатуна",
+                  "synonyms": "",
+                  "quickGroupId": "113",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Втулка нижней головки шатуна",
+                  "synonyms": "",
+                  "quickGroupId": "115",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Поршень",
+              "synonyms": "",
+              "quickGroupId": "117",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Поршень",
+                  "synonyms": "",
+                  "quickGroupId": "118",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Комплект поршневых колец",
+                  "synonyms": "Кольца поршневые",
+                  "quickGroupId": "120",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Сальники, комплекты уплотнений",
+              "synonyms": "",
+              "quickGroupId": "123",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Сальник коленвала задний",
+                  "synonyms": "",
+                  "quickGroupId": "13466",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Маховик",
+              "synonyms": "",
+              "quickGroupId": "110",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Система зажигания, накаливания",
+          "synonyms": "",
+          "quickGroupId": "245",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Распределитель зажигания",
+              "synonyms": "трамблер",
+              "quickGroupId": "246",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Катушка зажигания",
+              "synonyms": "",
+              "quickGroupId": "247",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Свечи зажигания",
+              "synonyms": "",
+              "quickGroupId": "248",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Провода высоковольтные",
+              "synonyms": "Провода высокого напряжения,Провода зажигания",
+              "quickGroupId": "249",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Усилитель искры в системе зажигания",
+              "synonyms": "",
+              "quickGroupId": "250",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Генератор импульсов",
+              "synonyms": "",
+              "quickGroupId": "251",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Вакуумная система",
+              "synonyms": "",
+              "quickGroupId": "256",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Система подачи воздуха",
+          "synonyms": "",
+          "quickGroupId": "46",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Воздухоочиститель в сборе",
+              "synonyms": "",
+              "quickGroupId": "47",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Фильтр воздушный",
+                  "synonyms": "воздухан",
+                  "quickGroupId": "3",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Крышка воздушного фильтра",
+                  "synonyms": "",
+                  "quickGroupId": "13471",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Дроссельная заслонка в сборе",
+              "synonyms": "Дроссель",
+              "quickGroupId": "51",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Дроссельная заслонка",
+                  "synonyms": "Дроссель",
+                  "quickGroupId": "52",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Прокладка дроссельной заслонки",
+                  "synonyms": "",
+                  "quickGroupId": "13470",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Коллектор впускной, комплектующие",
+              "synonyms": "",
+              "quickGroupId": "49",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Коллектор впускной",
+                  "synonyms": "",
+                  "quickGroupId": "13474",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Прокладка впускного коллектора",
+                  "synonyms": "",
+                  "quickGroupId": "24",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Тросик газа",
+              "synonyms": "",
+              "quickGroupId": "48",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Регулирование, управление",
+              "synonyms": "",
+              "quickGroupId": "64",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Заслонка теплого воздуха",
+              "synonyms": "",
+              "quickGroupId": "65",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Приготовление смеси",
+          "synonyms": "",
+          "quickGroupId": "224",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Дроссельная заслонка в сборе",
+              "synonyms": "",
+              "quickGroupId": "227",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Дроссельная заслонка",
+                  "synonyms": "Дроссель",
+                  "quickGroupId": "52",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Прокладка дроссельной заслонки",
+                  "synonyms": "",
+                  "quickGroupId": "13470",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Блок управления двигателем",
+              "synonyms": "ЭБУ,блок управления ДВС,компьютер",
+              "quickGroupId": "242",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Датчик массового расхода воздуха",
+              "synonyms": "ДМРВ",
+              "quickGroupId": "238",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Датчик кислорода",
+              "synonyms": "Лямбда-зонд,Кислородник,Лямбда-датчик,Кислородный датчик",
+              "quickGroupId": "241",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Управление холостым ходом",
+              "synonyms": "",
+              "quickGroupId": "237",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Выключатель, реле",
+              "synonyms": "",
+              "quickGroupId": "240",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Ременный привод",
+          "synonyms": "",
+          "quickGroupId": "185",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Ремень ГРМ",
+              "synonyms": "",
+              "quickGroupId": "201",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Ремень ГРМ",
+                  "synonyms": "",
+                  "quickGroupId": "202",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Комплект ремня ГРМ",
+                  "synonyms": "",
+                  "quickGroupId": "203",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Ролик обводной, направляющий",
+                  "synonyms": "",
+                  "quickGroupId": "205",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Крышка ремня ГРМ",
+                  "synonyms": "",
+                  "quickGroupId": "210",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Ремень приводной, ролики",
+              "synonyms": "",
+              "quickGroupId": "192",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Ремень приводной",
+                  "synonyms": "Ремень поликлиновый, ремень поликлиновой, ремень клиновой, ремень агрегатов",
+                  "quickGroupId": "193",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Ролик натяжной, натяжитель",
+                  "synonyms": "",
+                  "quickGroupId": "195",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Ролик обводной, направляющий",
+                  "synonyms": "",
+                  "quickGroupId": "196",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Шкив",
+              "synonyms": "шкиф",
+              "quickGroupId": "211",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Механизм свободного хода генератора",
+              "synonyms": "",
+              "quickGroupId": "212",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Система смазки",
+          "synonyms": "",
+          "quickGroupId": "125",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Фильтр масляный",
+              "synonyms": "",
+              "quickGroupId": "126",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Насос масляный, комплектующие",
+              "synonyms": "Маслонасос",
+              "quickGroupId": "136",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Насос масляный",
+                  "synonyms": "Маслонасос",
+                  "quickGroupId": "137",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Прокладка",
+                  "synonyms": "",
+                  "quickGroupId": "138",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Впускная труба",
+                  "synonyms": "",
+                  "quickGroupId": "139",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Корпус и прокладка масляного фильтра",
+              "synonyms": "",
+              "quickGroupId": "127",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Поддон масляный",
+              "synonyms": "",
+              "quickGroupId": "132",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Поддон масляный",
+                  "synonyms": "",
+                  "quickGroupId": "133",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Прокладка",
+                  "synonyms": "",
+                  "quickGroupId": "134",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Пробка сливного отверстия",
+                  "synonyms": "",
+                  "quickGroupId": "135",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Датчик давления масла",
+              "synonyms": "",
+              "quickGroupId": "142",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Указатель уровня масла",
+              "synonyms": "",
+              "quickGroupId": "143",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Прокладки",
+          "synonyms": "",
+          "quickGroupId": "19",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Комплект прокладок",
+              "synonyms": "",
+              "quickGroupId": "20",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка головки цилиндра",
+              "synonyms": "Прокладка ГБЦ",
+              "quickGroupId": "21",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка клапанной крышки",
+              "synonyms": "",
+              "quickGroupId": "22",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка впускного коллектора",
+              "synonyms": "",
+              "quickGroupId": "24",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка выпускного коллектора",
+              "synonyms": "",
+              "quickGroupId": "25",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка картера",
+              "synonyms": "",
+              "quickGroupId": "26",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка масляного поддона",
+              "synonyms": "",
+              "quickGroupId": "27",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка крышки распределительного механизма",
+              "synonyms": "",
+              "quickGroupId": "28",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Герметизация топливной системы",
+              "synonyms": "",
+              "quickGroupId": "30",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Герметизация охлаждающей жидкости",
+              "synonyms": "",
+              "quickGroupId": "31",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Герметизация в сиcтеме циркуляции  масла",
+              "synonyms": "",
+              "quickGroupId": "32",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Сальники, комплект уплотнений",
+              "synonyms": "Сальник коленвала,Сальник распредвала",
+              "quickGroupId": "33",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Крепление двигателя",
+          "synonyms": "",
+          "quickGroupId": "150",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Кронштейн двигателя",
+              "synonyms": "",
+              "quickGroupId": "151",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Опоры двигателя",
+              "synonyms": "Опоры двигателя,подушки двигателя,подушка двигателя,опора двигателя",
+              "quickGroupId": "152",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Отбойник двигателя",
+              "synonyms": "",
+              "quickGroupId": "153",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Электроника двигателя, датчики",
+          "synonyms": "",
+          "quickGroupId": "101",
+          "canBeSearched": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Топливная система",
+      "synonyms": "",
+      "quickGroupId": "262",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Фильтр топливный",
+          "synonyms": "",
+          "quickGroupId": "271",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Топливная форсунка",
+          "synonyms": "",
+          "quickGroupId": "13488",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Форсунка",
+              "synonyms": "форсунка, распылитель, насос-форсунка, инжектор",
+              "quickGroupId": "230",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка форсунки",
+              "synonyms": "кольцо инжектора, колечко форсунки",
+              "quickGroupId": "226",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Насос топливный, комплектующие",
+          "synonyms": "",
+          "quickGroupId": "266",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Насос топливный",
+              "synonyms": "Бензонасос",
+              "quickGroupId": "267",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Аксессуары",
+              "synonyms": "",
+              "quickGroupId": "268",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Система карбюратора",
+          "synonyms": "",
+          "quickGroupId": "281",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Карбюратор в сборе",
+              "synonyms": "",
+              "quickGroupId": "282",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Бак топливный, комплектующие",
+          "synonyms": "",
+          "quickGroupId": "264",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Бак топливный",
+              "synonyms": "бензобак",
+              "quickGroupId": "13478",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Датчик уровня топлива",
+              "synonyms": "",
+              "quickGroupId": "274",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крышка топливного бака",
+              "synonyms": "пробка бензобака",
+              "quickGroupId": "13479",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Топливопровод",
+          "synonyms": "",
+          "quickGroupId": "236",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Соединительные элементы",
+          "synonyms": "",
+          "quickGroupId": "275",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Регулятор давления подачи топлива",
+          "synonyms": "",
+          "quickGroupId": "276",
+          "canBeSearched": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Система охлаждения",
+      "synonyms": "",
+      "quickGroupId": "293",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Насос системы охлаждения, прокладка",
+          "synonyms": "Водяной насос,Помпа",
+          "quickGroupId": "294",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Насос системы охлаждения",
+              "synonyms": "Водяной насос,Помпа",
+              "quickGroupId": "295",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Шкив",
+              "synonyms": "",
+              "quickGroupId": "296",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка",
+              "synonyms": "",
+              "quickGroupId": "297",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Термостат, прокладка термостата",
+          "synonyms": "",
+          "quickGroupId": "299",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Термостат",
+              "synonyms": "",
+              "quickGroupId": "300",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка термостата",
+              "synonyms": "",
+              "quickGroupId": "301",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Корпус термостата",
+              "synonyms": "",
+              "quickGroupId": "13410",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Патрубки системы охлаждения",
+          "synonyms": "Шланг радиатора",
+          "quickGroupId": "308",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Патрубки системы охлаждения",
+              "synonyms": "Шланг радиатора",
+              "quickGroupId": "309",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Соединительные элементы",
+              "synonyms": "",
+              "quickGroupId": "310",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Фланец",
+              "synonyms": "",
+              "quickGroupId": "311",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Радиатор водяной",
+          "synonyms": "",
+          "quickGroupId": "302",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Радиатор системы охлаждения",
+              "synonyms": "Водяной радиатор, радиатор охлаждения",
+              "quickGroupId": "304",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крепление радиатора",
+              "synonyms": "",
+              "quickGroupId": "305",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Расширительный бачок",
+              "synonyms": "",
+              "quickGroupId": "307",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Вентилятор охлаждения радиатора",
+          "synonyms": "",
+          "quickGroupId": "316",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Выключатель, датчик",
+          "synonyms": "",
+          "quickGroupId": "313",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Реле",
+          "synonyms": "",
+          "quickGroupId": "314",
+          "canBeSearched": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Система выпуска",
+      "synonyms": "",
+      "quickGroupId": "320",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Коллектор выпускной, комплектующие",
+          "synonyms": "",
+          "quickGroupId": "342",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Коллектор выпускной",
+              "synonyms": "",
+              "quickGroupId": "13481",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Прокладка выпускного коллектора",
+              "synonyms": "",
+              "quickGroupId": "25",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Глушитель в сборе",
+          "synonyms": "глушак,банка",
+          "quickGroupId": "335",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Трубы",
+              "synonyms": "",
+              "quickGroupId": "344",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Глушитель",
+              "synonyms": "",
+              "quickGroupId": "336",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Датчик кислорода",
+          "synonyms": "Лямбда-зонд,Кислородник,Лямбда-датчик,Кислородный датчик",
+          "quickGroupId": "339",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Детали монтажа",
+          "synonyms": "",
+          "quickGroupId": "349",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Монтажный комплект",
+              "synonyms": "",
+              "quickGroupId": "350",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Монтажные элементы",
+              "synonyms": "",
+              "quickGroupId": "351",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Прокладка",
+                  "synonyms": "",
+                  "quickGroupId": "352",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Хомут",
+                  "synonyms": "",
+                  "quickGroupId": "353",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Отбойник",
+                  "synonyms": "",
+                  "quickGroupId": "355",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Резиновые полоски",
+                  "synonyms": "",
+                  "quickGroupId": "356",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Кронштейн",
+                  "synonyms": "",
+                  "quickGroupId": "357",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Зажимная деталь",
+                  "synonyms": "",
+                  "quickGroupId": "358",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Пружина",
+                  "synonyms": "",
+                  "quickGroupId": "361",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Распорная втулка",
+                  "synonyms": "",
+                  "quickGroupId": "365",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Трансмиссия ",
+      "synonyms": "",
+      "quickGroupId": "381",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Система сцепления",
+          "synonyms": "",
+          "quickGroupId": "382",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Комплект сцепления",
+              "synonyms": "",
+              "quickGroupId": "383",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Корзина сцепления",
+              "synonyms": "Нажимной диск сцепления",
+              "quickGroupId": "384",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Диск сцепления",
+              "synonyms": "",
+              "quickGroupId": "385",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Подшипник выжимной",
+              "synonyms": "Подшипник выключения сцепления",
+              "quickGroupId": "388",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Подшипник выжимной",
+                  "synonyms": "Подшипник выключения сцепления",
+                  "quickGroupId": "389",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Подвижная втулка",
+                  "synonyms": "",
+                  "quickGroupId": "390",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Возвратная вилка",
+                  "synonyms": "",
+                  "quickGroupId": "392",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Система управления сцеплением",
+              "synonyms": "",
+              "quickGroupId": "393",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Главный цилиндр",
+                  "synonyms": "",
+                  "quickGroupId": "394",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Рабочий цилиндр",
+                  "synonyms": "",
+                  "quickGroupId": "395",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Соединительные элементы / шланги",
+                  "synonyms": "",
+                  "quickGroupId": "398",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Педаль",
+                  "synonyms": "",
+                  "quickGroupId": "400",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Маховик",
+              "synonyms": "",
+              "quickGroupId": "404",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Подшипник направляющий (сцепление)",
+              "synonyms": "Центрирующий опорный подшипник",
+              "quickGroupId": "405",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Механическая коробка переключения передач",
+          "synonyms": "МКПП",
+          "quickGroupId": "410",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Прокладки",
+              "synonyms": "",
+              "quickGroupId": "411",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крепление КПП ",
+              "synonyms": "",
+              "quickGroupId": "413",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Корпус ",
+              "synonyms": "",
+              "quickGroupId": "414",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Кольцо синхронизатора",
+              "synonyms": "",
+              "quickGroupId": "418",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Автоматическая коробка передач",
+          "synonyms": "",
+          "quickGroupId": "423",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Поддон масляный",
+              "synonyms": "",
+              "quickGroupId": "426",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Прокладка масляного поддона",
+                  "synonyms": "",
+                  "quickGroupId": "27",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Крепление КПП",
+              "synonyms": "",
+              "quickGroupId": "431",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Масло трансмиссионное",
+              "synonyms": "",
+              "quickGroupId": "437",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Привод колеса",
+          "synonyms": "",
+          "quickGroupId": "443",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Приводной вал",
+              "synonyms": "",
+              "quickGroupId": "444",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "ШРУС",
+              "synonyms": "Шарнирный комплект, Приводной вал, Граната, шарнир равных угловых скоростей",
+              "quickGroupId": "446",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Пыльник",
+              "synonyms": "",
+              "quickGroupId": "447",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Главная передача",
+          "synonyms": "",
+          "quickGroupId": "451",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Дифференциал",
+              "synonyms": "",
+              "quickGroupId": "456",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Корпус",
+                  "synonyms": "",
+                  "quickGroupId": "13417",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Главная пара",
+                  "synonyms": "",
+                  "quickGroupId": "13419",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Подшипники",
+                  "synonyms": "",
+                  "quickGroupId": "13420",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Полуосевые шестерни и сателлиты",
+                  "synonyms": "",
+                  "quickGroupId": "13421",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Регулировочные шайбы",
+                  "synonyms": "",
+                  "quickGroupId": "13422",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Сальники, уплотнения",
+                  "synonyms": "",
+                  "quickGroupId": "13423",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Раздаточная коробка",
+          "synonyms": "",
+          "quickGroupId": "458",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Сальники, уплотнения",
+              "synonyms": "",
+              "quickGroupId": "13432",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ходовая часть",
+      "synonyms": "",
+      "quickGroupId": "465",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Амортизатор подвески, комплектующие",
+          "synonyms": "",
+          "quickGroupId": "472",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Амортизатор",
+              "synonyms": "стойка, стойки, аморты",
+              "quickGroupId": "13395",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Пыльник амортизатора",
+              "synonyms": "пыльник-отбойник",
+              "quickGroupId": "13396",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Отбойник амортизатора",
+              "synonyms": "",
+              "quickGroupId": "13397",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Опора амортизатора подвески",
+              "synonyms": "Опора стойки, опоры стойки, крабы, Опора амортизатора",
+              "quickGroupId": "469",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Пружина подвески, комплектующие",
+          "synonyms": "Пружина подвески,Торсион",
+          "quickGroupId": "466",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Пружины",
+              "synonyms": "",
+              "quickGroupId": "13436",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Стабилизатор поперечной устойчивости, крепление",
+          "synonyms": "",
+          "quickGroupId": "481",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Втулки стабилизатора",
+              "synonyms": "",
+              "quickGroupId": "13394",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Стабилизатор",
+              "synonyms": "",
+              "quickGroupId": "482",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Детали крепежа",
+              "synonyms": "",
+              "quickGroupId": "486",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Рычаги и тяги подвески",
+          "synonyms": "",
+          "quickGroupId": "478",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Рычаг (поперечный, диагональный, продольный)",
+              "synonyms": "",
+              "quickGroupId": "479",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Тяги подвески, тяга Панара",
+              "synonyms": "",
+              "quickGroupId": "487",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крепление рычага подвески",
+              "synonyms": "",
+              "quickGroupId": "480",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Ступица колеса, составляющие",
+          "synonyms": "",
+          "quickGroupId": "488",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Ступица колеса",
+              "synonyms": "",
+              "quickGroupId": "489",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Подшипник ступичный",
+              "synonyms": "",
+              "quickGroupId": "490",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Сальник вала",
+              "synonyms": "",
+              "quickGroupId": "491",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Подвеска, корпус колесного подшипника",
+              "synonyms": "",
+              "quickGroupId": "493",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Кулак поворотный, составляющие",
+          "synonyms": "",
+          "quickGroupId": "498",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Поворотный кулак",
+              "synonyms": "",
+              "quickGroupId": "499",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Балка моста, подвеска оси",
+          "synonyms": "",
+          "quickGroupId": "503",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Балка моста",
+              "synonyms": "",
+              "quickGroupId": "504",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Балка моста, надрамник",
+              "synonyms": "",
+              "quickGroupId": "506",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Масло гидравлическое",
+          "synonyms": "",
+          "quickGroupId": "477",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Колеса, шины",
+          "synonyms": "Катки",
+          "quickGroupId": "512",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Диски",
+              "synonyms": "",
+              "quickGroupId": "514",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Рулевое управление",
+      "synonyms": "",
+      "quickGroupId": "518",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Рулевой механизм, составляющие",
+          "synonyms": "",
+          "quickGroupId": "528",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Рейка рулевая",
+              "synonyms": "",
+              "quickGroupId": "13382",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Тяга рулевая",
+              "synonyms": "Тяга рулевая",
+              "quickGroupId": "520",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Наконечник рулевой тяги",
+              "synonyms": "",
+              "quickGroupId": "522",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Пыльник рулевой рейки",
+              "synonyms": "Гофрированный кожух рулевого управления",
+              "quickGroupId": "523",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Ремкомплект рулевой рейки",
+              "synonyms": "",
+              "quickGroupId": "13388",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Демпфер рулевой рейки",
+              "synonyms": "",
+              "quickGroupId": "526",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Рулевая колонка",
+          "synonyms": "",
+          "quickGroupId": "529",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Рулевое колесо",
+              "synonyms": "",
+              "quickGroupId": "13383",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Система гидроусилителя руля",
+          "synonyms": "",
+          "quickGroupId": "13379",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Насос ГУР",
+              "synonyms": "Гидрач, насос гидроусилителя",
+              "quickGroupId": "13380",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Бачок ГУР",
+              "synonyms": "",
+              "quickGroupId": "536",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Тормозная система",
+      "synonyms": "",
+      "quickGroupId": "542",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Дисковый тормозной механизм",
+          "synonyms": "",
+          "quickGroupId": "543",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Колодки тормозные дисковые",
+              "synonyms": "",
+              "quickGroupId": "545",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Датчик износа тормозных колодок",
+              "synonyms": "",
+              "quickGroupId": "562",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Диск тормозной",
+              "synonyms": "",
+              "quickGroupId": "544",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Суппорт тормозной",
+              "synonyms": "",
+              "quickGroupId": "550",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Направляющие суппорта",
+              "synonyms": "Направляшка",
+              "quickGroupId": "13377",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Ремкомплект тормозного суппорта, пыльники",
+              "synonyms": "",
+              "quickGroupId": "13378",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Детали тормозного суппорта",
+              "synonyms": "",
+              "quickGroupId": "549",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Детали тормозной системы",
+              "synonyms": "",
+              "quickGroupId": "546",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Барабанный тормозной механизм",
+          "synonyms": "",
+          "quickGroupId": "551",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Барабан тормозной",
+              "synonyms": "",
+              "quickGroupId": "552",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Колодки тормозные барабанные",
+              "synonyms": "",
+              "quickGroupId": "553",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Ремкомплект",
+              "synonyms": "",
+              "quickGroupId": "555",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Стояночный тормоз",
+              "synonyms": "Колодки ручника",
+              "quickGroupId": "557",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Колесный тормозной цилиндр",
+              "synonyms": "",
+              "quickGroupId": "558",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Стояночный тормоз",
+          "synonyms": "Колодки ручника",
+          "quickGroupId": "561",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Колодки стояночного тормоза",
+              "synonyms": "",
+              "quickGroupId": "13390",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Тросы, тяги и рычаги тормозной системы",
+              "synonyms": "",
+              "quickGroupId": "560",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Система курсовой устойчивости ESP (ABS, EBD, EDS, ASR)",
+          "synonyms": "",
+          "quickGroupId": "570",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Датчики АБС",
+              "synonyms": "датчик ABS",
+              "quickGroupId": "13391",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Блок управления АБС, датчики, реле",
+              "synonyms": "",
+              "quickGroupId": "13393",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Шланги тормозные",
+          "synonyms": "",
+          "quickGroupId": "564",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Усилитель тормозной системы",
+          "synonyms": "",
+          "quickGroupId": "566",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Главный тормозной цилиндр",
+          "synonyms": "",
+          "quickGroupId": "567",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Колесный тормозной цилиндр",
+          "synonyms": "",
+          "quickGroupId": "563",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Гидроаккумулятор",
+          "synonyms": "",
+          "quickGroupId": "572",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Выключатель фонаря сигнала торможения",
+          "synonyms": "",
+          "quickGroupId": "575",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Жидкость тормозная",
+          "synonyms": "",
+          "quickGroupId": "568",
+          "canBeSearched": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Электрооборудование",
+      "synonyms": "",
+      "quickGroupId": "604",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Аккумулятор",
+          "synonyms": "Батарея",
+          "quickGroupId": "621",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Система стартера",
+          "synonyms": "",
+          "quickGroupId": "612",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Стартер",
+              "synonyms": "",
+              "quickGroupId": "613",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Стартер, детали стартера",
+              "synonyms": "",
+              "quickGroupId": "614",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Тяговое реле стартера",
+              "synonyms": "",
+              "quickGroupId": "615",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Генератор, составляющие",
+          "synonyms": "",
+          "quickGroupId": "616",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Генератор",
+              "synonyms": "динамо",
+              "quickGroupId": "617",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Шкив генератора",
+              "synonyms": "",
+              "quickGroupId": "13473",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Механизм свободного хода генератора",
+              "synonyms": "",
+              "quickGroupId": "212",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Регулятор",
+              "synonyms": "",
+              "quickGroupId": "618",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Составляющие",
+              "synonyms": "",
+              "quickGroupId": "619",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Система освещения",
+          "synonyms": "",
+          "quickGroupId": "648",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Фары головного света, составляющие",
+              "synonyms": "Головной свет",
+              "quickGroupId": "622",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Фары передние",
+                  "synonyms": "фара передняя, передняя оптика",
+                  "quickGroupId": "623",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Лампы",
+                  "synonyms": "",
+                  "quickGroupId": "626",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Основная фара комплектующие",
+                  "synonyms": "",
+                  "quickGroupId": "627",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Регулировка угла наклона фар",
+                  "synonyms": "",
+                  "quickGroupId": "624",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Задние фонари",
+              "synonyms": "",
+              "quickGroupId": "13486",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Фонарь задний",
+                  "synonyms": "",
+                  "quickGroupId": "650",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Задняя противотуманная фара",
+                  "synonyms": "",
+                  "quickGroupId": "667",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Фонарь освещения номерного знака",
+                  "synonyms": "",
+                  "quickGroupId": "663",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Фонари указателя поворота",
+              "synonyms": "",
+              "quickGroupId": "658",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Фонарь указателя поворота",
+                  "synonyms": "",
+                  "quickGroupId": "659",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Дополнительное освещение",
+              "synonyms": "",
+              "quickGroupId": "629",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Фара противотуманная",
+                  "synonyms": "",
+                  "quickGroupId": "630",
+                  "canBeSearched": true,
+                  "children": [
+                    {
+                      "name": "Фара противотуманная",
+                      "synonyms": "туманка, противотуманка",
+                      "quickGroupId": "631",
+                      "canBeSearched": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Внутреннее освещение",
+              "synonyms": "",
+              "quickGroupId": "685",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Освещение салона",
+                  "synonyms": "",
+                  "quickGroupId": "686",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Подсветка приборов",
+                  "synonyms": "Освещение приборов",
+                  "quickGroupId": "691",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Выключатель, реле , блок управления освещения",
+              "synonyms": "",
+              "quickGroupId": "696",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Выключатель",
+                  "synonyms": "",
+                  "quickGroupId": "698",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Прерыватель указателей поворота",
+                  "synonyms": "",
+                  "quickGroupId": "700",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Контрольные приборы",
+          "synonyms": "",
+          "quickGroupId": "706",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Датчики",
+              "synonyms": "",
+              "quickGroupId": "707",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Измерительные приборы",
+              "synonyms": "",
+              "quickGroupId": "708",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Вал спидометра",
+              "synonyms": "",
+              "quickGroupId": "709",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Приборы управления",
+          "synonyms": "",
+          "quickGroupId": "712",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Датчики",
+          "synonyms": "",
+          "quickGroupId": "703",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Многофункциональное реле",
+          "synonyms": "",
+          "quickGroupId": "704",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Реле",
+          "synonyms": "",
+          "quickGroupId": "705",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Система очистки окон",
+          "synonyms": "",
+          "quickGroupId": "717",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Щетки стеклоочистителя",
+              "synonyms": "Дворники,Мослы",
+              "quickGroupId": "718",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Двигатель стеклоочистителя",
+              "synonyms": "",
+              "quickGroupId": "719",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Насос омывателя",
+              "synonyms": "",
+              "quickGroupId": "720",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Рычаг стеклоочистителя",
+              "synonyms": "",
+              "quickGroupId": "721",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Система тяг и рычагов привода стеклоочистителя",
+              "synonyms": "",
+              "quickGroupId": "722",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Бачок стеклоочистителя",
+              "synonyms": "",
+              "quickGroupId": "723",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Распылитель омывателя",
+              "synonyms": "",
+              "quickGroupId": "724",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Выключатель, реле",
+              "synonyms": "",
+              "quickGroupId": "726",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Звуковой сигнал",
+          "synonyms": "",
+          "quickGroupId": "701",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Дополнительные удобства",
+          "synonyms": "",
+          "quickGroupId": "727",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Подъемное устройство для окон",
+              "synonyms": "",
+              "quickGroupId": "730",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Датчики",
+              "synonyms": "",
+              "quickGroupId": "736",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Реле, выключатели, электроприводы",
+              "synonyms": "",
+              "quickGroupId": "742",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Стеклоподъемник",
+                  "synonyms": "",
+                  "quickGroupId": "745",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Зеркало",
+                  "synonyms": "",
+                  "quickGroupId": "751",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Отопление / кондиционирование",
+      "synonyms": "",
+      "quickGroupId": "756",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Отопление",
+          "synonyms": "",
+          "quickGroupId": "757",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Теплообменник",
+              "synonyms": "Радиатор печки",
+              "quickGroupId": "759",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Электродвигатель вентилятора",
+              "synonyms": "",
+              "quickGroupId": "761",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Блок управления",
+              "synonyms": "",
+              "quickGroupId": "762",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Клапан, управление",
+              "synonyms": "",
+              "quickGroupId": "765",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Кондиционер",
+          "synonyms": "",
+          "quickGroupId": "767",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Компрессор",
+              "synonyms": "",
+              "quickGroupId": "768",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Конденсатор",
+              "synonyms": "",
+              "quickGroupId": "769",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Осушитель",
+              "synonyms": "",
+              "quickGroupId": "771",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Датчики",
+              "synonyms": "",
+              "quickGroupId": "777",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Блок управления",
+              "synonyms": "",
+              "quickGroupId": "779",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Реле",
+              "synonyms": "",
+              "quickGroupId": "780",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Детали салона",
+      "synonyms": "",
+      "quickGroupId": "786",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Пепельница",
+          "synonyms": "",
+          "quickGroupId": "789",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Подъемное устройство для окон",
+          "synonyms": "",
+          "quickGroupId": "790",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Ручки",
+          "synonyms": "",
+          "quickGroupId": "793",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Органы управления автомобилем",
+          "synonyms": "",
+          "quickGroupId": "794",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Вещевой ящик",
+          "synonyms": "",
+          "quickGroupId": "795",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Центральная консоль",
+          "synonyms": "",
+          "quickGroupId": "797",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Сидения",
+          "synonyms": "",
+          "quickGroupId": "798",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Облицовка",
+          "synonyms": "",
+          "quickGroupId": "800",
+          "canBeSearched": true,
+          "children": []
+        },
+        {
+          "name": "Замок",
+          "synonyms": "",
+          "quickGroupId": "804",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Внешний замок",
+              "synonyms": "",
+              "quickGroupId": "807",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Внутренний замок",
+              "synonyms": "",
+              "quickGroupId": "808",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Цилиндр замка",
+              "synonyms": "",
+              "quickGroupId": "810",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Ручки",
+              "synonyms": "",
+              "quickGroupId": "811",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Составляющие",
+              "synonyms": "",
+              "quickGroupId": "812",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Детали кузова",
+      "synonyms": "",
+      "quickGroupId": "814",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Автомобиль, передняя часть",
+          "synonyms": "",
+          "quickGroupId": "816",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Бампер",
+              "synonyms": "",
+              "quickGroupId": "817",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крыло, навесные части",
+              "synonyms": "",
+              "quickGroupId": "818",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Колесная ниша",
+              "synonyms": "",
+              "quickGroupId": "820",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Капот",
+              "synonyms": "",
+              "quickGroupId": "822",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Ветровое стекло",
+              "synonyms": "переднее стекло, лобовое стекло, лобовик,лобовуха",
+              "quickGroupId": "824",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Фары передние",
+              "synonyms": "",
+              "quickGroupId": "826",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Фара противотуманная",
+              "synonyms": "",
+              "quickGroupId": "831",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Фонарь указателя поворота",
+              "synonyms": "",
+              "quickGroupId": "839",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Детали крепления",
+              "synonyms": "",
+              "quickGroupId": "848",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Газовые пружины",
+                  "synonyms": "",
+                  "quickGroupId": "853",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Спойлер",
+                  "synonyms": "",
+                  "quickGroupId": "857",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Решетка радиатора",
+                  "synonyms": "",
+                  "quickGroupId": "858",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Автомобиль, средняя часть",
+          "synonyms": "",
+          "quickGroupId": "860",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Каркас крыши, стойка крыши",
+              "synonyms": "",
+              "quickGroupId": "861",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Двери",
+              "synonyms": "",
+              "quickGroupId": "864",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Боковина",
+              "synonyms": "",
+              "quickGroupId": "867",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Дверные, боковые стекла",
+              "synonyms": "",
+              "quickGroupId": "868",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Зеркала",
+              "synonyms": "зеркало",
+              "quickGroupId": "869",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Детали крепления",
+              "synonyms": "",
+              "quickGroupId": "872",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Спойлер",
+                  "synonyms": "",
+                  "quickGroupId": "873",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Газовые пружины",
+                  "synonyms": "",
+                  "quickGroupId": "875",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Автомобиль, задняя часть",
+          "synonyms": "",
+          "quickGroupId": "876",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Бампер",
+              "synonyms": "",
+              "quickGroupId": "877",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крышка багажника",
+              "synonyms": "",
+              "quickGroupId": "881",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Заднее окно",
+              "synonyms": "",
+              "quickGroupId": "884",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Боковина",
+              "synonyms": "",
+              "quickGroupId": "885",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Колесная ниша",
+              "synonyms": "",
+              "quickGroupId": "887",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Бак топливный",
+              "synonyms": "",
+              "quickGroupId": "889",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Фонарь задний",
+              "synonyms": "",
+              "quickGroupId": "891",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Фонарь освещения номерного знака",
+              "synonyms": "",
+              "quickGroupId": "907",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Задняя противотуманная фара",
+              "synonyms": "",
+              "quickGroupId": "911",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Детали крепления",
+              "synonyms": "",
+              "quickGroupId": "924",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Спойлер",
+                  "synonyms": "",
+                  "quickGroupId": "926",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Кузовные детали",
+          "synonyms": "",
+          "quickGroupId": "932",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Облицовка, защитные накладки, эмблемы",
+              "synonyms": "",
+              "quickGroupId": "958",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Облицовка, защитные накладки",
+                  "synonyms": "Молдинг",
+                  "quickGroupId": "959",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Эмблемы",
+                  "synonyms": "",
+                  "quickGroupId": "960",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Бампер",
+              "synonyms": "",
+              "quickGroupId": "933",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крыло, навесные части",
+              "synonyms": "",
+              "quickGroupId": "935",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Капот",
+              "synonyms": "",
+              "quickGroupId": "953",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Двери",
+              "synonyms": "",
+              "quickGroupId": "951",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Боковина",
+              "synonyms": "",
+              "quickGroupId": "937",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Крышка багажника",
+              "synonyms": "",
+              "quickGroupId": "952",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Обшивка кузова",
+              "synonyms": "",
+              "quickGroupId": "936",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Каркас крыши, стойка крыши",
+              "synonyms": "",
+              "quickGroupId": "938",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Решетки и накладки передней части автомобиля",
+              "synonyms": "",
+              "quickGroupId": "940",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Колесная ниша",
+              "synonyms": "",
+              "quickGroupId": "943",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Спойлер",
+              "synonyms": "",
+              "quickGroupId": "945",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Остекление, зеркала",
+          "synonyms": "",
+          "quickGroupId": "962",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Остекление",
+              "synonyms": "",
+              "quickGroupId": "963",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Стекла (периметр кузова)",
+                  "synonyms": "Стекло ",
+                  "quickGroupId": "964",
+                  "canBeSearched": true,
+                  "children": [
+                    {
+                      "name": "Ветровое стекло",
+                      "synonyms": "переднее стекло, лобовое стекло, лобовик,лобовуха",
+                      "quickGroupId": "824",
+                      "canBeSearched": true,
+                      "children": []
+                    },
+                    {
+                      "name": "Дверные, боковые стекла",
+                      "synonyms": "",
+                      "quickGroupId": "868",
+                      "canBeSearched": true,
+                      "children": []
+                    },
+                    {
+                      "name": "Заднее стекло",
+                      "synonyms": "стекло задней двери",
+                      "quickGroupId": "13483",
+                      "canBeSearched": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Зеркала",
+              "synonyms": "зеркало наружное, салонное зеркало",
+              "quickGroupId": "968",
+              "canBeSearched": true,
+              "children": [
+                {
+                  "name": "Зеркало наружное",
+                  "synonyms": "лопухи, боковые зеркала, боковое зеркало, зеркало заднего вида",
+                  "quickGroupId": "13484",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Зеркальный элемент",
+                  "synonyms": "",
+                  "quickGroupId": "13485",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Система освещения/ Оптика",
+          "synonyms": "",
+          "quickGroupId": "991",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Фары головного света, составляющие",
+              "synonyms": "",
+              "quickGroupId": "969",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Фары передние",
+                  "synonyms": "",
+                  "quickGroupId": "970",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Основная фара комплектующие",
+                  "synonyms": "",
+                  "quickGroupId": "972",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Задние фонари",
+              "synonyms": "",
+              "quickGroupId": "13487",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Фонарь задний",
+                  "synonyms": "",
+                  "quickGroupId": "993",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Фонарь освещения номерного знака",
+                  "synonyms": "",
+                  "quickGroupId": "1010",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Задняя противотуманная фара",
+                  "synonyms": "",
+                  "quickGroupId": "1014",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Фонари указателя поворота",
+              "synonyms": "",
+              "quickGroupId": "1004",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Фонарь указателя поворота",
+                  "synonyms": "",
+                  "quickGroupId": "1005",
+                  "canBeSearched": true,
+                  "children": []
+                },
+                {
+                  "name": "Боковой фонарь указателя поворота",
+                  "synonyms": "",
+                  "quickGroupId": "1006",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Дополнительное освещение",
+              "synonyms": "",
+              "quickGroupId": "974",
+              "canBeSearched": false,
+              "children": [
+                {
+                  "name": "Фара противотуманная",
+                  "synonyms": "",
+                  "quickGroupId": "976",
+                  "canBeSearched": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Газовые/пружинные упоры",
+          "synonyms": "",
+          "quickGroupId": "1030",
+          "canBeSearched": true,
+          "children": [
+            {
+              "name": "Газовые упоры капота",
+              "synonyms": "",
+              "quickGroupId": "13476",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Дополнительное оборудование",
+      "synonyms": "",
+      "quickGroupId": "1038",
+      "canBeSearched": false,
+      "children": [
+        {
+          "name": "Информационные, коммуникационные системы",
+          "synonyms": "",
+          "quickGroupId": "1050",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Приборы",
+              "synonyms": "",
+              "quickGroupId": "1051",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Аудиосистема",
+              "synonyms": "",
+              "quickGroupId": "1056",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Система безопасности",
+          "synonyms": "",
+          "quickGroupId": "1057",
+          "canBeSearched": false,
+          "children": [
+            {
+              "name": "Аварийное оборудование (домкрат, крюк, инструмент)",
+              "synonyms": "",
+              "quickGroupId": "1061",
+              "canBeSearched": true,
+              "children": []
+            },
+            {
+              "name": "Система ремней безопасности",
+              "synonyms": "",
+              "quickGroupId": "1062",
+              "canBeSearched": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

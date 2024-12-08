@@ -1,0 +1,4392 @@
+{
+  "items": [
+    {
+      "attributes": [],
+      "code": "121-030",
+      "imageUrl": "https://img.laximo.ru/AU1551/%size%/079/079021000.gif?s=7104&k=9b2bd70f6b492b554c2d017b36fcbda9",
+      "name": "Жидкостное охлаждение",
+      "ssd": "JCpLd0dQdTZxVXg0eUwzZG5OemZyU21kZkQ0LVQ2aW8yTGpacTFoczdJLS1fejlfWDJzNlNJNHN6SXpQM3I4dU9sdUxLUGhvcUtqY0xPMElDcWpaX0ltWUNmNXBtVnhvUFVoNG1PaTQ2TGpzU2FuSlBWX01DWTM1NmJnOFRJdC1pZWw1cWZ6OWFieE5EV25fXzZtSkdjbWRyR3lzeWRqWWlOa1p5WjFNYkt6SjJlLW91Tl81bVZ4TWlGM3A2YmdKM1N6dFdJeHRhZjJkaVluWWFiMTVHR21wR2NtYzdlbnB1RHhJU0QwZERHQUFBQUFCMlpQc1U9JA==",
+      "unitId": "551375",
+      "spareParts": [
+        {
+          "codeOnImage": "1",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "026121053G",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "1",
+              "type": "2",
+              "x1": "610",
+              "x2": "659",
+              "y1": "1132",
+              "y2": "1202"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "2",
+          "name": "Хомут",
+          "partNumber": "N  10258101",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;23-35X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "633",
+              "x2": "691",
+              "y1": "1274",
+              "y2": "1343"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "752",
+              "x2": "809",
+              "y1": "1066",
+              "y2": "1136"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "2",
+          "name": "Пружинный хомут",
+          "partNumber": "N  0164031",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинный хомут;27X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "633",
+              "x2": "691",
+              "y1": "1274",
+              "y2": "1343"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "752",
+              "x2": "809",
+              "y1": "1066",
+              "y2": "1136"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "3",
+          "name": "Шланг системы охлаждения ",
+          "partNumber": "443121055F",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Шланг системы охлаждениядля автомобилей с кондицион."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "3",
+              "type": "2",
+              "x1": "925",
+              "x2": "983",
+              "y1": "1719",
+              "y2": "1787"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "4",
+          "name": "Хомут",
+          "partNumber": "N  0245077",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;32-50X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "861",
+              "x2": "921",
+              "y1": "1747",
+              "y2": "1816"
+            },
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "781",
+              "x2": "841",
+              "y1": "1471",
+              "y2": "1541"
+            },
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "1012",
+              "x2": "1071",
+              "y1": "1317",
+              "y2": "1386"
+            },
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "988",
+              "x2": "1048",
+              "y1": "966",
+              "y2": "1036"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "4",
+          "name": "Пружинный хомут",
+          "partNumber": "N  0164101",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинный хомут;40X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "861",
+              "x2": "921",
+              "y1": "1747",
+              "y2": "1816"
+            },
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "781",
+              "x2": "841",
+              "y1": "1471",
+              "y2": "1541"
+            },
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "1012",
+              "x2": "1071",
+              "y1": "1317",
+              "y2": "1386"
+            },
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "988",
+              "x2": "1048",
+              "y1": "966",
+              "y2": "1036"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "5",
+          "name": "Защитное кольцо",
+          "partNumber": "443121451",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "5",
+              "type": "2",
+              "x1": "823",
+              "x2": "882",
+              "y1": "1562",
+              "y2": "1632"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "6",
+          "name": "Хомут",
+          "partNumber": "N  10258201",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;12-22X9X0,4"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1050",
+              "x2": "1108",
+              "y1": "232",
+              "y2": "301"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "211",
+              "x2": "269",
+              "y1": "787",
+              "y2": "857"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1010",
+              "x2": "1068",
+              "y1": "64",
+              "y2": "134"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "327",
+              "x2": "385",
+              "y1": "396",
+              "y2": "465"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "339",
+              "x2": "398",
+              "y1": "174",
+              "y2": "243"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "7",
+          "name": "Хомут",
+          "partNumber": "N  90561801",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;16-28X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1040",
+              "x2": "1098",
+              "y1": "1702",
+              "y2": "1772"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1214",
+              "x2": "1273",
+              "y1": "70",
+              "y2": "139"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1233",
+              "x2": "1291",
+              "y1": "258",
+              "y2": "328"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1078",
+              "x2": "1136",
+              "y1": "1128",
+              "y2": "1197"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "876",
+              "x2": "934",
+              "y1": "651",
+              "y2": "720"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1419",
+              "x2": "1477",
+              "y1": "1572",
+              "y2": "1642"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "7",
+          "name": "Пружинный хомут",
+          "partNumber": "N  0164021",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинный хомут;23X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1040",
+              "x2": "1098",
+              "y1": "1702",
+              "y2": "1772"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1214",
+              "x2": "1273",
+              "y1": "70",
+              "y2": "139"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1233",
+              "x2": "1291",
+              "y1": "258",
+              "y2": "328"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1078",
+              "x2": "1136",
+              "y1": "1128",
+              "y2": "1197"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "876",
+              "x2": "934",
+              "y1": "651",
+              "y2": "720"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1419",
+              "x2": "1477",
+              "y1": "1572",
+              "y2": "1642"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "8",
+          "name": "Кабельная стяжка",
+          "partNumber": "N  0209022",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Кабельная стяжка;3,6X246"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "8",
+              "type": "2",
+              "x1": "596",
+              "x2": "653",
+              "y1": "383",
+              "y2": "453"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "9",
+          "name": "Шланг системы охлаждения ",
+          "partNumber": "026121056K",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Шланг системы охлаждения(Впускн. патрубок>трубка ОЖ)"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "9",
+              "type": "2",
+              "x1": "604",
+              "x2": "662",
+              "y1": "737",
+              "y2": "806"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "10",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "026121063C",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "10",
+              "type": "2",
+              "x1": "946",
+              "x2": "1017",
+              "y1": "1182",
+              "y2": "1251"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "11",
+          "name": "Трубопровод системы охлаждения",
+          "partNumber": "026121065H",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "11",
+              "type": "2",
+              "x1": "1375",
+              "x2": "1437",
+              "y1": "918",
+              "y2": "988"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "11A",
+          "name": "Держатель",
+          "partNumber": "443121093",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "11A",
+              "type": "2",
+              "x1": "989",
+              "x2": "1083",
+              "y1": "1250",
+              "y2": "1318"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "12",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "855121101C",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "12",
+              "type": "2",
+              "x1": "1286",
+              "x2": "1357",
+              "y1": "1082",
+              "y2": "1152"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "13",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "431121109Q",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "13",
+              "type": "2",
+              "x1": "1292",
+              "x2": "1364",
+              "y1": "1704",
+              "y2": "1773"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "14",
+          "name": "Пробка резьбовая",
+          "partNumber": "N  0160241",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пробка резьбовая;M10X1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "14",
+              "type": "2",
+              "x1": "819",
+              "x2": "892",
+              "y1": "799",
+              "y2": "868"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "14A",
+          "name": "Манжетное уплотнение",
+          "partNumber": "N  0138115",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Манжетное уплотнение;10X13,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "14A",
+              "type": "2",
+              "x1": "741",
+              "x2": "841",
+              "y1": "868",
+              "y2": "938"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "15",
+          "name": "Фланец",
+          "partNumber": "026121133C",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "15",
+              "type": "2",
+              "x1": "816",
+              "x2": "888",
+              "y1": "1045",
+              "y2": "1115"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "16",
+          "name": "Манжетное уплотнение",
+          "partNumber": "037121687",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Манжетное уплотнение;37,5X3,15N"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "16",
+              "type": "2",
+              "x1": "673",
+              "x2": "745",
+              "y1": "874",
+              "y2": "944"
+            },
+            {
+              "code": "16",
+              "type": "2",
+              "x1": "1047",
+              "x2": "1119",
+              "y1": "670",
+              "y2": "739"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "16",
+          "name": "Уплотнитель",
+          "partNumber": "052121091A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "16",
+              "type": "2",
+              "x1": "673",
+              "x2": "745",
+              "y1": "874",
+              "y2": "944"
+            },
+            {
+              "code": "16",
+              "type": "2",
+              "x1": "1047",
+              "x2": "1119",
+              "y1": "670",
+              "y2": "739"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "17",
+          "name": "Винт с шестигранной головкой",
+          "partNumber": "N  01021710",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигранной головкой;M6X20"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "17",
+              "type": "2",
+              "x1": "1204",
+              "x2": "1276",
+              "y1": "587",
+              "y2": "656"
+            },
+            {
+              "code": "17",
+              "type": "2",
+              "x1": "941",
+              "x2": "1013",
+              "y1": "1032",
+              "y2": "1103"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "17A",
+          "name": "Пружинная шайба",
+          "partNumber": "N  0122265",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинная шайба;6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "17A",
+              "type": "2",
+              "x1": "1132",
+              "x2": "1224",
+              "y1": "600",
+              "y2": "669"
+            },
+            {
+              "code": "17A",
+              "type": "2",
+              "x1": "883",
+              "x2": "974",
+              "y1": "1057",
+              "y2": "1128"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "18",
+          "name": "Фланец с уплотн.кольцом",
+          "partNumber": "026121144A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "18",
+              "type": "2",
+              "x1": "1090",
+              "x2": "1162",
+              "y1": "638",
+              "y2": "707"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "19",
+          "name": "Радиатор охлаждающей жидкости ",
+          "partNumber": "443121251T",
+          "match": "t",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Радиатор охлаждающей жидкости;600MMдля автомобилей с кондицион."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "19",
+              "type": "2",
+              "x1": "270",
+              "x2": "342",
+              "y1": "1711",
+              "y2": "1781"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "20",
+          "name": "Опора радиатора ОЖ",
+          "partNumber": "443121263",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "20",
+              "type": "2",
+              "x1": "886",
+              "x2": "963",
+              "y1": "1901",
+              "y2": "1970"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "21",
+          "name": "Подкладная шайба",
+          "partNumber": "N  01167016",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;8,4"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "21",
+              "type": "2",
+              "x1": "735",
+              "x2": "803",
+              "y1": "1852",
+              "y2": "1921"
+            },
+            {
+              "code": "21",
+              "type": "2",
+              "x1": "175",
+              "x2": "244",
+              "y1": "2425",
+              "y2": "2495"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "23",
+          "name": "Винт с шестигранной головкой",
+          "partNumber": "N  01023820",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигранной головкой;M8X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "23",
+              "type": "2",
+              "x1": "686",
+              "x2": "763",
+              "y1": "1840",
+              "y2": "1910"
+            },
+            {
+              "code": "23",
+              "type": "2",
+              "x1": "234",
+              "x2": "311",
+              "y1": "2471",
+              "y2": "2542"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "24",
+          "name": "Втулка",
+          "partNumber": "443121267",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "24",
+              "type": "2",
+              "x1": "846",
+              "x2": "923",
+              "y1": "1803",
+              "y2": "1872"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "25",
+          "name": "Резиновая опора",
+          "partNumber": "055129669",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Резиновая опора;17/11,8"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "25",
+              "type": "2",
+              "x1": "117",
+              "x2": "195",
+              "y1": "1236",
+              "y2": "1305"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "26",
+          "name": "Крышка",
+          "partNumber": "443121321",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "26",
+              "type": "2",
+              "x1": "1446",
+              "x2": "1523",
+              "y1": "1081",
+              "y2": "1152"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "27",
+          "name": "Манжетное уплотнение",
+          "partNumber": "171121327",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "27",
+              "type": "2",
+              "x1": "1421",
+              "x2": "1497",
+              "y1": "1135",
+              "y2": "1204"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28A",
+          "name": "Расширительный бачок",
+          "partNumber": "8A0121403A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28A",
+              "type": "2",
+              "x1": "1496",
+              "x2": "1601",
+              "y1": "1499",
+              "y2": "1570"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "31",
+          "name": "Саморез с цил. скругл. головк.",
+          "partNumber": "N  01397511",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "3"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Саморез с цил. скругл. головк.;B4,8X19"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "31",
+              "type": "2",
+              "x1": "1620",
+              "x2": "1688",
+              "y1": "1246",
+              "y2": "1315"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "32",
+          "name": "Подкладная шайба",
+          "partNumber": "N  0116653",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "3"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;5,3X15X1,6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "32",
+              "type": "2",
+              "x1": "1622",
+              "x2": "1698",
+              "y1": "1309",
+              "y2": "1379"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "-",
+          "name": "Шланг в бухтах по 5 м 'заказ по 5'",
+          "partNumber": "443121107A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "*"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Шланг в бухтах по 5 м 'заказ по 5';7X2,5"
+            }
+          ],
+          "imageMap": []
+        },
+        {
+          "codeOnImage": "34",
+          "name": "Хомут",
+          "partNumber": "N  0245281",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;8-12X8X0,4"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "1323",
+              "x2": "1400",
+              "y1": "1252",
+              "y2": "1322"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "35",
+          "name": "Хомут",
+          "partNumber": "311133343",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "35",
+              "type": "2",
+              "x1": "1008",
+              "x2": "1084",
+              "y1": "1536",
+              "y2": "1606"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "46",
+          "name": "Опора ",
+          "partNumber": "443121263E",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Опора;лев.для автомобилей с кондицион."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "46",
+              "type": "2",
+              "x1": "1003",
+              "x2": "1081",
+              "y1": "2347",
+              "y2": "2415"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "46",
+          "name": "Опора ",
+          "partNumber": "443121264A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Опора;прав.для автомобилей с кондицион."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "46",
+              "type": "2",
+              "x1": "1003",
+              "x2": "1081",
+              "y1": "2347",
+              "y2": "2415"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "47",
+          "name": "Сайлент-блок ",
+          "partNumber": "431121273",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Сайлент-блокдля автомобилей с кондицион."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "47",
+              "type": "2",
+              "x1": "1011",
+              "x2": "1085",
+              "y1": "2281",
+              "y2": "2348"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "48",
+          "name": "Подкладная шайба ",
+          "partNumber": "N  01167016",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "4"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;8,4для автомобилей с кондицион.;N011670"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "48",
+              "type": "2",
+              "x1": "1189",
+              "x2": "1266",
+              "y1": "2423",
+              "y2": "2492"
+            },
+            {
+              "code": "48",
+              "type": "2",
+              "x1": "964",
+              "x2": "1041",
+              "y1": "2438",
+              "y2": "2506"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "49",
+          "name": "Винт с шестигранной головкой ",
+          "partNumber": "N  01024016",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигранной головкой;M8X20для автомобилей с кондицион."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "49",
+              "type": "2",
+              "x1": "1252",
+              "x2": "1330",
+              "y1": "2446",
+              "y2": "2515"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "50",
+          "name": "Опорная пластина ",
+          "partNumber": "443121493",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Опорная пластина;лев.для автомобилей с кондицион."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "50",
+              "type": "2",
+              "x1": "1215",
+              "x2": "1293",
+              "y1": "2351",
+              "y2": "2420"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "50",
+          "name": "Опорная пластина ",
+          "partNumber": "443121493A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Опорная пластина;прав.для автомобилей с кондицион."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "50",
+              "type": "2",
+              "x1": "1215",
+              "x2": "1293",
+              "y1": "2351",
+              "y2": "2420"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "51",
+          "name": "Концентрат ОЖ",
+          "partNumber": "G  011V8BA1",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Концентрат ОЖ;1,5 л."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "51",
+              "type": "2",
+              "x1": "1261",
+              "x2": "1330",
+              "y1": "1905",
+              "y2": "1972"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "attributes": [],
+      "code": "121-040",
+      "imageUrl": "https://img.laximo.ru/AU1551/%size%/112/112022000.gif?s=7104&k=939002d489e91360ba02742603a4264c",
+      "name": "Жидкостное охлаждение F             >> 44-M-200 000",
+      "ssd": "JCpLd0g2enRfaHN2bi1xS3k0dUktbjdLSzJscEdQX19qLS1PX0E4N3U5anBxR2dvQ0R4dEg5bDdtOXVZaWVoNWJRemNmNjhfX18tTGU3cGZYZi1PcTk3UFhxay16Z3NfYWg4dno3X3Z6Ny1ySHY2ZWFnaWJYdHF1dnU5ckc5d3AzcjR1X3F1cVB1c2FXajZvcVA3ZVRwN0stenY3bm8tUDM0NU9uc29iT191ZWpyal83NGl1emdzYjN3cS12dTllaW51NkQ5czZQcXJLM3Q2UFB1b3VUejctVHA3THVyNi03MnNmSDJwS1d6QUFBQUFLVkEzNU09JA==",
+      "unitId": "551424",
+      "spareParts": [
+        {
+          "codeOnImage": "1",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "447121055B",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "1",
+              "type": "2",
+              "x1": "453",
+              "x2": "509",
+              "y1": "1301",
+              "y2": "1376"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "2",
+          "name": "Хомут",
+          "partNumber": "N  0245077",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;32-50X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "365",
+              "x2": "427",
+              "y1": "1329",
+              "y2": "1405"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "67",
+              "x2": "130",
+              "y1": "1846",
+              "y2": "1922"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "477",
+              "x2": "539",
+              "y1": "839",
+              "y2": "915"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "1121",
+              "x2": "1183",
+              "y1": "1125",
+              "y2": "1201"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "798",
+              "x2": "860",
+              "y1": "1274",
+              "y2": "1349"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "2",
+          "name": "Пружинный хомут",
+          "partNumber": "N  0164101",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинный хомут;40X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "365",
+              "x2": "427",
+              "y1": "1329",
+              "y2": "1405"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "67",
+              "x2": "130",
+              "y1": "1846",
+              "y2": "1922"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "477",
+              "x2": "539",
+              "y1": "839",
+              "y2": "915"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "1121",
+              "x2": "1183",
+              "y1": "1125",
+              "y2": "1201"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "798",
+              "x2": "860",
+              "y1": "1274",
+              "y2": "1349"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "3",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "034121063C",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "3",
+              "type": "2",
+              "x1": "358",
+              "x2": "422",
+              "y1": "1095",
+              "y2": "1170"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "4",
+          "name": "Трубопровод системы охлаждения",
+          "partNumber": "034121071C",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Трубопровод системы охлаждения;;Ступенч. кор. пер."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "807",
+              "x2": "871",
+              "y1": "787",
+              "y2": "862"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "6",
+          "name": "Хомут",
+          "partNumber": "N  10258101",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;23-35X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "276",
+              "x2": "339",
+              "y1": "1006",
+              "y2": "1081"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "402",
+              "x2": "466",
+              "y1": "1074",
+              "y2": "1150"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1550",
+              "x2": "1614",
+              "y1": "789",
+              "y2": "865"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1096",
+              "x2": "1160",
+              "y1": "793",
+              "y2": "868"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1385",
+              "x2": "1449",
+              "y1": "816",
+              "y2": "892"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1048",
+              "x2": "1112",
+              "y1": "682",
+              "y2": "757"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "6",
+          "name": "Пружинный хомут",
+          "partNumber": "N  0164031",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинный хомут;27X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "276",
+              "x2": "339",
+              "y1": "1006",
+              "y2": "1081"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "402",
+              "x2": "466",
+              "y1": "1074",
+              "y2": "1150"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1550",
+              "x2": "1614",
+              "y1": "789",
+              "y2": "865"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1096",
+              "x2": "1160",
+              "y1": "793",
+              "y2": "868"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1385",
+              "x2": "1449",
+              "y1": "816",
+              "y2": "892"
+            },
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "1048",
+              "x2": "1112",
+              "y1": "682",
+              "y2": "757"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "6A",
+          "name": "Кабельная стяжка",
+          "partNumber": "N  0209022",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Кабельная стяжка;3,6X246"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "6A",
+              "type": "2",
+              "x1": "1090",
+              "x2": "1185",
+              "y1": "1422",
+              "y2": "1499"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "7",
+          "name": "Хомут",
+          "partNumber": "N  90561801",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;16-28X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1468",
+              "x2": "1530",
+              "y1": "35",
+              "y2": "112"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "872",
+              "x2": "933",
+              "y1": "1789",
+              "y2": "1864"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "723",
+              "x2": "784",
+              "y1": "1860",
+              "y2": "1936"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1480",
+              "x2": "1543",
+              "y1": "231",
+              "y2": "307"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "7",
+          "name": "Пружинный хомут",
+          "partNumber": "N  0164021",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинный хомут;23X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1468",
+              "x2": "1530",
+              "y1": "35",
+              "y2": "112"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "872",
+              "x2": "933",
+              "y1": "1789",
+              "y2": "1864"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "723",
+              "x2": "784",
+              "y1": "1860",
+              "y2": "1936"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1480",
+              "x2": "1543",
+              "y1": "231",
+              "y2": "307"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "8",
+          "name": "Уплотнитель",
+          "partNumber": "052121091A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "8",
+              "type": "2",
+              "x1": "284",
+              "x2": "347",
+              "y1": "845",
+              "y2": "921"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "10",
+          "name": "Сайлент-блок",
+          "partNumber": "443121273E",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "10",
+              "type": "2",
+              "x1": "492",
+              "x2": "571",
+              "y1": "1767",
+              "y2": "1843"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "11",
+          "name": "Подкладная шайба",
+          "partNumber": "N  0115476",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;6,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "11",
+              "type": "2",
+              "x1": "1527",
+              "x2": "1598",
+              "y1": "1364",
+              "y2": "1439"
+            },
+            {
+              "code": "11",
+              "type": "2",
+              "x1": "1355",
+              "x2": "1426",
+              "y1": "1317",
+              "y2": "1393"
+            },
+            {
+              "code": "11",
+              "type": "2",
+              "x1": "441",
+              "x2": "512",
+              "y1": "1695",
+              "y2": "1772"
+            },
+            {
+              "code": "11",
+              "type": "2",
+              "x1": "1281",
+              "x2": "1351",
+              "y1": "1547",
+              "y2": "1623"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "12",
+          "name": "Пружинная шайба",
+          "partNumber": "N  0122265",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинная шайба;6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "12",
+              "type": "2",
+              "x1": "1436",
+              "x2": "1513",
+              "y1": "1393",
+              "y2": "1468"
+            },
+            {
+              "code": "12",
+              "type": "2",
+              "x1": "1555",
+              "x2": "1631",
+              "y1": "1496",
+              "y2": "1572"
+            },
+            {
+              "code": "12",
+              "type": "2",
+              "x1": "302",
+              "x2": "379",
+              "y1": "1573",
+              "y2": "1650"
+            },
+            {
+              "code": "12",
+              "type": "2",
+              "x1": "1247",
+              "x2": "1323",
+              "y1": "1608",
+              "y2": "1684"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "13",
+          "name": "Гайка шестигранная",
+          "partNumber": "N  01100624",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Гайка шестигранная;M6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "13",
+              "type": "2",
+              "x1": "180",
+              "x2": "268",
+              "y1": "1620",
+              "y2": "1697"
+            },
+            {
+              "code": "13",
+              "type": "2",
+              "x1": "1214",
+              "x2": "1291",
+              "y1": "1565",
+              "y2": "1641"
+            },
+            {
+              "code": "13",
+              "type": "2",
+              "x1": "1358",
+              "x2": "1436",
+              "y1": "1372",
+              "y2": "1447"
+            },
+            {
+              "code": "13",
+              "type": "2",
+              "x1": "1579",
+              "x2": "1657",
+              "y1": "1351",
+              "y2": "1425"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "14",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "447121101A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "14",
+              "type": "2",
+              "x1": "570",
+              "x2": "648",
+              "y1": "1039",
+              "y2": "1115"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "15",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "447121109A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "15",
+              "type": "2",
+              "x1": "647",
+              "x2": "725",
+              "y1": "1761",
+              "y2": "1836"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "16",
+          "name": "Фланец",
+          "partNumber": "034121133B",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Фланец;;PR"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "16",
+              "type": "2",
+              "x1": "364",
+              "x2": "443",
+              "y1": "867",
+              "y2": "945"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "16",
+          "name": "Фланец",
+          "partNumber": "034121133C",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Фланец;;RT"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "16",
+              "type": "2",
+              "x1": "364",
+              "x2": "443",
+              "y1": "867",
+              "y2": "945"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "17",
+          "name": "Винт с шестигранной головкой",
+          "partNumber": "N  01021612",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигранной головкой;M6X18"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "17",
+              "type": "2",
+              "x1": "416",
+              "x2": "492",
+              "y1": "750",
+              "y2": "825"
+            },
+            {
+              "code": "17",
+              "type": "2",
+              "x1": "1442",
+              "x2": "1519",
+              "y1": "1595",
+              "y2": "1671"
+            },
+            {
+              "code": "17",
+              "type": "2",
+              "x1": "1202",
+              "x2": "1279",
+              "y1": "1158",
+              "y2": "1233"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "18",
+          "name": "Пружинная шайба",
+          "partNumber": "N  0122265",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинная шайба;6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "18",
+              "type": "2",
+              "x1": "1365",
+              "x2": "1445",
+              "y1": "1606",
+              "y2": "1683"
+            },
+            {
+              "code": "18",
+              "type": "2",
+              "x1": "1200",
+              "x2": "1279",
+              "y1": "1208",
+              "y2": "1284"
+            },
+            {
+              "code": "18",
+              "type": "2",
+              "x1": "355",
+              "x2": "433",
+              "y1": "712",
+              "y2": "787"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "19",
+          "name": "Патрубок",
+          "partNumber": "034121143",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "19",
+              "type": "2",
+              "x1": "657",
+              "x2": "745",
+              "y1": "187",
+              "y2": "260"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "21",
+          "name": "Уплотнительное кольцо",
+          "partNumber": "N  90035103",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Уплотнительное кольцо;21X3"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "21",
+              "type": "2",
+              "x1": "594",
+              "x2": "667",
+              "y1": "436",
+              "y2": "511"
+            },
+            {
+              "code": "21",
+              "type": "2",
+              "x1": "582",
+              "x2": "655",
+              "y1": "224",
+              "y2": "300"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "22",
+          "name": "Винт с шестигранной головкой",
+          "partNumber": "N  01023820",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигранной головкой;M8X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "22",
+              "type": "2",
+              "x1": "728",
+              "x2": "809",
+              "y1": "598",
+              "y2": "673"
+            },
+            {
+              "code": "22",
+              "type": "2",
+              "x1": "758",
+              "x2": "840",
+              "y1": "224",
+              "y2": "299"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "23",
+          "name": "Пружинная шайба",
+          "partNumber": "N  01224110",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинная шайба;B8X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "23",
+              "type": "2",
+              "x1": "667",
+              "x2": "749",
+              "y1": "621",
+              "y2": "696"
+            },
+            {
+              "code": "23",
+              "type": "2",
+              "x1": "721",
+              "x2": "804",
+              "y1": "355",
+              "y2": "430"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "24",
+          "name": "Пробка резьбовая",
+          "partNumber": "N  0160241",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пробка резьбовая;M10X1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "24",
+              "type": "2",
+              "x1": "885",
+              "x2": "967",
+              "y1": "1140",
+              "y2": "1216"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "25",
+          "name": "Манжетное уплотнение",
+          "partNumber": "N  0138115",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Манжетное уплотнение;10X13,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "25",
+              "type": "2",
+              "x1": "841",
+              "x2": "923",
+              "y1": "955",
+              "y2": "1031"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "27",
+          "name": "Радиатор охлаждающей жидкости",
+          "partNumber": "443121251K",
+          "match": "t",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Радиатор охлаждающей жидкости;615MM"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "27",
+              "type": "2",
+              "x1": "215",
+              "x2": "293",
+              "y1": "2206",
+              "y2": "2282"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28",
+          "name": "Сайлент-блок",
+          "partNumber": "431121273",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28",
+              "type": "2",
+              "x1": "638",
+              "x2": "721",
+              "y1": "2137",
+              "y2": "2213"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28A",
+          "name": "Упор",
+          "partNumber": "443121268",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28A",
+              "type": "2",
+              "x1": "257",
+              "x2": "371",
+              "y1": "2229",
+              "y2": "2302"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28B",
+          "name": "Держатель",
+          "partNumber": "443121263G",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28B",
+              "type": "2",
+              "x1": "670",
+              "x2": "781",
+              "y1": "2207",
+              "y2": "2283"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28C",
+          "name": "Пружинное кольцо",
+          "partNumber": "N  0120387",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинное кольцо;8"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28C",
+              "type": "2",
+              "x1": "403",
+              "x2": "509",
+              "y1": "2212",
+              "y2": "2288"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28D",
+          "name": "Винт с шестигр. гол. самостопорящийся",
+          "partNumber": "N  01024022",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигр. гол. самостопорящийся;M8X20"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28D",
+              "type": "2",
+              "x1": "232",
+              "x2": "336",
+              "y1": "2293",
+              "y2": "2368"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28E",
+          "name": "Подкладная шайба",
+          "partNumber": "N  90033302",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;8,4X20X2,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28E",
+              "type": "2",
+              "x1": "442",
+              "x2": "551",
+              "y1": "2333",
+              "y2": "2409"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "29",
+          "name": "Шестигранная гайка с буртиком, самоконтрящаяся",
+          "partNumber": "N  90908301",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Шестигранная гайка с буртиком, самоконтрящаяся;M8"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "29",
+              "type": "2",
+              "x1": "681",
+              "x2": "764",
+              "y1": "2313",
+              "y2": "2388"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "30",
+          "name": "Крышка",
+          "partNumber": "443121321",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "30",
+              "type": "2",
+              "x1": "898",
+              "x2": "982",
+              "y1": "1391",
+              "y2": "1466"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "30A",
+          "name": "Манжетное уплотнение",
+          "partNumber": "171121327",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "30A",
+              "type": "2",
+              "x1": "840",
+              "x2": "958",
+              "y1": "1466",
+              "y2": "1543"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "31A",
+          "name": "Расширительный бачок",
+          "partNumber": "8A0121403A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "31A",
+              "type": "2",
+              "x1": "939",
+              "x2": "1049",
+              "y1": "1782",
+              "y2": "1855"
+            },
+            {
+              "code": "31A",
+              "type": "2",
+              "x1": "646",
+              "x2": "756",
+              "y1": "1679",
+              "y2": "1752"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "32",
+          "name": "Подкладная шайба",
+          "partNumber": "N  0116653",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "3"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;5,3X15X1,6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "32",
+              "type": "2",
+              "x1": "1085",
+              "x2": "1168",
+              "y1": "1544",
+              "y2": "1620"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "36",
+          "name": "Хомут",
+          "partNumber": "N  10258201",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;12-22X9X0,4"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1323",
+              "x2": "1409",
+              "y1": "305",
+              "y2": "381"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1139",
+              "x2": "1223",
+              "y1": "500",
+              "y2": "576"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1085",
+              "x2": "1170",
+              "y1": "356",
+              "y2": "432"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "905",
+              "x2": "990",
+              "y1": "612",
+              "y2": "688"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1269",
+              "x2": "1354",
+              "y1": "140",
+              "y2": "216"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "878",
+              "x2": "963",
+              "y1": "411",
+              "y2": "486"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1211",
+              "x2": "1296",
+              "y1": "827",
+              "y2": "903"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "36",
+          "name": "Пружинный хомут",
+          "partNumber": "N  0164011",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинный хомут;19X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1323",
+              "x2": "1409",
+              "y1": "305",
+              "y2": "381"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1139",
+              "x2": "1223",
+              "y1": "500",
+              "y2": "576"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1085",
+              "x2": "1170",
+              "y1": "356",
+              "y2": "432"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "905",
+              "x2": "990",
+              "y1": "612",
+              "y2": "688"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1269",
+              "x2": "1354",
+              "y1": "140",
+              "y2": "216"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "878",
+              "x2": "963",
+              "y1": "411",
+              "y2": "486"
+            },
+            {
+              "code": "36",
+              "type": "2",
+              "x1": "1211",
+              "x2": "1296",
+              "y1": "827",
+              "y2": "903"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "37",
+          "name": "Саморез с цил. скругл. головк.",
+          "partNumber": "N  01397511",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "3"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Саморез с цил. скругл. головк.;B4,8X19"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "37",
+              "type": "2",
+              "x1": "1087",
+              "x2": "1170",
+              "y1": "1479",
+              "y2": "1554"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "39",
+          "name": "Термовыключатель ",
+          "partNumber": "035919369D",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Термовыключатель;25/17C   M10X1для лямбда-зонда"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "39",
+              "type": "2",
+              "x1": "728",
+              "x2": "813",
+              "y1": "1028",
+              "y2": "1104"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "-",
+          "name": "Шланг в бухтах по 5 м 'заказ по 5'",
+          "partNumber": "443121107A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "*"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Шланг в бухтах по 5 м 'заказ по 5';7X2,5"
+            }
+          ],
+          "imageMap": []
+        },
+        {
+          "codeOnImage": "42",
+          "name": "Хомут",
+          "partNumber": "N  0245281",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;8-12X8X0,4"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "42",
+              "type": "2",
+              "x1": "690",
+              "x2": "772",
+              "y1": "1612",
+              "y2": "1688"
+            },
+            {
+              "code": "42",
+              "type": "2",
+              "x1": "382",
+              "x2": "464",
+              "y1": "1547",
+              "y2": "1623"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "42B",
+          "name": "Кабельная стяжка",
+          "partNumber": "N  90666101",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Кабельная стяжка;4,6X200"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "42B",
+              "type": "2",
+              "x1": "558",
+              "x2": "683",
+              "y1": "1521",
+              "y2": "1598"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "43",
+          "name": "Концентрат ОЖ",
+          "partNumber": "G  011V8BA1",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Концентрат ОЖ;1,5 л."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "43",
+              "type": "2",
+              "x1": "1297",
+              "x2": "1382",
+              "y1": "1708",
+              "y2": "1783"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "attributes": [],
+      "code": "121-050",
+      "imageUrl": "https://img.laximo.ru/AU1551/%size%/112/112024000.gif?s=7104&k=4606eb6dae75841528e1341f6ca6d22f",
+      "name": "Жидкостное охлаждение F 44-N-000 001>>",
+      "ssd": "JCpLd0g5eWRqbXRmNzVyNnVfdjRpZzY2V3hrWmFJLVBfNV8takg5THk2aVoyQmhZZUV3ZGI2a0w2NnZvLVpnSkhYeXNEOTlQajRfN0M4b3ZMWV8tMjY2X0x0bE92bnRQR205ZnY4LWZ2NV9iYm83dUduanJMcXJlenA4YmE2eFpyczVlanR2YVRwdHFLazdZMkk2dVB1NjZpMHVMN3ZfX3JfNC03cnByUzR2dV9zaVBuX2pldm50cnIzck96cDh1LWd2S2Y2dEtUdHE2cnE3X1RwcGVQMDZPUHU2N3lzN09ueHR2YnhvNkswQUFBQUFGUlhjMnM9JA==",
+      "unitId": "551474",
+      "spareParts": [
+        {
+          "codeOnImage": "1",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "447121055B",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "1",
+              "type": "2",
+              "x1": "671",
+              "x2": "789",
+              "y1": "1969",
+              "y2": "2055"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "2",
+          "name": "Хомут",
+          "partNumber": "N  0245077",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;32-50X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "490",
+              "x2": "607",
+              "y1": "865",
+              "y2": "951"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "394",
+              "x2": "512",
+              "y1": "1305",
+              "y2": "1391"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "807",
+              "x2": "924",
+              "y1": "1477",
+              "y2": "1562"
+            },
+            {
+              "code": "2",
+              "type": "2",
+              "x1": "713",
+              "x2": "830",
+              "y1": "2013",
+              "y2": "2099"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "3",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "034121063C",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "3",
+              "type": "2",
+              "x1": "476",
+              "x2": "593",
+              "y1": "1465",
+              "y2": "1550"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "4",
+          "name": "Хомут",
+          "partNumber": "N  10258101",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;23-35X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "438",
+              "x2": "556",
+              "y1": "1489",
+              "y2": "1574"
+            },
+            {
+              "code": "4",
+              "type": "2",
+              "x1": "562",
+              "x2": "679",
+              "y1": "1443",
+              "y2": "1529"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "5",
+          "name": "Кабельная стяжка",
+          "partNumber": "N  0209022",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Кабельная стяжка;3,6X246"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "5",
+              "type": "2",
+              "x1": "1237",
+              "x2": "1354",
+              "y1": "1194",
+              "y2": "1279"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "6",
+          "name": "Трубопровод системы охлаждения",
+          "partNumber": "034121071C",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "6",
+              "type": "2",
+              "x1": "866",
+              "x2": "984",
+              "y1": "1285",
+              "y2": "1371"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "7",
+          "name": "Хомут",
+          "partNumber": "N  90561801",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;16-28X9X0,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "705",
+              "x2": "822",
+              "y1": "584",
+              "y2": "670"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1314",
+              "x2": "1431",
+              "y1": "46",
+              "y2": "132"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1346",
+              "x2": "1464",
+              "y1": "199",
+              "y2": "285"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "840",
+              "x2": "958",
+              "y1": "1128",
+              "y2": "1214"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1028",
+              "x2": "1145",
+              "y1": "1190",
+              "y2": "1275"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1193",
+              "x2": "1310",
+              "y1": "871",
+              "y2": "957"
+            },
+            {
+              "code": "7",
+              "type": "2",
+              "x1": "1352",
+              "x2": "1470",
+              "y1": "1650",
+              "y2": "1736"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "8",
+          "name": "Уплотнитель",
+          "partNumber": "052121091A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "8",
+              "type": "2",
+              "x1": "251",
+              "x2": "368",
+              "y1": "1082",
+              "y2": "1168"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "10",
+          "name": "Сайлент-блок",
+          "partNumber": "443121273E",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "10",
+              "type": "2",
+              "x1": "1097",
+              "x2": "1215",
+              "y1": "1718",
+              "y2": "1804"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "11",
+          "name": "Сайлент-блок",
+          "partNumber": "443121273E",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "11",
+              "type": "2",
+              "x1": "1348",
+              "x2": "1466",
+              "y1": "1389",
+              "y2": "1475"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "12",
+          "name": "Пружинная шайба",
+          "partNumber": "N  0122265",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "3"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинная шайба;6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "12",
+              "type": "2",
+              "x1": "986",
+              "x2": "1103",
+              "y1": "1459",
+              "y2": "1545"
+            },
+            {
+              "code": "12",
+              "type": "2",
+              "x1": "1286",
+              "x2": "1404",
+              "y1": "1329",
+              "y2": "1415"
+            },
+            {
+              "code": "12",
+              "type": "2",
+              "x1": "1390",
+              "x2": "1507",
+              "y1": "1397",
+              "y2": "1483"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "13",
+          "name": "Гайка шестигранная",
+          "partNumber": "N  01100624",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "3"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Гайка шестигранная;M6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "13",
+              "type": "2",
+              "x1": "926",
+              "x2": "1043",
+              "y1": "1437",
+              "y2": "1523"
+            },
+            {
+              "code": "13",
+              "type": "2",
+              "x1": "1271",
+              "x2": "1388",
+              "y1": "1287",
+              "y2": "1373"
+            },
+            {
+              "code": "13",
+              "type": "2",
+              "x1": "1456",
+              "x2": "1573",
+              "y1": "1403",
+              "y2": "1489"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "14",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "447121101A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "14",
+              "type": "2",
+              "x1": "717",
+              "x2": "834",
+              "y1": "837",
+              "y2": "923"
+            },
+            {
+              "code": "14",
+              "type": "2",
+              "x1": "759",
+              "x2": "876",
+              "y1": "1429",
+              "y2": "1515"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "16",
+          "name": "Шланг системы охлаждения",
+          "partNumber": "447121109A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "16",
+              "type": "2",
+              "x1": "1199",
+              "x2": "1316",
+              "y1": "929",
+              "y2": "1014"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "17",
+          "name": "Фланец",
+          "partNumber": "034121133B",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "17",
+              "type": "2",
+              "x1": "321",
+              "x2": "438",
+              "y1": "1094",
+              "y2": "1180"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "-",
+          "name": "Пробка резьбовая",
+          "partNumber": "N  0160241",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пробка резьбовая;M10X1"
+            }
+          ],
+          "imageMap": []
+        },
+        {
+          "codeOnImage": "-",
+          "name": "Манжетное уплотнение",
+          "partNumber": "N  0138115",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Манжетное уплотнение;10X13,5"
+            }
+          ],
+          "imageMap": []
+        },
+        {
+          "codeOnImage": "18",
+          "name": "Винт с шестигранной головкой",
+          "partNumber": "N  01021612",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигранной головкой;M6X18"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "18",
+              "type": "2",
+              "x1": "372",
+              "x2": "490",
+              "y1": "803",
+              "y2": "889"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "-",
+          "name": "Пружинная шайба",
+          "partNumber": "N  0122265",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинная шайба;6"
+            }
+          ],
+          "imageMap": []
+        },
+        {
+          "codeOnImage": "20",
+          "name": "Патрубок",
+          "partNumber": "034121143",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "20",
+              "type": "2",
+              "x1": "685",
+              "x2": "803",
+              "y1": "678",
+              "y2": "763"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "21",
+          "name": "Уплотнительное кольцо",
+          "partNumber": "N  90035103",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Уплотнительное кольцо;21X3"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "21",
+              "type": "2",
+              "x1": "633",
+              "x2": "751",
+              "y1": "684",
+              "y2": "769"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "22",
+          "name": "Винт с шестигранной головкой",
+          "partNumber": "N  01023820",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигранной головкой;M8X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "22",
+              "type": "2",
+              "x1": "842",
+              "x2": "960",
+              "y1": "783",
+              "y2": "869"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "23",
+          "name": "Пружинная шайба",
+          "partNumber": "N  01224110",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинная шайба;B8X15"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "23",
+              "type": "2",
+              "x1": "785",
+              "x2": "902",
+              "y1": "797",
+              "y2": "883"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "24",
+          "name": "Радиатор охлаждающей жидкости",
+          "partNumber": "447121251H",
+          "match": "t",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Радиатор охлаждающей жидкости;615MM"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "24",
+              "type": "2",
+              "x1": "874",
+              "x2": "992",
+              "y1": "2274",
+              "y2": "2360"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "24A",
+          "name": "Упор",
+          "partNumber": "443121268",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "24A",
+              "type": "2",
+              "x1": "1093",
+              "x2": "1211",
+              "y1": "2294",
+              "y2": "2380"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "26",
+          "name": "Шестигранная гайка с буртиком, самоконтрящаяся",
+          "partNumber": "N  90908301",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Шестигранная гайка с буртиком, самоконтрящаяся;M8"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "26",
+              "type": "2",
+              "x1": "1404",
+              "x2": "1521",
+              "y1": "2370",
+              "y2": "2455"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "25A",
+          "name": "Держатель",
+          "partNumber": "443121263G",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "25A",
+              "type": "2",
+              "x1": "1412",
+              "x2": "1529",
+              "y1": "2274",
+              "y2": "2360"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "25B",
+          "name": "Пружинное кольцо",
+          "partNumber": "N  0120387",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Пружинное кольцо;8"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "25B",
+              "type": "2",
+              "x1": "1189",
+              "x2": "1306",
+              "y1": "2270",
+              "y2": "2356"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "25C",
+          "name": "Винт с шестигр. гол. самостопорящийся",
+          "partNumber": "N  01024022",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Винт с шестигр. гол. самостопорящийся;M8X20"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "25C",
+              "type": "2",
+              "x1": "1049",
+              "x2": "1167",
+              "y1": "2346",
+              "y2": "2431"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "25D",
+          "name": "Подкладная шайба",
+          "partNumber": "N  90033301",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;8,4X20X2,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "25D",
+              "type": "2",
+              "x1": "1219",
+              "x2": "1336",
+              "y1": "2376",
+              "y2": "2461"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "25",
+          "name": "Сайлент-блок",
+          "partNumber": "431121273",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "2"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "25",
+              "type": "2",
+              "x1": "1398",
+              "x2": "1515",
+              "y1": "2196",
+              "y2": "2282"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "27",
+          "name": "Подкладная шайба",
+          "partNumber": "N  0115476",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;6,5"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "27",
+              "type": "2",
+              "x1": "1330",
+              "x2": "1448",
+              "y1": "1351",
+              "y2": "1437"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28",
+          "name": "Крышка",
+          "partNumber": "443121321",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28",
+              "type": "2",
+              "x1": "1390",
+              "x2": "1507",
+              "y1": "345",
+              "y2": "430"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "28A",
+          "name": "Манжетное уплотнение",
+          "partNumber": "171121327",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "28A",
+              "type": "2",
+              "x1": "1422",
+              "x2": "1537",
+              "y1": "397",
+              "y2": "482"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "29A",
+          "name": "Расширительный бачок",
+          "partNumber": "8A0121403A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "29A",
+              "type": "2",
+              "x1": "1394",
+              "x2": "1509",
+              "y1": "783",
+              "y2": "869"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "30",
+          "name": "Подкладная шайба",
+          "partNumber": "N  0116653",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "3"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Подкладная шайба;5,3X15X1,6"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "30",
+              "type": "2",
+              "x1": "1442",
+              "x2": "1557",
+              "y1": "520",
+              "y2": "606"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "31",
+          "name": "Саморез с цил. скругл. головк.",
+          "partNumber": "N  01397511",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "3"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Саморез с цил. скругл. головк.;B4,8X19"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "31",
+              "type": "2",
+              "x1": "1505",
+              "x2": "1621",
+              "y1": "432",
+              "y2": "518"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "-",
+          "name": "Шланг в бухтах по 5 м 'заказ по 5'",
+          "partNumber": "443121107A",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "*"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Шланг в бухтах по 5 м 'заказ по 5';7X2,5"
+            }
+          ],
+          "imageMap": []
+        },
+        {
+          "codeOnImage": "-",
+          "name": "Кабельная стяжка",
+          "partNumber": "N  90666101",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Кабельная стяжка;4,6X200"
+            }
+          ],
+          "imageMap": []
+        },
+        {
+          "codeOnImage": "33",
+          "name": "Хомут",
+          "partNumber": "311133343",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "1"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "33",
+              "type": "2",
+              "x1": "1083",
+              "x2": "1201",
+              "y1": "1455",
+              "y2": "1541"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "34",
+          "name": "Хомут",
+          "partNumber": "N  10258201",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Хомут;12-22X9X0,4"
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "956",
+              "x2": "1073",
+              "y1": "492",
+              "y2": "578"
+            },
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "996",
+              "x2": "1113",
+              "y1": "662",
+              "y2": "747"
+            },
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "741",
+              "x2": "858",
+              "y1": "893",
+              "y2": "979"
+            },
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "727",
+              "x2": "844",
+              "y1": "1042",
+              "y2": "1128"
+            },
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "711",
+              "x2": "828",
+              "y1": "1200",
+              "y2": "1285"
+            },
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "1229",
+              "x2": "1346",
+              "y1": "508",
+              "y2": "594"
+            },
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "1284",
+              "x2": "1402",
+              "y1": "293",
+              "y2": "379"
+            },
+            {
+              "code": "34",
+              "type": "2",
+              "x1": "1169",
+              "x2": "1286",
+              "y1": "165",
+              "y2": "251"
+            }
+          ]
+        },
+        {
+          "codeOnImage": "35",
+          "name": "Концентрат ОЖ",
+          "partNumber": "G  011V8BA1",
+          "source": "Laximo",
+          "attributes": [
+            {
+              "key": "amount",
+              "name": "amount",
+              "value": "X"
+            },
+            {
+              "key": "note",
+              "name": "note",
+              "value": "Концентрат ОЖ;1,5 л."
+            }
+          ],
+          "imageMap": [
+            {
+              "code": "35",
+              "type": "2",
+              "x1": "356",
+              "x2": "474",
+              "y1": "1624",
+              "y2": "1710"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

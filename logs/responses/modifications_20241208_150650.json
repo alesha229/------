@@ -1,0 +1,212 @@
+{
+  "commonAttributes": [
+    {
+      "key": "Brand",
+      "name": "Бренд",
+      "value": "AUDI"
+    },
+    {
+      "key": "ManufacturerId",
+      "name": "Производитель",
+      "value": "657"
+    },
+    {
+      "key": "Catalog",
+      "name": "Каталог",
+      "value": "AU1551"
+    },
+    {
+      "key": "Model",
+      "name": "Модель",
+      "value": ""
+    },
+    {
+      "key": "Name",
+      "name": "Наименование",
+      "value": "100"
+    },
+    {
+      "key": "ImageUrl",
+      "name": "Иконка модели",
+      "value": ""
+    },
+    {
+      "key": "Date",
+      "name": "Дата",
+      "value": ""
+    },
+    {
+      "key": "Actual",
+      "name": "Актуальность",
+      "value": ""
+    },
+    {
+      "key": "KolCount",
+      "name": "Модификаций",
+      "value": "0"
+    },
+    {
+      "key": "KolComment",
+      "name": "Модификации",
+      "value": ""
+    }
+  ],
+  "specificAttributes": [
+    {
+      "carId": 41,
+      "ssd": "JCpLd0ZTWm5kSkdsRldBQVFRRUNjUFJBb2VQamtuVjFCV1VFZG9XeE1WSmpJdUtpZ3JibmxWUHhFVkVTQTJMejU0Wlc5U1cxZFhVQjhRQVZGM1VFSURSRWRhUVVRbGJCVUhRRU1WQ2tKQlhFUWJkR3BDVFVaRkEwTkdYaGtHR0ZkTlJrVU5RMFplR1JWcVVWRWxSVXhCUkJkYUZRdGFRUWdTREExS1JCdFNTRUpCWEVjT0ZBb0lGUmNKRkFKRVIxcEJDQkZWVzFZQUFBQUFxR1NyWFE9PSQ=",
+      "attributes": [
+        {
+          "key": "CarID",
+          "name": "CarID",
+          "value": "41"
+        },
+        {
+          "key": "Ssd",
+          "name": "Ssd",
+          "value": "$*KwFSZndJGlFWAAQQECcPRAoePjknV1BWUEdoWxMVJjIuKigrbnlVPxEVESA2Lz54ZW9SW1dXUB8QAVF3UEIDREdaQUQlbBUHQEMVCkJBXEQbdGpCTUZFA0NGXhkGGFdNRkUNQ0ZeGRVqUVElRUxBRBdaFQtaQQgSDA1KRBtSSEJBXEcOFAoIFRcJFAJER1pBCBFVW1YAAAAAqGSrXQ==$"
+        },
+        {
+          "key": "prodrange",
+          "name": "Период производства",
+          "value": "1989 - 1996"
+        },
+        {
+          "key": "market",
+          "name": "Рынок",
+          "value": "FAW-VW"
+        }
+      ]
+    },
+    {
+      "carId": 699,
+      "ssd": "JCpLd0ZrVUVGeGJpVVZCREE1WWlSOGJqd29DQThSWVdaZ1puRmViU1VqRUFRWUhCNGRXRTlqQ1Njakp4WUFHUWhPVTFsa2JXRmhaaWttTjJkQlpuUTFjbkZzZDNJVFdpTXhkblVqUEhSM2FuSXRWRTRYZFh4eGREUnljalVoS205N2NITTdkWEJvTHlOY1oyZHlmWFoxSXpFdElTZDJPU1U5T250d2NHcGlQM1p0Y0Q4ak96eC1MeU5wTlhWd2EzWTVKVDVqZkFBQUFBRDRZbVdSJA==",
+      "attributes": [
+        {
+          "key": "CarID",
+          "name": "CarID",
+          "value": "699"
+        },
+        {
+          "key": "Ssd",
+          "name": "Ssd",
+          "value": "$*KwFkUEFxbiUVBDA5YiR8bjwoCA8RYWZgZnFebSUjEAQYHB4dWE9jCScjJxYAGQhOU1lkbWFhZikmN2dBZnQ1cnFsd3ITWiMxdnUjPHR3anItVE4XdXxxdDRycjUhKm97cHM7dXBoLyNcZ2dyfXZ1IzEtISd2OSU9OntwcGpiP3ZtcD8jOzx-LyNpNXVwa3Y5JT5jfAAAAAD4YmWR$"
+        },
+        {
+          "key": "prodrange",
+          "name": "Период производства",
+          "value": "1989 - 1989"
+        },
+        {
+          "key": "market",
+          "name": "Рынок",
+          "value": "США"
+        }
+      ]
+    },
+    {
+      "carId": 705,
+      "ssd": "JCpLd0ZSWlhRY1VRc0FJdzFUSno5WVh3a2RQVG9rVkZOVlUwUnJXQkFXSlRFdEtTc29iWHBXUEJJV0VpTTFMRDE3Wm14UldGUlVVeHdUQWxKMFUwRUFSMFJaUWtjbWJ4WUVRMEFXQ1VGQ1gwY1lZWHNpUUVsRVFRRkhSd0FVR1ZKUVNVUkJEMGRIQUJRS0lsTlZSazlDUnhSWkZnaFpRZ3NSRHc1SlJ4aFJTMEZDWDBRTkZ3a0xGaFFLRndGSFJGbENDeEpXV0ZVQUFBQUFxcERsbHc9PSQ=",
+      "attributes": [
+        {
+          "key": "CarID",
+          "name": "CarID",
+          "value": "705"
+        },
+        {
+          "key": "Ssd",
+          "name": "Ssd",
+          "value": "$*KwFRZXQcUQsAIw1TJz9YXwkdPTokVFNVU0RrWBAWJTEtKSsobXpWPBIWEiM1LD17ZmxRWFRUUxwTAlJ0U0EAR0RZQkcmbxYEQ0AWCUFCX0cYYXsiQElEQQFHRwAUGVJQSURBD0dHABQKIlNVRk9CRxRZFghZQgsRDw5JRxhRS0FCX0QNFwkLFhQKFwFHRFlCCxJWWFUAAAAAqpDllw==$"
+        },
+        {
+          "key": "prodrange",
+          "name": "Период производства",
+          "value": "1990 - 1991"
+        },
+        {
+          "key": "market",
+          "name": "Рынок",
+          "value": "США"
+        }
+      ]
+    },
+    {
+      "carId": 707,
+      "ssd": "JCpLd0d6aDVhTnJQTFFzY3I2dnVTSXRldl8zOWpHdHJHM3NhYUp1dkwweDlQUHk4bktqNWkwM3ZEMDhNSFh6dC1aaEk2enVyYTJzZjd4NExDV3NhUGlwYWE3b0tYRWpmVG1vYUwwNjZPZ3ZhWDZnNW5Bb3F1bW8tT2xwZUwyLTdDNHE2YWo3YVdsNHZib3dMRzNwSzJncGZhNzlPcTdvT256N2V5cnBmcXpxYU9ndmFidjlldnA5UGJvOWVPbHBydWc2ZkMwdXJjQUFBQUFNOHhQSUE9PSQ=",
+      "attributes": [
+        {
+          "key": "CarID",
+          "name": "CarID",
+          "value": "707"
+        },
+        {
+          "key": "Ssd",
+          "name": "Ssd",
+          "value": "$*KwGzh5aNrPLQscr6vuSItev_39jGtrG3saaJuvL0x9PPy8nKj5i03vD08MHXzt-ZhI6zura2sf7x4LCWsaPipaa7oKXEjfTmoaL066OgvaX6g5nAoqumo-OlpeL2-7C4q6aj7aWl4vbowLG3pK2gpfa79Oq7oOnz7eyrpfqzqaOgvabv9evp9Pbo9eOlprug6fC0urcAAAAAM8xPIA==$"
+        },
+        {
+          "key": "prodrange",
+          "name": "Период производства",
+          "value": "1992 - 1992"
+        },
+        {
+          "key": "market",
+          "name": "Рынок",
+          "value": "США"
+        }
+      ]
+    },
+    {
+      "carId": 711,
+      "ssd": "JCpLd0Y5U1ZoVExubzVQeXNzSm45SmF5VXhFUllJZUg5NWYyaEhkRHc2Q1IwQkJRY0VRVlo2RUQ0NlBnOFpBQkZYU2tCOWRIaDRmekFfTG41WWYyMHNhMmgxYm1zS1F6b29iMnc2SlcxdWMyczBUVmNPYkdWb2JTMXJheXc0Tlh0LVpXaHRJMnRyTERnbURuOTVhbU51YXpoMU9pUjFiaWM5SXlKbGF6UjlaMjF1YzJnaE95VW5PamdtT3kxcmFIVnVKejU2ZEhrQUFBQUFTZS1pN2c9PSQ=",
+      "attributes": [
+        {
+          "key": "CarID",
+          "name": "CarID",
+          "value": "711"
+        },
+        {
+          "key": "Ssd",
+          "name": "Ssd",
+          "value": "$*KwF9SVhTLno5PyssJn9JayUxERYIeH95f2hHdDw6CR0BBQcEQVZ6ED46Pg8ZABFXSkB9dHh4fzA_Ln5Yf20sa2h1bmsKQzoob2w6JW1uc2s0TVcObGVobS1rayw4NXt-ZWhtI2trLDgmDn95amNuazh1OiR1bic9IyJlazR9Z21uc2ghOyUnOjgmOy1raHVuJz56dHkAAAAASe-i7g==$"
+        },
+        {
+          "key": "prodrange",
+          "name": "Период производства",
+          "value": "1993 - 1993"
+        },
+        {
+          "key": "market",
+          "name": "Рынок",
+          "value": "США"
+        }
+      ]
+    },
+    {
+      "carId": 713,
+      "ssd": "JCpLd0hSNWZUNHI5ZUNsSWl6cXRlTi1ZbWR2YnFrMU5QVjA4VHIySkNXcGJHdHFhdW83ZnJXdkpLV2txTzFyTDM3NXV6UjJOVFUwNXlUZ3RMMDA4R0F4OFRad3NlbTc1YUV3OENXaWNIQzM4ZVk0ZnVpd01uRXdZSEh4NENVbWRmYnljVEJqOGZIZ0pTS290UFZ4c19DeDVUWmxvalp3b3VSajQ3Sng1alJ5OEhDMzhTTmw0bUxscFNLbDRISHhObkNpNUxXMk5VQUFBQUE0bFZrd2c9PSQ=",
+      "attributes": [
+        {
+          "key": "CarID",
+          "name": "CarID",
+          "value": "713"
+        },
+        {
+          "key": "Ssd",
+          "name": "Ssd",
+          "value": "$*KwHR5fT4r9eClIizqteN-Ymdvbqk1NPV08Tr2JCWpbGtqauo7frWvJKWkqO1rL375uzR2NTU05yTgtL008GAx8TZwsem75aEw8CWicHC38eY4fuiwMnEwYHHx4CUmdfbycTBj8fHgJSKotPVxs_Cx5TZlojZwouRj47Jx5jRy8HC38SNl4mLlpSKl4HHxNnCi5LW2NUAAAAA4lVkwg==$"
+        },
+        {
+          "key": "prodrange",
+          "name": "Период производства",
+          "value": "1994 - 1994"
+        },
+        {
+          "key": "market",
+          "name": "Рынок",
+          "value": "США"
+        }
+      ]
+    }
+  ]
+}
