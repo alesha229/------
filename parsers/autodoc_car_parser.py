@@ -134,7 +134,7 @@ class AutodocCarParser(BaseParser):
                     break
                     
             if not year_key and years:
-                # Если год не найден точно, ищем ближайший
+                # Если год не найден точно, ищем ближай��ий
                 try:
                     target_year = int(year)
                     closest_year = min(years, key=lambda x: abs(int(x.get("value", 0)) - target_year))
@@ -484,31 +484,71 @@ class AutodocCarParser(BaseParser):
             logger.error(f"Ошибка в пошаговом поиске: {e}")
             return {}
 
-    async def get_parts_list(self, brand_code: str, car_id: str, car_ssd: str) -> Dict:
-        """Получение списка доступных категорий запчастей для выбранной машины"""
-        url = f"{self.base_url}/brands/{brand_code}/cars/{car_id}/quickgroups?ssd={car_ssd}"
-        logger.error(f"[ЗАПРОС] URL дерева запчастей: {url}")
-            
-        response = await self._make_request(url)
-        if not response:
-            logger.error("[ОТВЕТ] Пустой ответ от API списка запчастей")
-            return {}
-            
-        if 'data' not in response:
-            logger.error(f"[ОТВЕТ] Неожиданный формат ответа: {response}")
-            return {}
+    async def get_parts_list(self, brand_code: str, car_id: int, ssd: str) -> List[Dict]:
+        """Получить список запчастей для выбранной модификации"""
+        url = f"{self.base_url}/brands/{brand_code}/cars/{car_id}/quickgroups"
+        if ssd:
+            url += f"?ssd={ssd}"
         
-        # Подсчитываем количество категорий
-        total_categories = len(response.get('data', []))
-        total_items = 0
-        for category in response.get('data', []):
-            total_items += self._count_all_items(category)
-            
-        logger.info(f"[ОТВЕТ] Успешно получено дерево запчастей:")
-        logger.info(f"[ОТВЕТ] - Всего корневых категорий: {total_categories}")
-        logger.info(f"[ОТВЕТ] - Всего элементов в дереве: {total_items}")
+        logger.error(f"[ЗАПРОС] URL дерева запчастей: {url}")
+        
+        try:
+            response = await self._make_request(url)
+            if response:
+                logger.info("[ОТВЕТ] Успешно получено дерево запчастей:")
+                logger.info(f"[ОТВЕТ] - Всего корневых категорий: {len(response)}")
+                
+                # Подсчитываем общее количество элементов
+                total_items = sum(1 for _ in self._count_all_items_generator(response))
+                logger.info(f"[ОТВЕТ] - Всего элементов в дереве: {total_items}")
+                
+                # Логируем структуру первого элемента для отладки
+                if response and isinstance(response, list) and len(response) > 0:
+                    first_item = response[0]
+                    logger.info(f"[ОТВЕТ] - Структура первого элемента: {first_item}")
+                    if 'children' in first_item:
+                        children = first_item.get('children', [])
+                        logger.info(f"[ОТВЕТ] - Количество дочерних элементов: {len(children)}")
+                        
+                        # Если у первой категории есть дочерние элементы, возвращаем их
+                        if children:
+                            logger.info(f"[ОТВЕТ] - Возвращаем дочерние элементы первой категории")
+                            return children
+                        
+                        # Если нет дочерних элементов, пробуем получить запчасти для этой категории
+                        if 'id' in first_item:
+                            logger.info(f"[ОТВЕТ] - Пробуем получить запчасти для категории {first_item['id']}")
+                            parts = await self.get_group_parts(
+                                brand_code, 
+                                car_id, 
+                                first_item['id'], 
+                                ssd
+                            )
+                            if parts and 'items' in parts:
+                                logger.info(f"[ОТВЕТ] - Получены запчасти для категории: {len(parts['items'])} элементов")
+                                return self._convert_parts_to_tree(parts['items'])
+                
+                return response
+            return []
+        except Exception as e:
+            logger.error(f"Error getting parts list: {e}", exc_info=True)
+            return []
 
-        return response
+    def _convert_parts_to_tree(self, parts: List[Dict]) -> List[Dict]:
+        """Преобразование списка запчастей в древовидную структуру"""
+        result = []
+        for part in parts:
+            tree_item = {
+                'name': part.get('name', 'Без названия'),
+                'article': part.get('article'),
+                'oem': part.get('oem'),
+                'description': part.get('description'),
+                'id': part.get('id')
+            }
+            if 'children' in part:
+                tree_item['children'] = self._convert_parts_to_tree(part['children'])
+            result.append(tree_item)
+        return result
 
     async def get_group_parts(self, brand_code: str, car_id: str, quick_group_id: str, car_ssd: str) -> Dict:
         """Получение списка запчастей для выбранной группы"""
@@ -536,12 +576,7 @@ class AutodocCarParser(BaseParser):
                 logger.error("[ОТВЕТ] Нет доступных запчастей в группе")
                 return {}
             
-            # Если только один элемент, показываем его запчасти
-            if len(items) == 1:
-                self._display_spare_parts(items[0])
-                return response_data
-            
-            # Если несколько элементов, даем выбрать
+            logger.info(f"[ОТВЕТ] Получено {len(items)} запчастей")
             return response_data
             
         except Exception as e:
@@ -684,12 +719,26 @@ class AutodocCarParser(BaseParser):
                 print(f"Error occurred: {e}")
                 break
 
+    def _count_all_items_generator(self, parts_data):
+        """Генератор для подсчета всех элементов в дереве запчастей"""
+        if not isinstance(parts_data, list):
+            return
+        
+        for item in parts_data:
+            if not isinstance(item, dict):
+                continue
+            
+            yield item  # Считаем текущий элемент
+            
+            # Рекурсивно обходим дочерние элементы
+            if 'children' in item and isinstance(item['children'], list):
+                yield from self._count_all_items_generator(item['children'])
 
     def _count_all_items(self, category: Dict) -> int:
-        """Подсчет всех элементов в категории и её подкатегориях"""
+        """Подсчет всех элементов в категории и её подкатегориях (старый метод)"""
         if not category:
             return 0
-            
+        
         count = 1  # Считаем текущую категорию
         children = category.get('children', [])
         for child in children:
